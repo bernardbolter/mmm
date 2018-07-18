@@ -1,6 +1,6 @@
 # Smoothism
 
-Smoothism.com is a Digital Development Agency based in San Francisco with a global outlook
+Smoothism.com is a Digital Development Agency based in San Francisco and Berlin with a global outlook
 
 ## Getting Started
 
@@ -12,9 +12,9 @@ commands for compiling -
 
 ## Built With
 
-* Babel
 * Gulp
-* inline SVG sprite system with gulp-svgstore
+* SASS
+* JQuery
 
 ## Authors
 
