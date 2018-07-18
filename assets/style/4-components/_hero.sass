@@ -1,0 +1,53 @@
+.hero
+  width: 100%
+  background: url('img/hero_small.jpg') no-repeat center center
+  background-size: cover
+  display: flex
+  justify-content: center
+  align-items: center
+
+  @media (min-width: 500px)
+    background: url('img/hero.jpg') no-repeat center center
+    background-size: cover
+
+  @media (min-width: 1000px)
+    background: url('img/hero_large.jpg') no-repeat center center
+    background-size: cover
+
+  svg
+    display: inline-block
+    position: absolute
+    top: 0
+    left: 0
+
+.svg-container
+  display: inline-block
+  position: relative
+  width: 70%
+  padding-bottom: 70%
+  overflow: hidden
+  @media (min-width: 750px)
+    width: 600px
+    padding-bottom: 600px
+
+// #mmm_circle
+//   stroke-dasharray: 615.8389892578125
+//   stroke-dashoffset: 615.8389892578125
+//   animation: dash_circle 2.5s linear forwards
+//
+//   @keyframes dash_circle
+//     0%
+//       stroke-dashoffset: 615.8389892578125
+//     100%
+//       stroke-dashoffset: 0
+//
+// #mmm_line
+//   stroke-dasharray: 687.8948974609375
+//   stroke-dashoffset: 687.8948974609375
+//   animation: dash_line 2.5s linear forwards
+//
+//   @keyframes dash_line
+//     0%
+//       stroke-dashoffset: 687.8948974609375
+//     100%
+//       stroke-dashoffset: 0

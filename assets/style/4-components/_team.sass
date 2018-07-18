@@ -1,0 +1,126 @@
+.team
+  width: 100%
+  height: auto
+  background: $grey-back
+  margin: 0 auto
+  padding: 0
+
+  @media (min-width: $mobile-break)
+    display: block
+
+  h1
+    font-family: $heading-font
+    font-size: 30px
+    color: $dark-text
+    padding: 30px 0 20px 10px
+    margin: 0
+
+    @media (min-width: $mobile-break)
+      font-size: 36px
+      width: auto
+
+.team-button
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: center
+  cursor: pointer
+  margin: 0 0 0 5%
+  svg
+    transition: all 0.5s ease-in-out
+
+    path
+      fill: $dark-text
+
+    circle
+      fill: none
+      stroke: $dark-text
+      stroke-width: 1.3px
+
+.team-button-on
+  svg
+    transform: rotate(180deg)
+    transition: all 0.5s ease-in-out
+
+.team-line
+  stroke: $dark-text
+  stroke-linecap: round
+  stroke-width: 1.5
+
+#team-circle
+  stroke: $dark-text
+  stroke-width: 1.5
+  fill: none
+
+.team-dropped
+  display: block
+
+.team-drop
+  display: inline-block
+  text-align: right
+  font-family: $body-font
+  font-weight: 300
+  color: $dark-text
+  font-size: 20px
+  margin: 8px 0 0 40px
+  cursor: pointer
+  transition: all 0.5s ease-in-out
+  letter-spacing: 0.05em
+
+  @media (min-width: $mobile-break)
+    display: none
+
+.team-wrap-on
+  transition: max-height 1s ease-in-out
+  max-height: 2500px !important
+
+.team-drop-stop
+  display: none
+
+.team-component-wrap
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
+  flex-wrap: wrap
+  max-height: 0
+  overflow: hidden
+  max-width: 1200px
+  margin: 0 auto
+  transition: max-height 1s ease-in-out
+
+.team-component
+  width: 90%
+  margin: 0 5% 25px
+
+  @media (min-width: $mobile-break)
+    width: 40%
+
+  h3
+    font-family: $heading-font
+    font-size: 16px
+    color: $dark-text
+    margin: 5px 0 0 0
+    padding: 0
+
+  h5
+    font-family: $body-font
+    font-size: 13px
+    font-weight: 300
+    color: $dark-text
+    margin: 0
+    padding: 0
+
+  p
+    font-family: $body-font
+    font-size: 14px
+    font-weight: 700
+    color: $dark-text
+    margin: 20px 0 10px 0
+    padding: 0
+    line-height: 1.5
+    text-indent: 20px
+
+  img
+    width: 100%
+    border: 1px solid $dark-text
