@@ -1,5 +1,4 @@
 (function($){
-  // can do something like
   $('#navigation-button').click(function() {
     $('#navigation-button').toggleClass( "button-open" );
     $('.navigation-menu').toggleClass( "navigation-menu-open");
@@ -64,5 +63,11 @@
        fullscreen();
        changeNavButton();
   });
+
+  // Tooltipster initialization and options
+
+
+    $('.tooltip').tooltipster();
+
 
 })(jQuery);

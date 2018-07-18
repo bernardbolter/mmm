@@ -20,7 +20,8 @@ var gulp = require('gulp'),
 var path = {
     HTML: [
         './assets/html/index.html',
-        './assets/html/**/*.html'
+        './assets/html/**/*.html',
+        './assets/html/parts/**/*.html'
     ],
     STYLESHEETS: [
         './assets/style/style.sass',
@@ -158,7 +159,6 @@ gulp.task('clean-in', function() {
   gulp.task('watch', function() {
     gulp.watch([path.HTML], ['html-in']);
     gulp.watch([path.STYLESHEETS], ['html-in', 'style-in']);
-    gulp.watch([path.SVG], ['svg-in', 'html-in']);
     gulp.watch([path.JS], ['js-in']);
   });
   
