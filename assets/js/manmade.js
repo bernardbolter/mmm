@@ -10,6 +10,11 @@
     $('#team').toggleClass( "team-dropped");
   });
 
+  $('#basic-info-button').click(function() {
+    $('.basic_info_wrap').toggleClass( "basic_info_wrap_on" );
+    $('.basic_info_button').toggleClass( "basic_info_button_on" );
+  });
+
   $('.privacy-button').click(function() {
     $('#privacy-policy').toggleClass("privacy-policy-on");
   })

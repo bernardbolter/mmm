@@ -1,0 +1,35 @@
+.form-header
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    background: $form-header-back
+    border: 1px solid $form-header-border
+    width: 100%
+    margin: 20px 0
+    padding: 5px 20px
+
+    @media (min-width: $mobile-break)
+        width: 96%
+        margin: 20px 2%
+        
+
+    h3
+        font-family: $heading-font
+        font-size: 20px
+        color: $form-header-border
+        margin: 0
+        padding: 0
+
+    svg
+        width: 30px
+        height: 30px
+        transition: all 0.5s ease-in-out
+
+        path
+        fill: $dark-text
+
+        circle
+        fill: none
+        stroke: $dark-text
+        stroke-width: 1.3px

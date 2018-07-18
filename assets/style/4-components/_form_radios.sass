@@ -1,0 +1,85 @@
+.manmade-radio-buttons-wrap
+  width: 100%
+  margin: 0 0 10px 0
+  display: flex
+  flex-direction: column
+
+  @media (min-width: $mobile-break)
+    width: 46%
+    margin: 0 2%
+
+.manmade-radio-buttons-title
+  font-family: $body-font
+  color: $light-text
+  font-size: 12px
+  font-weight: 700
+  margin-bottom: 5px
+
+.manmade-radio-buttons-title-2
+  font-family: $body-font
+  color: $light-text
+  font-size: 12px
+  font-weight: 700
+  margin: 0 0 5px
+
+.manmade-radio-buttons
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: center
+  flex-wrap: wrap
+
+  div
+    display: flex
+    flex-direction: row
+    align-items: center
+    margin: 7px 0
+
+  input
+    appearance: none
+    position: relative
+    right: 0
+    bottom: 0
+    left: 0
+    height: 30px
+    width: 30px
+    background: $form-back
+    border: none
+    color: $dark-text
+    cursor: pointer
+    display: inline-block
+    margin: 0
+    outline: none
+    position: relative
+
+  input:hover
+    background: #9faab7
+
+  input:checked
+    background: $light-text
+
+  input:checked::before
+    height: 30px
+    width: 30px
+    position: absolute
+    content: '✔'
+    display: inline-block
+    font-size: 18px
+    text-align: center
+    line-height: 30px
+
+  input:checked::after
+    background: #40e0d0
+    content: ''
+    display: block
+    position: relative
+    z-index: 100
+
+  label
+    font-family: $body-font
+    color: $light-text
+    font-size: 18px
+    font-weight: 700
+    margin: 0 10px 0 5px
+    cursor: pointer
