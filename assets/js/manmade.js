@@ -15,6 +15,22 @@
     $('.basic_info_button').toggleClass( "basic_info_button_on" );
   });
 
+  $('#mastering-info-button').click(function() {
+    $('.mastering_wrap').toggleClass( "mastering_wrap_on" );
+    $('.mastering_info_button').toggleClass( "mastering_info_button_on" );
+  });
+
+  $('#manufacturing_button').click(function() {
+    $('.manufacturing_wrap').toggleClass( "manufacturing_wrap_on" );
+    $('.manufacturing_button').toggleClass( "manufacturing_button_on" );
+  });
+
+  $('#manufacturing_switch_button').click(function() {
+    $('.manufactoring_out_wrap').toggleClass( "manufactoring_out_wrap_on" );
+    $('.manufactoring_in_wrap').toggleClass( "manufactoring_in_wrap_on" );
+    $('.manufacturing_switch_button').toggleClass( "manufacturing_switch_button_on" );
+  });
+
   $('.privacy-button').click(function() {
     $('#privacy-policy').toggleClass("privacy-policy-on");
   })

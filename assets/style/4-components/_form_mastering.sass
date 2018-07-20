@@ -1,3 +1,19 @@
+#mastering-info-button
+    cursor: pointer
+    
+.mastering_wrap
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    flex-wrap: wrap
+    transition: max-height 1.5s ease
+    max-height: 2500px
+    overflow: hidden
+
+.mastering_wrap_on
+    transition: max-height 1.5s ease
+    max-height: 0
+    
 .mastering-top-block
     display: flex
     flex-direction: row
@@ -95,4 +111,17 @@
     color: $light-text
     font-weight: 700
     opacity: 0.5
+
+.mastering_info_button
+    cursor: pointer
+
+.mastering_info_button
+    svg
+        transform: rotate(0deg)
+        transition: all 1s ease-in-out
+
+.mastering_info_button_on
+    svg
+        transform: rotate(180deg)
+        transition: all 1s ease-in-out
 
