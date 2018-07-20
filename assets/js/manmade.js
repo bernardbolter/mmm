@@ -35,6 +35,16 @@
     $('#privacy-policy').toggleClass("privacy-policy-on");
   })
 
+  // CHANGE COLOR OF ELEMENTS ON LOAD
+
+  var randColor = Math.floor(Math.random() * 2);
+  console.log(randColor);
+  if (randColor === 0) {
+    $('.mmm_line').addClass( "mmm_line_color" );
+  } 
+
+
+
   // SCROLL TO ACTION FROM MENU
 
   $('a[href^="#"]').on('click', function(event) {
