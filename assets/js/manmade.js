@@ -40,10 +40,10 @@
   var randColor = Math.floor(Math.random() * 2);
   console.log(randColor);
   if (randColor === 0) {
-    $('.mmm_line').addClass( "mmm_line_color" );
+    $('.color-theme').addClass( "color-theme-magenta" );
+    $('.color-theme-background').addClass( "color-theme-background-magenta" );
+    $('.color-theme-team').addClass( "color-theme-team-magenta" );
   } 
-
-
 
   // SCROLL TO ACTION FROM MENU
 
@@ -98,7 +98,10 @@
   // Tooltipster initialization and options
 
 
-    $('.tooltip').tooltipster();
+    $('.tooltip').tooltipster({
+      side: ['left', 'top'],
+      maxWidth: 230
+    });
 
 
 })(jQuery);

@@ -16,9 +16,11 @@
   stroke-width: 1.5
 
 #hamburger-circle
-  stroke: white
   stroke-width: 1.5
   fill: none
+
+.hamburger-circle
+  stroke: white
 
 .button
   svg
@@ -34,10 +36,15 @@
 
 .button-open
   svg
+    .hamburger-line
+      stroke: $dark-text
+
+    .hamburger-circle
+      stroke: $dark-text
+
     #hamburger-line-1
       transform: rotate(45deg) translate(9px, -12.5px)
       transition: all 0.5s ease-in-out
-      stroke: $dark-text
 
     #hamburger-line-2
       display: none
@@ -46,10 +53,6 @@
     #hamburger-line-3
       transform: rotate(-45deg) translate(-19px, 1.5px)
       transition: all 0.5s ease-in-out
-      stroke: $dark-text
-
-    #hamburger-circle
-      stroke: $dark-text
 
 .button-dark
   svg

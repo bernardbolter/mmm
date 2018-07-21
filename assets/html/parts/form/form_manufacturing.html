@@ -53,28 +53,18 @@
                     <label for="delivery_of_audio_data">Delivery of Audio Data:</label>
                     <img src="img/info.png" class="tooltip info-tip" title="please note audio specification" />    
                 </div>
-                <select name="delivery_of_audio_data" id="delivery_of_audio_data" size="1">
-                    <option value="Data (WAV, CD), incl. 2 test pressings">Data (WAV, CD), incl. 2 test pressings</option>
-                    <option value="Data (WAV, CD), without test pressings">Data (WAV, CD), without test pressings</option>
-                    <option value="Lacquers will be delivered, incl. 2 test pressings">Lacquers will be delivered, incl. 2 test pressings</option>
-                    <option value="Lacquers will be delivered, without  test pressings">Lacquers will be delivered, without  test pressings</option>
-                    <option value="Matrix exists (Re-Order)">Matrix exists (Re-Order)</option>
-                    
-                </select>
-            </div>
-            <div class="dropdown_wrap">
-                <div class="dropdown_label_wrap">
-                    <label for="amount_of_side_recorded">Amount Sides Recorded:</label>
-                    <img src="img/info.png" class="tooltip info-tip" title="depending on the option" />      
+                <div class="select_field">
+                    <select name="delivery_of_audio_data" id="delivery_of_audio_data" size="1">
+                        <option value="Nothing selected">select one</option>
+                        <option value="Data (WAV, CD), incl. 2 test pressings">Data (WAV, CD), incl. 2 test pressings</option>
+                        <option value="Data (WAV, CD), without test pressings">Data (WAV, CD), without test pressings</option>
+                        <option value="Lacquers will be delivered, incl. 2 test pressings">Lacquers will be delivered, incl. 2 test pressings</option>
+                        <option value="Lacquers will be delivered, without  test pressings">Lacquers will be delivered, without  test pressings</option>
+                        <option value="Matrix exists (Re-Order)">Matrix exists (Re-Order)</option>     
+                    </select>
                 </div>
-                <select name="amount_of_side_recorded" id="amount_of_side_recorded" size="1">
-                    <option value="1">1</option>
-                    <option value="2" selected="selected">2</option>
-                    <option value="4">4 (2xVinyl)</option>
-                    <option value="6">6 (3xVinyl)</option>
-                    
-                </select>
             </div>
+
             <div class="dropdown_wrap">
                 <div class="dropdown_label_wrap">
                     <label for="additional_test_pressings">Additional Test Pressings / Promos:</label>   
@@ -82,15 +72,7 @@
                 </div>
                 <input type="text" name="additional_test_pressings">
             </div>
-            <div class="dropdown_wrap">
-                <div class="dropdown_label_wrap">
-                    <label for="amount_more_than_15min">Amount More Than 15min:</label>   
-                </div>
-                <select name="amount_of_side_recorded" id="amount_of_side_recorded" size="1">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                </select>
-            </div>
+
         </section>
 
     </section>
