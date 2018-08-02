@@ -43,6 +43,7 @@
     $('.color-theme').addClass( "color-theme-magenta" );
     $('.color-theme-background').addClass( "color-theme-background-magenta" );
     $('.color-theme-team').addClass( "color-theme-team-magenta" );
+    $('.color-theme-select').addClass( "color-theme-select-magenta" );
   } 
 
   // SCROLL TO ACTION FROM MENU
