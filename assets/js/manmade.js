@@ -104,5 +104,15 @@
       maxWidth: 230
     });
 
+  // Change text of vinyl color selector
+
+  $( "input[name=vinyl_color]" ).on("change", function() {
+    $("#vinyl_color_text").html(this.value);
+  });
+
+  $( "input[name=vinyl_color]" ).hover(function() {
+      console.log("hovering");
+  });
+
 
 })(jQuery);
