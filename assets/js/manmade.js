@@ -107,11 +107,31 @@
   // Change text of vinyl color selector
 
   $( "input[name=vinyl_color]" ).on("change", function() {
-    $("#vinyl_color_text").html(this.value);
-  });
-
-  $( "input[name=vinyl_color]" ).hover(function() {
-      console.log("hovering");
+    var colorVal = this.value;
+    switch (colorVal) {
+      case 'vinyl_color_black':
+         $('#vinyl_color_text').html('BLACK (default)');
+         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_black_disc.png');
+         break;
+      case 'vinyl_color_transparent':
+         $('#vinyl_color_text').html('TRANSPARENT');
+         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_transparent_disc.png');
+         break;
+      case 'vinyl_color_white':
+         $('#vinyl_color_text').html('WHITE');
+         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_white_disc.png');
+         break;
+      case 'vinyl_color_gold':
+         $('#vinyl_color_text').html('GOLD');
+         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_gold_disc.png');
+         break;
+      case 'vinyl_color_yellow':
+         $('#vinyl_color_text').html('YELLOW');
+         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_yellow_disc.png');
+         break;
+      default:
+        console.log('no match');
+    }
   });
 
 
