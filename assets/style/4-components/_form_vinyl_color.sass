@@ -66,9 +66,33 @@
 .vinyl_color_yellow
     background-image: url('img/vinyl_color_yellow.png')
 
+.vinyl_color_yellow_translucent
+    background-image: url('img/vinyl_color_yellow_translucent.png')
+
+.vinyl_color_orange
+    background-image: url('img/vinyl_color_orange.png')
+
+.vinyl_color_red
+    background-image: url('img/vinyl_color_red.png')
+
+.vinyl_color_red_translucent
+    background-image: url('img/vinyl_color_red_translucent.png')
+
+.vinyl_color_blue
+    background-image: url('img/vinyl_color_blue.png')
+
+.vinyl_color_blue_translucent
+    background-image: url('img/vinyl_color_blue_translucent.png')
+
+.vinyl_color_green
+    background-image: url('img/vinyl_color_green.png')
+
+.vinyl_color_green_translucent
+    background-image: url('img/vinyl_color_green_translucent.png')
+
 .vinyl_color_display_wrap
-    width: 45%
-    margin-right: 5%
+    width: 150px
+    margin-right: 10px
     display: flex
     flex-direction: column
     justify-content: center
@@ -78,17 +102,82 @@
         width: 100%
 
 .vinyl_color_all_wrap
-    width: 50%
+    width: 55%
     display: flex
     flex-wrap: wrap
     align-items: flex-start
+    margin-top: -35px
+    justify-content: flex-end
 
 .vinyl_color_single
     width: 45px
     height: 45px
-    margin: 0 1px 1px 0
+    margin: 0 5px 5px 0
 
 #vinyl_color_text
     color: white
     font-size: 11px
     font-weight: 700
+
+.machine_cleaning_wrap
+    width: 150px
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    align-items: center
+    flex-wrap: wrap
+    margin-top: 20px
+
+    div
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin: 7px 0
+
+    input
+        appearance: none
+        position: relative
+        right: 0
+        bottom: 0
+        left: 0
+        height: 15px
+        width: 15px
+        background: $form-back
+        border: none
+        color: $dark-text
+        cursor: pointer
+        display: inline-block
+        margin: 0
+        outline: none
+        position: relative
+
+    input:hover
+        background: #9faab7
+
+    input:checked
+        background: $light-text
+
+    input:checked::before
+        height: 15px
+        width: 15px
+        position: absolute
+        content: '✔'
+        display: inline-block
+        font-size: 9px
+        text-align: center
+        line-height: 15px
+
+    input:checked::after
+        background: #40e0d0
+        content: ''
+        display: block
+        position: relative
+        z-index: 100
+
+    label
+        font-family: $body-font
+        color: $light-text
+        font-size: 14px
+        font-weight: 700
+        margin: 0 10px 0 5px
+        cursor: pointer

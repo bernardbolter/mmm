@@ -129,6 +129,38 @@
          $('#vinyl_color_text').html('YELLOW');
          $('#vinyl_color_disc').attr('src', 'img/vinyl_color_yellow_disc.png');
          break;
+      case 'vinyl_color_yellow_translucent':
+         $('#vinyl_color_text').html('YELLOW TRANSLUCENT');
+         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_yellow_translucent_disc.png');
+         break;
+      case 'vinyl_color_orange':
+         $('#vinyl_color_text').html('ORANGE');
+         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_orange_disc.png');
+         break;
+      case 'vinyl_color_red':
+         $('#vinyl_color_text').html('RED');
+         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_red_disc.png');
+         break;
+      case 'vinyl_color_red_translucent':
+         $('#vinyl_color_text').html('RED TRANSLUCENT');
+         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_red_translucent_disc.png');
+         break;
+      case 'vinyl_color_blue':
+         $('#vinyl_color_text').html('BLUE');
+         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_blue_disc.png');
+         break;
+      case 'vinyl_color_blue_translucent':
+         $('#vinyl_color_text').html('BLUE TRANSLUCENT');
+         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_blue_translucent_disc.png');
+         break;
+      case 'vinyl_color_green':
+         $('#vinyl_color_text').html('GREEN');
+         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_green_disc.png');
+         break;
+      case 'vinyl_color_green_translucent':
+         $('#vinyl_color_text').html('GREEN TRANSLUCENT');
+         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_green_translucent_disc.png');
+         break;
       default:
         console.log('no match');
     }
