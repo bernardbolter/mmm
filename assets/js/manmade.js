@@ -41,7 +41,7 @@
   console.log(randColor);
   if (randColor === 0) {
     $('.color-theme').addClass( "color-theme-magenta" );
-    $('.color-theme-background').addClass( "color-theme-background-magenta" );
+    $('.color-theme-line').addClass( "color-theme-line-magenta" );
     $('.color-theme-team').addClass( "color-theme-team-magenta" );
     $('.color-theme-select').addClass( "color-theme-select-magenta" );
   } 
@@ -163,6 +163,67 @@
          break;
       default:
         console.log('no match');
+    }
+  });
+
+  // Hide default field for label dropdown
+
+  $( "input[name=label_color_radios]" ).on("change", function() {
+    var labelChecked = this.value;
+    switch (labelChecked) {
+      case 'label_print_1c':
+        $('#color_of_label').addClass('color_of_label_on');
+        break;
+      case 'label_print_4c':
+        $('#color_of_label').addClass('color_of_label_on');
+        break;
+      case 'label_print_default':
+        $('#color_of_label').removeClass('color_of_label_on');
+        break;
+      default:
+        $('#color_of_label').removeClass('color_of_label_on');
+    }
+  });
+
+  $( "input[name=sleeves_color_radios]" ).on("change", function() {
+    var sleeveChecked = this.value;
+    switch (sleeveChecked) {
+      case 'sleeves_print_1c':
+        $('#type_of_sleeve').addClass('type_of_sleeve_off');
+        $('#type_of_sleeve_color').removeClass('type_of_sleeve_color_off');
+        break;
+      case 'sleeves_print_4c':
+        $('#type_of_sleeve').addClass('type_of_sleeve_off');
+        $('#type_of_sleeve_color').removeClass('type_of_sleeve_color_off');
+        break;
+      case 'sleevs_print_default':
+        $('#type_of_sleeve').removeClass('type_of_sleeve_off');
+        $('#type_of_sleeve_color').addClass('type_of_sleeve_color_off');
+        break;
+      default:
+        $('#type_of_sleeve').removeClass('type_of_sleeve_off');
+        $('#type_of_sleeve_color').addClass('type_of_sleeve_color_off');
+    }
+  });
+
+  $( "input[name=cover_color_radios]" ).on("change", function() {
+    var coverChecked = this.value;
+    switch (coverChecked) {
+      case 'cover_print_1c':
+        $('#type_of_cover').addClass('type_of_cover_off');
+        $('#type_of_cover_color').removeClass('type_of_cover_color_off');
+        break;
+      case 'cover_print_4c':
+        $('#type_of_cover').addClass('type_of_cover_off');
+        $('#type_of_cover_color').removeClass('type_of_cover_color_off');
+        break;
+      case 'cover_print_default':
+        $('#type_of_cover').removeClass('type_of_cover_off');
+        $('#type_of_cover_color').addClass('type_of_cover_color_off');
+        break;
+      default:
+        $('#type_of_cover').removeClass('type_of_cover_off');
+        $('#type_of_cover_color').addClass('type_of_cover_color_off');
     }
   });
 

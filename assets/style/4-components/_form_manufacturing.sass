@@ -83,7 +83,18 @@
     position: relative
     right: 0
     transition: max-height 1s ease-in-out, right 2s ease-in-out
-    max-height: 2000px
+    max-height: 5000px
 
 .manmade-form-heading
     color: white
+
+.manufactoring_header_wrap
+    width: 96%
+    margin: 0 2% 10px
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    @media (min-width: $mobile-break)
+        flex-direction: row
+        justify-content: space-between
