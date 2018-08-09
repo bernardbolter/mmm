@@ -1,5 +1,5 @@
 <div id="manufacturing_button" class="form-header">
-    <h3>Vinyl Manufaturing Info</h3>
+    <h3>Vinyl Manufaturing Order</h3>
     <a class="manufacturing_button">
         <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <path d="M18.9322709,25.8285624 C18.7703137,25.836892 18.624696,25.939809 18.5502831,26.0985366 C18.4758703,26.2572641 18.4839707,26.447681 18.5715322,26.5980422 C18.6590936,26.7484035 18.8128099,26.8358594 18.974764,26.8274584 L28.039954,26.8274584 C28.2034156,26.8300058 28.3554595,26.7353726 28.4378649,26.5797957 C28.5202703,26.4242189 28.5202703,26.231802 28.4378649,26.0762251 C28.3554595,25.9206483 28.2034156,25.8260151 28.039954,25.8285624 L18.974764,25.8285624 C18.9606074,25.8278305 18.9464275,25.8278305 18.9322709,25.8285624 Z"  fill-rule="nonzero" transform="translate(23.499669, 26.328013) rotate(-45.000000) translate(-23.499669, -26.328013) "></path>
@@ -12,378 +12,322 @@
 
 <!-- MANUFACTURING SECTION -->
 
-<section class="manufacturing_wrap manufacturing_wrap_on">
-
-    <div id="manufacturing_switch_button" class="form-header">
-        <h4>If you have your vinyl manufactoring setup, click here</h4>
-        <a class="manufacturing_switch_button">
-            <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <path d="M18.9322709,25.8285624 C18.7703137,25.836892 18.624696,25.939809 18.5502831,26.0985366 C18.4758703,26.2572641 18.4839707,26.447681 18.5715322,26.5980422 C18.6590936,26.7484035 18.8128099,26.8358594 18.974764,26.8274584 L28.039954,26.8274584 C28.2034156,26.8300058 28.3554595,26.7353726 28.4378649,26.5797957 C28.5202703,26.4242189 28.5202703,26.231802 28.4378649,26.0762251 C28.3554595,25.9206483 28.2034156,25.8260151 28.039954,25.8285624 L18.974764,25.8285624 C18.9606074,25.8278305 18.9464275,25.8278305 18.9322709,25.8285624 Z"  fill-rule="nonzero" transform="translate(23.499669, 26.328013) rotate(-45.000000) translate(-23.499669, -26.328013) "></path>
-                <path d="M10.4067665,19.4357976 C10.0671681,19.4441272 9.76183073,19.5470442 9.60579882,19.7057717 C9.44976691,19.8644992 9.46675209,20.0549161 9.65035464,20.2052774 C9.83395718,20.3556386 10.1562757,20.4430946 10.4958677,20.4346936 L29.5041323,20.4346936 C29.8468854,20.4372409 30.1656972,20.3426077 30.3384884,20.1870309 C30.5112795,20.031454 30.5112795,19.8390371 30.3384884,19.6834603 C30.1656972,19.5278834 29.8468854,19.4332502 29.5041323,19.4357976 L10.4958677,19.4357976 C10.4661837,19.4350656 10.4364506,19.4350656 10.4067665,19.4357976 Z"  fill-rule="nonzero" transform="translate(19.983875, 19.935249) rotate(-90.000000) translate(-19.983875, -19.935249) "></path>
-                <path d="M11.9316889,26.0430094 C11.7697317,26.0509851 11.6241139,26.1495298 11.5497011,26.301514 C11.4752883,26.4534982 11.4833886,26.6358254 11.5709501,26.7797989 C11.6585116,26.9237722 11.8122278,27.0075126 11.9741819,26.9994686 L21.0393719,26.9994686 C21.2028336,27.0019077 21.3548774,26.9112949 21.4372829,26.7623275 C21.5196883,26.6133602 21.5196883,26.4291178 21.4372829,26.2801505 C21.3548774,26.1311831 21.2028336,26.0405703 21.0393719,26.0430094 L11.9741819,26.0430094 C11.9600254,26.0423085 11.9458454,26.0423085 11.9316889,26.0430094 L11.9316889,26.0430094 Z"  fill-rule="nonzero" transform="translate(16.499087, 26.542484) rotate(45.000000) translate(-16.499087, -26.542484) "></path>
-                <circle cx="20" cy="20" r="19"></circle>
-            </svg>
-        </a>
+<section class="manufacturing_wrap">
+    <div class="manufactoring_header_wrap">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel semper lorem.</p>
+        <div class="dropdown_wrap test_pressing_wrap">
+            <div class="dropdown_label_wrap">
+                <label for="additional_test_pressings">Test Pressings <br />(2 test pressings w/ every order are free)<span class="text_pressings_footnote">*If you require addition test pressings please enter this quantity below.</span></label>   
+            </div>
+            <select id="test_pressing_amount" name="test_pressing_amount"></select>
+        </div>
     </div>
 
-    <!-- MANUFACTURING OUT-->
+    <!--  VINYL SELECTIONS -->
 
-    <section class="manufacturing_switch_wrap">
+    <div class="form_vinyl_selections_wrap color-theme-select">
+        <div class="form_vinyl_selections_radios">
+            <h3>VINYL <span class="h3_extra">| size</span></h3>
+            <input type="radio" id="manufacturing_7inch" value="manufacturing_7inch" name="manufacturing_vinyl_size" />
+            <label class="manufaturing_image manufacturing_vinyl_7" for="manufacturing_7inch"><span class="manufacturing_vinyl_font">7"</span></label> 
 
-        <section class="manufactoring_out_wrap">
-            <div class="manmade-form-text-1">
-            <p class="manmade-form-heading">PRESSING / MANUFACTURING SHIPPING INFORMATION:</p>
-                <p class="manmade-form-heading"><span class="manmade-form-heading-light">Please note:</span> Vinyl master lacquers will be shipped to pressing plants ONLY.</p>
+            <input type="radio" id="manufacturing_10inch" value="manufacturing_10inch" name="manufacturing_vinyl_size" />
+            <label class="manufaturing_image manufacturing_vinyl_10" for="manufacturing_10inch"><span class="manufacturing_vinyl_font">10"</span></label> 
+
+            <input type="radio" id="manufacturing_12inch" value="manufacturing_12inch" name="manufacturing_vinyl_size" />
+            <label class="manufaturing_image manufacturing_vinyl_12" for="manufacturing_12inch"><span class="manufacturing_vinyl_font">12"</span></label> 
+        </div>
+        <div class="form_vinyl_selections_amount">
+            <div class="vinyl-radio-button">
+                <input checked="checked" type="radio" id="140G_vinyl" value="140G_vinyl" name="vinyl_weight" />
+                <label for="vinyl_weight">140G Vinyl</label>
+                <input type="radio" id="180G_vinyl" value="180G_vinyl" name="vinyl_weight" />
+                <label for="vinyl_weight">180G Vinyl</label>
             </div>
-            <div class="manmade-input">
-                <label for="pressing_plant">Pressing Plant:</label>
-                <input type="text" name="pressing_plant">
+            <div class="vinyl_amount_wrap">
+                <div class="dropdown_label_wrap">
+                    <label for="amount_of_vinyl">How many units would like to order?<span class="vinyl_amount_footnote">(minimum 100 units, no test pressing issued)</span></label>   
+                </div>
+                <input type="text" name="amount_of_vinyl">
             </div>
-            <div class="manmade-input">
-                <label for="contact_person">Contact Person:</label>
-                <input type="text" name="contact_person">
+        </div>
+    </div>
+
+    <!--  VINYL COLOR  -->
+
+    <div class="vinyl_color_wrap">
+        <h3>VINYL <span class="h3_extra">| color</span></h3>
+        <section class="vinyl_color_selection_wrap">
+            <div class="vinyl_color_display_wrap">
+                <img id="vinyl_color_disc" src="img/vinyl_color_black_disc.png" alt="example of vinyl color">
+                <p id="vinyl_color_text">Black (default)</p>
             </div>
+            <div class="vinyl_color_all_wrap">
+                <div class="vinyl_color_single">
+                    <input type="radio" id="vinyl_color_black" value="vinyl_color_black" name="vinyl_color" />
+                    <label class="vinyl_color_image vinyl_color_black" for="vinyl_color_black">Black</label>
+                </div>
+                <div class="vinyl_color_single">
+                    <input type="radio" id="vinyl_color_white" value="vinyl_color_white" name="vinyl_color" />
+                    <label class="vinyl_color_image vinyl_color_white" for="vinyl_color_white">White</label>
+                </div>
+                <div class="vinyl_color_single">
+                    <input type="radio" id="vinyl_color_gold" value="vinyl_color_gold" name="vinyl_color" />
+                    <label class="vinyl_color_image vinyl_color_gold" for="vinyl_color_gold">Gold</label>
+                </div>
+                <div class="vinyl_color_single">
+                    <input type="radio" id="vinyl_color_yellow" value="vinyl_color_yellow" name="vinyl_color" />
+                    <label class="vinyl_color_image vinyl_color_yellow" for="vinyl_color_yellow">Yellow</label>
+                </div>
+                <div class="vinyl_color_single">
+                    <input type="radio" id="vinyl_color_yellow_translucent" value="vinyl_color_yellow_translucent" name="vinyl_color" />
+                    <label class="vinyl_color_image vinyl_color_yellow_translucent" for="vinyl_color_yellow_translucent">Yellow Translucent</label>
+                </div>
+                <div class="vinyl_color_single">
+                    <input type="radio" id="vinyl_color_orange" value="vinyl_color_orange" name="vinyl_color" />
+                    <label class="vinyl_color_image vinyl_color_orange" for="vinyl_color_orange">Orange</label>
+                </div>
+                <div class="vinyl_color_single">
+                    <input type="radio" id="vinyl_color_red" value="vinyl_color_red" name="vinyl_color" />
+                    <label class="vinyl_color_image vinyl_color_red" for="vinyl_color_red">Red</label>
+                </div>
+                <div class="vinyl_color_single">
+                    <input type="radio" id="vinyl_color_red_translucent" value="vinyl_color_red_translucent" name="vinyl_color" />
+                    <label class="vinyl_color_image vinyl_color_red_translucent" for="vinyl_color_red_translucent">Red Translucent</label>
+                </div>
+                <div class="vinyl_color_single">
+                    <input type="radio" id="vinyl_color_blue" value="vinyl_color_blue" name="vinyl_color" />
+                    <label class="vinyl_color_image vinyl_color_blue" for="vinyl_color_blue">Blue</label>
+                </div>
+                <div class="vinyl_color_single">
+                    <input type="radio" id="vinyl_color_blue_translucent" value="vinyl_color_blue_translucent" name="vinyl_color" />
+                    <label class="vinyl_color_image vinyl_color_blue_translucent" for="vinyl_color_blue_translucent">Blue Translucent</label>
+                </div>
+                <div class="vinyl_color_single">
+                    <input type="radio" id="vinyl_color_green" value="vinyl_color_green" name="vinyl_color" />
+                    <label class="vinyl_color_image vinyl_color_green" for="vinyl_color_green">Green</label>
+                </div>
+                <div class="vinyl_color_single">
+                    <input type="radio" id="vinyl_color_green_translucent" value="vinyl_color_green_translucent" name="vinyl_color" />
+                    <label class="vinyl_color_image vinyl_color_green_translucent" for="vinyl_color_green_translucent">Green Translucent</label>
+                </div>
+                <div class="machine_cleaning_wrap">
+                    <input type="checkbox" id="marbled" value="marbled" name="marbled" />
+                    <label for="marbled">Marbled</label>
+                </div>
+                <div class="machine_cleaning_wrap">
+                    <input type="checkbox" id="transparent" value="transparent" name="transparent" />
+                    <label for="transparent">Transparent</label>
+                </div>
+            </div> 
         </section>
+    </div>
 
-        <!-- MANUFACTURING IN-->
+    <!-- LABEL -->
 
-        <section class="manufactoring_in_wrap manufactoring_in_wrap_on">
-            <div class="manufactoring_header_wrap">
-                <div class="dropdown_wrap">
-                    <div class="dropdown_label_wrap">
-                        <label for="delivery_of_audio_data">Delivery of Audio Data:</label>
-                        <img src="img/info.png" class="tooltip info-tip" title="please note audio specification" />    
-                    </div>
-                    <div class="select_field">
-                        <select name="delivery_of_audio_data" id="delivery_of_audio_data" size="1">
-                            <option value="Nothing selected">select one</option>
-                            <option value="Data (WAV, CD), incl. 2 test pressings">Data (WAV, CD), incl. 2 test pressings</option>
-                            <option value="Data (WAV, CD), without test pressings">Data (WAV, CD), without test pressings</option>
-                            <option value="Lacquers will be delivered, incl. 2 test pressings">Lacquers will be delivered, incl. 2 test pressings</option>
-                            <option value="Lacquers will be delivered, without  test pressings">Lacquers will be delivered, without  test pressings</option>
-                            <option value="Matrix exists (Re-Order)">Matrix exists (Re-Order)</option>     
-                        </select>
-                    </div>
+    <div class="label_wrap color-theme-select">
+        <div class="label_radios_wrap">
+            <h3>CENTER LABELS <span class="h3_extra">| print</span></h3>
+            <div class="label_print_radios">
+                <div class="label_print_radio">
+                    <input type="radio" id="label_print_default" value="label_print_default" name="label_color_radios" />
+                    <label class="label_print_image label_print_default" for="label_print_default"></label> 
+                    <h5>default</h5>
                 </div>
-
-                <div class="dropdown_wrap">
-                    <div class="dropdown_label_wrap">
-                        <label for="additional_test_pressings">Additional Test Pressings / Promos:</label>   
-                        <img src="img/info.png" class="tooltip info-tip" title="number of sides longer than 15min number of sides longer than 15min number of sides longer than 15min number of sides longer than 15min number of sides longer than 15min number of sides longer than 15min number of sides longer than 15min number of sides longer than 15min number of sides longer than 15min number of sides longer than 15min" /> 
-                    </div>
-                    <input type="text" name="additional_test_pressings">
+                <div class="label_print_radio">
+                    <input type="radio" id="label_print_1c" value="label_print_1c" name="label_color_radios" />
+                    <label class="label_print_image label_print_1c" for="label_print_1c"></label> 
+                    <h5>1c</h5>
+                    <p>custom layout</p> 
+                </div>
+                <div class="label_print_radio">
+                    <input type="radio" id="label_print_4c" value="label_print_4c" name="label_color_radios" />
+                    <label class="label_print_image label_print_4c" for="label_print_4c"></label>
+                    <h5>4c</h5>
+                    <p>custom layout</p> 
                 </div>
             </div>
-
-            <!--  VINYL SELECTIONS -->
-
-            <div class="form_vinyl_selections_wrap color-theme-select">
-                <div class="form_vinyl_selections_radios">
-                    <h3>VINYL <span class="h3_extra">| size</span></h3>
-                    <input type="radio" id="manufacturing_7inch" value="manufacturing_7inch" name="manufacturing_vinyl_size" />
-                    <label class="manufaturing_image manufacturing_vinyl_7" for="manufacturing_7inch"><span class="manufacturing_vinyl_font">7"</span></label> 
-
-                    <input type="radio" id="manufacturing_10inch" value="manufacturing_10inch" name="manufacturing_vinyl_size" />
-                    <label class="manufaturing_image manufacturing_vinyl_10" for="manufacturing_10inch"><span class="manufacturing_vinyl_font">10"</span></label> 
-
-                    <input type="radio" id="manufacturing_12inch" value="manufacturing_12inch" name="manufacturing_vinyl_size" />
-                    <label class="manufaturing_image manufacturing_vinyl_12" for="manufacturing_12inch"><span class="manufacturing_vinyl_font">12"</span></label> 
+        </div>
+        <div class="label_inputs_wrap">
+            <div id="color_of_label" class="dropdown_wrap">
+                <div class="dropdown_label_wrap">
+                    <label for="delivery_of_audio_data">Color:</label>
                 </div>
-                <div class="form_vinyl_selections_amount">
-                    <div class="vinyl-radio-button">
-                        <input type="checkbox" id="180G_vinyl" value="180G_vinyl" name="180G_vinyl" />
-                        <label for="12inch">180G Vinyl</label>
-                    </div>
-                    <div class="vinyl_amount_wrap">
-                        <div class="dropdown_label_wrap">
-                            <label for="amount_of_vinyl">Amount:</label>   
-                            <img src="img/info.png" class="tooltip info-tip" title="number of sides longer than 15min number of sides longer than 15min number of sides longer than 15min number of sides longer than 15min number of sides longer than 15min number of sides longer than 15min number of sides longer than 15min number of sides longer than 15min number of sides longer than 15min number of sides longer than 15min" /> 
-                        </div>
-                        <input type="text" name="amount_of_vinyl">
-                    </div>
+                <div class="select_field">
+                    <select name="color_of_default_label" id="color_of_default_label" size="1">
+                        <option value="Nothing selected">select one</option>
+                        <option value="White">White</option>
+                        <option value="Black">Black</option>
+                        <option value="Repress">Repress</option>
+                    </select>
                 </div>
             </div>
-
-            <!--  VINYL COLOR  -->
-
-            <div class="vinyl_color_wrap">
-                <h3>VINYL <span class="h3_extra">| color</span></h3>
-                <section class="vinyl_color_selection_wrap">
-                    <div class="vinyl_color_display_wrap">
-                        <img id="vinyl_color_disc" src="img/vinyl_color_black_disc.png" alt="example of vinyl color">
-                        <p id="vinyl_color_text">Black (default)</p>
-                    </div>
-                    <div class="vinyl_color_all_wrap">
-                        <div class="vinyl_color_single">
-                            <input type="radio" id="vinyl_color_black" value="vinyl_color_black" name="vinyl_color" />
-                            <label class="vinyl_color_image vinyl_color_black" for="vinyl_color_black">Black</label>
-                        </div>
-                        <div class="vinyl_color_single">
-                            <input type="radio" id="vinyl_color_transparent" value="vinyl_color_transparent" name="vinyl_color" />
-                            <label class="vinyl_color_image vinyl_color_transparent" for="vinyl_color_transparent">Transparent</label>
-                        </div>
-                        <div class="vinyl_color_single">
-                            <input type="radio" id="vinyl_color_white" value="vinyl_color_white" name="vinyl_color" />
-                            <label class="vinyl_color_image vinyl_color_white" for="vinyl_color_white">White</label>
-                        </div>
-                        <div class="vinyl_color_single">
-                            <input type="radio" id="vinyl_color_gold" value="vinyl_color_gold" name="vinyl_color" />
-                            <label class="vinyl_color_image vinyl_color_gold" for="vinyl_color_gold">Gold</label>
-                        </div>
-                        <div class="vinyl_color_single">
-                            <input type="radio" id="vinyl_color_yellow" value="vinyl_color_yellow" name="vinyl_color" />
-                            <label class="vinyl_color_image vinyl_color_yellow" for="vinyl_color_yellow">Yellow</label>
-                        </div>
-                        <div class="vinyl_color_single">
-                            <input type="radio" id="vinyl_color_yellow_translucent" value="vinyl_color_yellow_translucent" name="vinyl_color" />
-                            <label class="vinyl_color_image vinyl_color_yellow_translucent" for="vinyl_color_yellow_translucent">Yellow Translucent</label>
-                        </div>
-                        <div class="vinyl_color_single">
-                            <input type="radio" id="vinyl_color_orange" value="vinyl_color_orange" name="vinyl_color" />
-                            <label class="vinyl_color_image vinyl_color_orange" for="vinyl_color_orange">Orange</label>
-                        </div>
-                        <div class="vinyl_color_single">
-                            <input type="radio" id="vinyl_color_red" value="vinyl_color_red" name="vinyl_color" />
-                            <label class="vinyl_color_image vinyl_color_red" for="vinyl_color_red">Red</label>
-                        </div>
-                        <div class="vinyl_color_single">
-                            <input type="radio" id="vinyl_color_red_translucent" value="vinyl_color_red_translucent" name="vinyl_color" />
-                            <label class="vinyl_color_image vinyl_color_red_translucent" for="vinyl_color_red_translucent">Red Translucent</label>
-                        </div>
-                        <div class="vinyl_color_single">
-                            <input type="radio" id="vinyl_color_blue" value="vinyl_color_blue" name="vinyl_color" />
-                            <label class="vinyl_color_image vinyl_color_blue" for="vinyl_color_blue">Blue</label>
-                        </div>
-                        <div class="vinyl_color_single">
-                            <input type="radio" id="vinyl_color_blue_translucent" value="vinyl_color_blue_translucent" name="vinyl_color" />
-                            <label class="vinyl_color_image vinyl_color_blue_translucent" for="vinyl_color_blue_translucent">Blue Translucent</label>
-                        </div>
-                        <div class="vinyl_color_single">
-                            <input type="radio" id="vinyl_color_green" value="vinyl_color_green" name="vinyl_color" />
-                            <label class="vinyl_color_image vinyl_color_green" for="vinyl_color_green">Green</label>
-                        </div>
-                        <div class="vinyl_color_single">
-                            <input type="radio" id="vinyl_color_green_translucent" value="vinyl_color_green_translucent" name="vinyl_color" />
-                            <label class="vinyl_color_image vinyl_color_green_translucent" for="vinyl_color_green_translucent">Green Translucent</label>
-                        </div>
-                        <div class="machine_cleaning_wrap">
-                            <input type="checkbox" id="machine_cleaning" value="machine_cleaning" name="machine_cleaning" />
-                            <label for="12inch">Machine Cleaning</label>
-                            <img src="img/info.png" class="tooltip info-tip" title="if this option is deactivated you will recieve some marbled records" />
-                        </div>
-                    </div> 
-                </section>
+            <div class="vinyl_amount_wrap">
+                <div class="dropdown_label_wrap">
+                    <label for="amount_of_labels">Amount:</label>   
+                    <img src="img/info.png" class="tooltip info-tip" title="The amount refers to paired labels. Minimum order of 500 labels." /> 
+                </div>
+                <input type="text" name="amount_of_labels">
             </div>
+        </div>
+    </div>
 
-            <!-- LABEL -->
+    <!--  INNER SLEEVES AND DISCO SLEEVES -->
 
-            <div class="label_wrap color-theme-select">
-                <div class="label_radios_wrap">
-                    <h3>LABEL <span class="h3_extra">| print</span></h3>
-                    <div class="label_print_radios">
-                        <div class="label_print_radio">
-                            <input type="radio" id="label_print_default" value="label_print_default" name="label_color_radios" />
-                            <label class="label_print_image label_print_default" for="label_print_default"></label> 
-                            <h5>default</h5>
-                        </div>
-                        <div class="label_print_radio">
-                            <input type="radio" id="label_print_1c" value="label_print_1c" name="label_color_radios" />
-                            <label class="label_print_image label_print_1c" for="label_print_1c"></label> 
-                            <h5>1c</h5>
-                            <p>custom layout</p> 
-                        </div>
-                        <div class="label_print_radio">
-                            <input type="radio" id="label_print_4c" value="label_print_4c" name="label_color_radios" />
-                            <label class="label_print_image label_print_4c" for="label_print_4c"></label>
-                            <h5>4c</h5>
-                            <p>custom layout</p> 
-                        </div>
-                    </div>
-                </div>
-                <div class="label_inputs_wrap">
-                    <div id="color_of_label" class="dropdown_wrap">
-                        <div class="dropdown_label_wrap">
-                            <label for="delivery_of_audio_data">Color:</label>
-                        </div>
-                        <div class="select_field">
-                            <select name="color_of_default_label" id="color_of_default_label" size="1">
-                                <option value="Nothing selected">select one</option>
-                                <option value="White">White</option>
-                                <option value="Black">Black</option>
-                                <option value="Repress">Repress</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="vinyl_amount_wrap">
-                        <div class="dropdown_label_wrap">
-                            <label for="amount_of_labels">Amount:</label>   
-                            <img src="img/info.png" class="tooltip info-tip" title="The amount refers to paired labels. Minimum order of 500 labels." /> 
-                        </div>
-                        <input type="text" name="amount_of_labels">
-                    </div>
-                </div>
+    <div class="sleeves_wrap color-theme-select">
+        <h3>SLEEVES <span class="h3_extra">| inner and disco</span></h3>
+        <div class="sleeves_print_radios">
+            <div class="sleeves_print_radio">
+                <input type="radio" id="sleeves_print_default" value="sleeves_print_default" name="sleeves_color_radios" />
+                <label class="sleeves_print_image sleeves_print_default" for="sleeves_print_default"></label> 
+                <h5>default</h5>
             </div>
-
-            <!--  INNER SLEEVES AND DISCO SLEEVES -->
-
-            <div class="sleeves_wrap color-theme-select">
-                <h3>SLEEVES <span class="h3_extra">| inner and disco</span></h3>
-                <div class="sleeves_print_radios">
-                    <div class="sleeves_print_radio">
-                        <input type="radio" id="sleeves_print_default" value="sleeves_print_default" name="sleeves_color_radios" />
-                        <label class="sleeves_print_image sleeves_print_default" for="sleeves_print_default"></label> 
-                        <h5>default</h5>
-                    </div>
-                    <div class="sleeves_print_radio">
-                        <input type="radio" id="sleeves_print_1c" value="sleeves_print_1c" name="sleeves_color_radios" />
-                        <label class="sleeves_print_image sleeves_print_1c" for="sleeves_print_1c"></label> 
-                        <h5>1c</h5>
-                        <p>custom layout</p> 
-                    </div>
-                    <div class="sleeves_print_radio">
-                        <input type="radio" id="sleeves_print_4c" value="sleeves_print_4c" name="sleeves_color_radios" />
-                        <label class="sleeves_print_image sleeves_print_4c" for="sleeves_print_4c"></label>
-                        <h5>4c</h5>
-                        <p>custom layout</p> 
-                    </div>
-                </div>
-                <div id="type_of_sleeve" class="dropdown_wrap">
-                    <div class="dropdown_label_wrap">
-                        <label for="type_of_sleeve">Type of Sleeve:</label>
-                    </div>
-                    <div class="select_field">
-                        <select name="type_of_sleeve" id="type_of_sleeve" size="1">
-                            <option value="Nothing selected">None</option>
-                            <option value="Inner Sleeve White">Inner Sleeve White</option>
-                            <option value="Inner Sleeve Black">Inner Sleeve Black</option>
-                            <option value="Inner Sleeve White Polylined">Inner Sleeve White Polylined</option>
-                            <option value="Inner Sleeve Black Polylined">Inner Sleeve Black Polylined</option>
-                            <option value="Disco Bag White">Disco Bag White</option>
-                            <option value="Disco Bag Black">Disco Bag Black</option>
-                            <option value="Disco Bag Brown">Disco Bag Brown</option>
-                        </select>
-                    </div>
-                </div>
-                <div id="type_of_sleeve_color" class="dropdown_wrap type_of_sleeve_color_off">
-                    <div class="dropdown_label_wrap">
-                        <label for="type_of_sleeve">Type of Sleeve:</label>
-                        <img src="img/info.png" class="tooltip info-tip" title="Standard grammage at 3mm back: GC2 350g and GC1 300g for all other options. Different paper thicknesses, print on rough side and matt lacquer possible on request." /> 
-                    </div>
-                    <div class="select_field">
-                        <select name="type_of_sleeve_color" id="type_of_sleeve" size="1">
-                            <option value="Nothing selected">None</option>
-                            <option value="Inner Sleeves">Inner Sleeves</option>
-                            <option value="Disco Bags">Disco Bags</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="vinyl_amount_wrap">
-                    <div class="dropdown_label_wrap">
-                        <label for="amount_of_sleeves">Amount:</label>   
-                        <img src="img/info.png" class="tooltip info-tip" title="Minimum of 300 copies for printed matter." /> 
-                    </div>
-                    <input type="text" name="amount_of_sleeves">
-                </div>
+            <div class="sleeves_print_radio">
+                <input type="radio" id="sleeves_print_1c" value="sleeves_print_1c" name="sleeves_color_radios" />
+                <label class="sleeves_print_image sleeves_print_1c" for="sleeves_print_1c"></label> 
+                <h5>1c</h5>
+                <p>custom layout</p> 
             </div>
-
-            <!--  COVER  -->
-
-            <div class="sleeves_wrap color-theme-select">
-                <h3>COVER<span class="h3_extra">| print</span></h3>
-                <div class="sleeves_print_radios">
-                    <div class="sleeves_print_radio">
-                        <input type="radio" id="cover_print_default" value="cover_print_default" name="cover_color_radios" />
-                        <label class="sleeves_print_image cover_print_default" for="cover_print_default"></label> 
-                        <h5>default</h5>
-                    </div>
-                    <div class="sleeves_print_radio">
-                        <input type="radio" id="cover_print_1c" value="cover_print_1c" name="cover_color_radios" />
-                        <label class="sleeves_print_image cover_print_1c" for="cover_print_1c"></label> 
-                        <h5>1c</h5>
-                        <p>custom layout</p> 
-                    </div>
-                    <div class="sleeves_print_radio">
-                        <input type="radio" id="cover_print_4c" value="cover_print_4c" name="cover_color_radios" />
-                        <label class="sleeves_print_image cover_print_4c" for="cover_print_4c"></label>
-                        <h5>4c</h5>
-                        <p>custom layout</p> 
-                    </div>
-                </div>
-                <div id="type_of_cover" class="dropdown_wrap">
-                    <div class="dropdown_label_wrap">
-                        <label for="type_of_sleeve">Type of Cover:</label>
-                    </div>
-                    <div class="select_field">
-                        <select name="type_of_sleeve" id="type_of_sleeve" size="1">
-                            <option value="None">None</option>
-                            <option value="Cover White">Cover White</option>
-                            <option value="Cover White inside out">Cover White inside out</option>
-                            <option value="Cover Black">Cover Black</option>
-                            <option value="Cover Black inside out">Cover Black inside out</option>
-                            <option value="Cover Brown">Cover Brown</option>
-                        </select>
-                    </div>
-                </div>
-                <div id="type_of_cover_color" class="dropdown_wrap type_of_cover_color_off">
-                    <div class="dropdown_label_wrap">
-                        <label for="type_of_sleeve">Type of Cover:</label>
-                        <img src="img/info.png" class="tooltip info-tip" title="Standard grammage at 3mm back: GC2 350g and GC1 300g for all other options. Different paper thicknesses, print on rough side and matt lacquer possible on request." /> 
-                    </div>
-                    <div class="select_field">
-                        <select name="type_of_sleeve_color" id="type_of_sleeve" size="1">
-                            <option value="Nothing selected">None</option>
-                            <option value="3mm Cover">3mm Cover</option>
-                            <option value="5mm Cover (for 2 LPs)">5mm Cover (for 2 LPs)</option>
-                            <option value="7mm Cover (for 2 LPs)">7mm Cover (for 3 LPs)</option>
-                            <option value="7mm Gatefold (for 1-2 LPs)">7mm Gatefold (for 1-2 LPs)</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="vinyl_amount_wrap">
-                    <div class="dropdown_label_wrap">
-                        <label for="amount_of_covers">Amount:</label>   
-                        <img src="img/info.png" class="tooltip info-tip" title="minimum of 300 copies for printed matter." /> 
-                    </div>
-                    <input type="text" name="amount_of_covers">
-                </div>
+            <div class="sleeves_print_radio">
+                <input type="radio" id="sleeves_print_4c" value="sleeves_print_4c" name="sleeves_color_radios" />
+                <label class="sleeves_print_image sleeves_print_4c" for="sleeves_print_4c"></label>
+                <h5>4c</h5>
+                <p>custom layout</p> 
             </div>
-
-            <!--  PE AND PVC SLEEVES -->
-
-            <div class="pvc_wrap">
-                <h3>SLEEVES<span class="h3_extra">| PE and PVC</span></h3>
-                <div class="vinyl_amount_wrap">
-                    <div class="dropdown_label_wrap">
-                        <label for="amount_of_pe_pvc_sleeves">Amount:</label>   
-                    </div>
-                    <input type="text" name="amount_of_pe_pvc_sleeves">
-                </div>
-                <div class="dropdown_wrap">
-                    <div class="dropdown_label_wrap">
-                        <label for="type_of_pe_pvc_sleeves">Type of PE and PVC Sleeves:</label>
-                        <img src="img/info.png" class="tooltip info-tip" title="Depending on size of the PE and PVC sleeves they can be used as inlay or outer cover." /> 
-                    </div>
-                    <div class="select_field">
-                        <select name="type_of_pe_pvc_sleeves" size="1">
-                            <option value="Nothing selected">None</option>
-                            <option value="PE SLeeve (thin, small)">PE SLeeve (thin, small)</option>
-                            <option value="PE Cover (thin, large)">PE Cover (thin, large)</option>
-                            <option value="PE Cover with flap">PE Cover with flap</option>
-                            <option value="PVC Sleeve (heavy, small)">PVC Sleeve (heavy, small)</option>
-                            <option value="PVC Cover (heavy, big)">PVC Cover (heavy, big)</option>
-                        </select>
-                    </div>
-                </div>
-
+        </div>
+        <div id="type_of_sleeve" class="dropdown_wrap">
+            <div class="dropdown_label_wrap">
+                <label for="type_of_sleeve">Type of Sleeve:</label>
             </div>
-
-            <!--  Further Packaging Services  -->
-
-            <div class="further_packaging_wrap">
-
+            <div class="select_field">
+                <select name="type_of_sleeve" id="type_of_sleeve" size="1">
+                    <option value="Nothing selected">None</option>
+                    <option value="Inner Sleeve White">Inner Sleeve White</option>
+                    <option value="Inner Sleeve Black">Inner Sleeve Black</option>
+                    <option value="Inner Sleeve White Polylined">Inner Sleeve White Polylined</option>
+                    <option value="Inner Sleeve Black Polylined">Inner Sleeve Black Polylined</option>
+                    <option value="Disco Bag White">Disco Bag White</option>
+                    <option value="Disco Bag Black">Disco Bag Black</option>
+                    <option value="Disco Bag Brown">Disco Bag Brown</option>
+                </select>
             </div>
+        </div>
+        <div id="type_of_sleeve_color" class="dropdown_wrap type_of_sleeve_color_off">
+            <div class="dropdown_label_wrap">
+                <label for="type_of_sleeve">Type of Sleeve:</label>
+                <img src="img/info.png" class="tooltip info-tip" title="Standard grammage at 3mm back: GC2 350g and GC1 300g for all other options. Different paper thicknesses, print on rough side and matt lacquer possible on request." /> 
+            </div>
+            <div class="select_field">
+                <select name="type_of_sleeve_color" id="type_of_sleeve" size="1">
+                    <option value="Nothing selected">None</option>
+                    <option value="Inner Sleeves">Inner Sleeves</option>
+                    <option value="Disco Bags">Disco Bags</option>
+                </select>
+            </div>
+        </div>
+        <div class="vinyl_amount_wrap">
+            <div class="dropdown_label_wrap">
+                <label for="amount_of_sleeves">Amount:</label>   
+                <img src="img/info.png" class="tooltip info-tip" title="Minimum of 300 copies for printed matter." /> 
+            </div>
+            <input type="text" name="amount_of_sleeves">
+        </div>
+    </div>
 
-        <!-- End Manufacturing IN  -->
-        </section>
-    </section>
+    <!--  COVER  -->
+
+    <div class="sleeves_wrap color-theme-select">
+        <h3>COVER<span class="h3_extra">| print</span></h3>
+        <div class="sleeves_print_radios">
+            <div class="sleeves_print_radio">
+                <input type="radio" id="cover_print_default" value="cover_print_default" name="cover_color_radios" />
+                <label class="sleeves_print_image cover_print_default" for="cover_print_default"></label> 
+                <h5>default</h5>
+            </div>
+            <div class="sleeves_print_radio">
+                <input type="radio" id="cover_print_1c" value="cover_print_1c" name="cover_color_radios" />
+                <label class="sleeves_print_image cover_print_1c" for="cover_print_1c"></label> 
+                <h5>1c</h5>
+                <p>custom layout</p> 
+            </div>
+            <div class="sleeves_print_radio">
+                <input type="radio" id="cover_print_4c" value="cover_print_4c" name="cover_color_radios" />
+                <label class="sleeves_print_image cover_print_4c" for="cover_print_4c"></label>
+                <h5>4c</h5>
+                <p>custom layout</p> 
+            </div>
+        </div>
+        <div id="type_of_cover" class="dropdown_wrap">
+            <div class="dropdown_label_wrap">
+                <label for="type_of_sleeve">Type of Cover:</label>
+            </div>
+            <div class="select_field">
+                <select name="type_of_sleeve" id="type_of_sleeve" size="1">
+                    <option value="None">None</option>
+                    <option value="Cover White">Cover White</option>
+                    <option value="Cover White inside out">Cover White inside out</option>
+                    <option value="Cover Black">Cover Black</option>
+                    <option value="Cover Black inside out">Cover Black inside out</option>
+                    <option value="Cover Brown">Cover Brown</option>
+                </select>
+            </div>
+        </div>
+        <div id="type_of_cover_color" class="dropdown_wrap type_of_cover_color_off">
+            <div class="dropdown_label_wrap">
+                <label for="type_of_sleeve">Type of Cover:</label>
+                <img src="img/info.png" class="tooltip info-tip" title="Standard grammage at 3mm back: GC2 350g and GC1 300g for all other options. Different paper thicknesses, print on rough side and matt lacquer possible on request." /> 
+            </div>
+            <div class="select_field">
+                <select name="type_of_sleeve_color" id="type_of_sleeve" size="1">
+                    <option value="Nothing selected">None</option>
+                    <option value="3mm Cover">3mm Cover</option>
+                    <option value="5mm Cover (for 2 LPs)">5mm Cover (for 2 LPs)</option>
+                    <option value="7mm Cover (for 2 LPs)">7mm Cover (for 3 LPs)</option>
+                    <option value="7mm Gatefold (for 1-2 LPs)">7mm Gatefold (for 1-2 LPs)</option>
+                </select>
+            </div>
+        </div>
+        <div class="vinyl_amount_wrap">
+            <div class="dropdown_label_wrap">
+                <label for="amount_of_covers">Amount:</label>   
+                <img src="img/info.png" class="tooltip info-tip" title="minimum of 300 copies for printed matter." /> 
+            </div>
+            <input type="text" name="amount_of_covers">
+        </div>
+    </div>
+
+    <!--  PE AND PVC SLEEVES -->
+
+    <div class="pvc_wrap">
+        <h3>SLEEVES<span class="h3_extra">| PE and PVC</span></h3>
+        <div class="vinyl_amount_wrap">
+            <div class="dropdown_label_wrap">
+                <label for="amount_of_pe_pvc_sleeves">Amount:</label>   
+            </div>
+            <input type="text" name="amount_of_pe_pvc_sleeves">
+        </div>
+        <div class="dropdown_wrap">
+            <div class="dropdown_label_wrap">
+                <label for="type_of_pe_pvc_sleeves">Type of PE and PVC Sleeves:</label>
+                <img src="img/info.png" class="tooltip info-tip" title="Depending on size of the PE and PVC sleeves they can be used as inlay or outer cover." /> 
+            </div>
+            <div class="select_field">
+                <select name="type_of_pe_pvc_sleeves" size="1">
+                    <option value="Nothing selected">None</option>
+                    <option value="PE SLeeve (thin, small)">PE SLeeve (thin, small)</option>
+                    <option value="PE Cover (thin, large)">PE Cover (thin, large)</option>
+                    <option value="PE Cover with flap">PE Cover with flap</option>
+                    <option value="PVC Sleeve (heavy, small)">PVC Sleeve (heavy, small)</option>
+                    <option value="PVC Cover (heavy, big)">PVC Cover (heavy, big)</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+    <!--  Further Packaging Services  -->
+
+    <div class="further_packaging_wrap">
+
+    </div>
 </section>

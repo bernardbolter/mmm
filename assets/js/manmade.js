@@ -25,26 +25,20 @@
     $('.manufacturing_button').toggleClass( "manufacturing_button_on" );
   });
 
-  $('#manufacturing_switch_button').click(function() {
-    $('.manufactoring_out_wrap').toggleClass( "manufactoring_out_wrap_on" );
-    $('.manufactoring_in_wrap').toggleClass( "manufactoring_in_wrap_on" );
-    $('.manufacturing_switch_button').toggleClass( "manufacturing_switch_button_on" );
-  });
-
   $('.privacy-button').click(function() {
     $('#privacy-policy').toggleClass("privacy-policy-on");
   })
 
   // CHANGE COLOR OF ELEMENTS ON LOAD
 
-  var randColor = Math.floor(Math.random() * 2);
-  console.log(randColor);
-  if (randColor === 0) {
-    $('.color-theme').addClass( "color-theme-magenta" );
-    $('.color-theme-line').addClass( "color-theme-line-magenta" );
-    $('.color-theme-team').addClass( "color-theme-team-magenta" );
-    $('.color-theme-select').addClass( "color-theme-select-magenta" );
-  } 
+  // var randColor = Math.floor(Math.random() * 2);
+  // console.log(randColor);
+  // if (randColor === 0) {
+  //   $('.color-theme').addClass( "color-theme-magenta" );
+  //   $('.color-theme-line').addClass( "color-theme-line-magenta" );
+  //   $('.color-theme-team').addClass( "color-theme-team-magenta" );
+  //   $('.color-theme-select').addClass( "color-theme-select-magenta" );
+  // } 
 
   // SCROLL TO ACTION FROM MENU
 
@@ -103,6 +97,16 @@
       side: ['left', 'top'],
       maxWidth: 230
     });
+
+  // add dropdown to the test pressing
+
+  for(var i=1; i<=24; i++){
+      var select = document.getElementById("test_pressing_amount");
+      var option = document.createElement("OPTION");
+    select.options.add(option);
+    option.text = i-1;
+    option.value = i-1;
+  }
 
   // Change text of vinyl color selector
 
