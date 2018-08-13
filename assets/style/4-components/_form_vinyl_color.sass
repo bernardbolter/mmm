@@ -15,6 +15,9 @@
     flex-direction: row
     justify-content: space-between
     align-items: flex-start
+    flex-wrap: wrap
+    border-bottom: 1px solid #666
+    padding: 0 0 20px
 
     input
         margin: 0
@@ -91,18 +94,19 @@
     background-image: url('img/vinyl_color_green_translucent.png')
 
 .vinyl_color_display_wrap
-    width: 150px
-    margin-right: 10px
+    width: 48%
+    margin-right: 2%
     display: flex
     flex-direction: column
     justify-content: center
     align-items: flex-start
+    max-width: 150px
 
     img
         width: 100%
 
 .vinyl_color_all_wrap
-    width: 55%
+    width: 50%
     display: flex
     flex-wrap: wrap
     align-items: flex-start
@@ -119,8 +123,14 @@
     font-size: 11px
     font-weight: 700
 
+.vinyl_color_notes_wrap
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+
 .machine_cleaning_wrap
-    width: 150px
+    margin-left: 15px
     display: flex
     flex-direction: row
     justify-content: flex-end

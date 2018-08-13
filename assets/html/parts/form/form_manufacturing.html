@@ -12,13 +12,11 @@
 
 <!-- MANUFACTURING SECTION -->
 
-<section class="manufacturing_wrap">
+<section class="manufacturing_wrap manufacturing_wrap_on">
     <div class="manufactoring_header_wrap">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel semper lorem.</p>
-        <div class="dropdown_wrap test_pressing_wrap">
-            <div class="dropdown_label_wrap">
-                <label for="additional_test_pressings">Test Pressings <br />(2 test pressings w/ every order are free)<span class="text_pressings_footnote">*If you require addition test pressings please enter this quantity below.</span></label>   
-            </div>
+        <p>Change text here for info about manufacturing.</p>
+        <div class="test_pressing_wrap">
+            <label for="additional_test_pressings">Test Pressings <br />(2 test pressings w/ every order are free)<span class="text_pressings_footnote">*If you require addition test pressings please enter this quantity below.</span></label>   
             <select id="test_pressing_amount" name="test_pressing_amount"></select>
         </div>
     </div>
@@ -26,29 +24,30 @@
     <!--  VINYL SELECTIONS -->
 
     <div class="form_vinyl_selections_wrap color-theme-select">
-        <div class="form_vinyl_selections_radios">
-            <h3>VINYL <span class="h3_extra">| size</span></h3>
-            <input type="radio" id="manufacturing_7inch" value="manufacturing_7inch" name="manufacturing_vinyl_size" />
-            <label class="manufaturing_image manufacturing_vinyl_7" for="manufacturing_7inch"><span class="manufacturing_vinyl_font">7"</span></label> 
+        <div class="form_vinyl_size">
+            <div class="form_vinyl_selections_radios">
+                <h3>VINYL <span class="h3_extra">| size</span></h3>
+                <input type="radio" id="manufacturing_7inch" value="manufacturing_7inch" name="manufacturing_vinyl_size" />
+                <label class="manufaturing_image manufacturing_vinyl_7" for="manufacturing_7inch"><span class="manufacturing_vinyl_font">7"</span></label> 
 
-            <input type="radio" id="manufacturing_10inch" value="manufacturing_10inch" name="manufacturing_vinyl_size" />
-            <label class="manufaturing_image manufacturing_vinyl_10" for="manufacturing_10inch"><span class="manufacturing_vinyl_font">10"</span></label> 
+                <input type="radio" id="manufacturing_10inch" value="manufacturing_10inch" name="manufacturing_vinyl_size" />
+                <label class="manufaturing_image manufacturing_vinyl_10" for="manufacturing_10inch"><span class="manufacturing_vinyl_font">10"</span></label> 
 
-            <input type="radio" id="manufacturing_12inch" value="manufacturing_12inch" name="manufacturing_vinyl_size" />
-            <label class="manufaturing_image manufacturing_vinyl_12" for="manufacturing_12inch"><span class="manufacturing_vinyl_font">12"</span></label> 
-        </div>
-        <div class="form_vinyl_selections_amount">
-            <div class="vinyl-radio-button">
-                <input checked="checked" type="radio" id="140G_vinyl" value="140G_vinyl" name="vinyl_weight" />
-                <label for="vinyl_weight">140G Vinyl</label>
-                <input type="radio" id="180G_vinyl" value="180G_vinyl" name="vinyl_weight" />
-                <label for="vinyl_weight">180G Vinyl</label>
+                <input type="radio" id="manufacturing_12inch" value="manufacturing_12inch" name="manufacturing_vinyl_size" />
+                <label class="manufaturing_image manufacturing_vinyl_12" for="manufacturing_12inch"><span class="manufacturing_vinyl_font">12"</span></label> 
             </div>
-            <div class="vinyl_amount_wrap">
-                <div class="dropdown_label_wrap">
-                    <label for="amount_of_vinyl">How many units would like to order?<span class="vinyl_amount_footnote">(minimum 100 units, no test pressing issued)</span></label>   
+            <div class="form_vinyl_selections_amount">
+                <div class="vinyl-radio-button">
+                    <input checked="checked" type="radio" id="140G_vinyl" value="140G_vinyl" name="vinyl_weight" />
+                    <label for="vinyl_weight">140G Vinyl</label>
+                    <input type="radio" id="180G_vinyl" value="180G_vinyl" name="vinyl_weight" />
+                    <label for="vinyl_weight">180G Vinyl</label>
                 </div>
-                <input type="text" name="amount_of_vinyl">
+                <div class="vinyl_amount_wrap">
+                    <div class="dropdown_label_wrap">
+                    <label for="amount_of_vinyl">How many units would like to order?<span class="vinyl_amount_footnote">(minimum 100 units, no test pressing issued)</span></label>   
+                    <input type="text" name="amount_of_vinyl">
+                </div>
             </div>
         </div>
     </div>
@@ -111,6 +110,8 @@
                     <input type="radio" id="vinyl_color_green_translucent" value="vinyl_color_green_translucent" name="vinyl_color" />
                     <label class="vinyl_color_image vinyl_color_green_translucent" for="vinyl_color_green_translucent">Green Translucent</label>
                 </div>
+            </div>
+            <div class="vinyl_color_notes_wrap">
                 <div class="machine_cleaning_wrap">
                     <input type="checkbox" id="marbled" value="marbled" name="marbled" />
                     <label for="marbled">Marbled</label>
@@ -162,7 +163,7 @@
                     </select>
                 </div>
             </div>
-            <div class="vinyl_amount_wrap">
+            <div class="color_amount_wrap">
                 <div class="dropdown_label_wrap">
                     <label for="amount_of_labels">Amount:</label>   
                     <img src="img/info.png" class="tooltip info-tip" title="The amount refers to paired labels. Minimum order of 500 labels." /> 
@@ -195,49 +196,51 @@
                 <p>custom layout</p> 
             </div>
         </div>
-        <div id="type_of_sleeve" class="dropdown_wrap">
-            <div class="dropdown_label_wrap">
-                <label for="type_of_sleeve">Type of Sleeve:</label>
+        <section class="sleeve_info_wrap">
+            <div id="type_of_sleeve" class="sleeve_dropdown_wrap">
+                <div class="dropdown_label_wrap">
+                    <label for="type_of_sleeve">Type of Sleeve:</label>
+                </div>
+                <div class="select_field">
+                    <select name="type_of_sleeve" id="type_of_sleeve" size="1">
+                        <option value="Nothing selected">None</option>
+                        <option value="Inner Sleeve White">Inner Sleeve White</option>
+                        <option value="Inner Sleeve Black">Inner Sleeve Black</option>
+                        <option value="Inner Sleeve White Polylined">Inner Sleeve White Polylined</option>
+                        <option value="Inner Sleeve Black Polylined">Inner Sleeve Black Polylined</option>
+                        <option value="Disco Bag White">Disco Bag White</option>
+                        <option value="Disco Bag Black">Disco Bag Black</option>
+                        <option value="Disco Bag Brown">Disco Bag Brown</option>
+                    </select>
+                </div>
             </div>
-            <div class="select_field">
-                <select name="type_of_sleeve" id="type_of_sleeve" size="1">
-                    <option value="Nothing selected">None</option>
-                    <option value="Inner Sleeve White">Inner Sleeve White</option>
-                    <option value="Inner Sleeve Black">Inner Sleeve Black</option>
-                    <option value="Inner Sleeve White Polylined">Inner Sleeve White Polylined</option>
-                    <option value="Inner Sleeve Black Polylined">Inner Sleeve Black Polylined</option>
-                    <option value="Disco Bag White">Disco Bag White</option>
-                    <option value="Disco Bag Black">Disco Bag Black</option>
-                    <option value="Disco Bag Brown">Disco Bag Brown</option>
-                </select>
+            <div id="type_of_sleeve_color" class="sleeve_dropdown_wrap type_of_sleeve_color_off">
+                <div class="dropdown_label_wrap">
+                    <label for="type_of_sleeve">Type of Sleeve:</label>
+                    <img src="img/info.png" class="tooltip info-tip" title="Standard grammage at 3mm back: GC2 350g and GC1 300g for all other options. Different paper thicknesses, print on rough side and matt lacquer possible on request." /> 
+                </div>
+                <div class="select_field">
+                    <select name="type_of_sleeve_color" id="type_of_sleeve" size="1">
+                        <option value="Nothing selected">None</option>
+                        <option value="Inner Sleeves">Inner Sleeves</option>
+                        <option value="Disco Bags">Disco Bags</option>
+                    </select>
+                </div>
             </div>
-        </div>
-        <div id="type_of_sleeve_color" class="dropdown_wrap type_of_sleeve_color_off">
-            <div class="dropdown_label_wrap">
-                <label for="type_of_sleeve">Type of Sleeve:</label>
-                <img src="img/info.png" class="tooltip info-tip" title="Standard grammage at 3mm back: GC2 350g and GC1 300g for all other options. Different paper thicknesses, print on rough side and matt lacquer possible on request." /> 
+            <div class="color_amount_wrap">
+                <div class="dropdown_label_wrap">
+                    <label for="amount_of_sleeves">Amount:</label>   
+                    <img src="img/info.png" class="tooltip info-tip" title="Minimum of 300 copies for printed matter." /> 
+                </div>
+                <input type="text" name="amount_of_sleeves">
             </div>
-            <div class="select_field">
-                <select name="type_of_sleeve_color" id="type_of_sleeve" size="1">
-                    <option value="Nothing selected">None</option>
-                    <option value="Inner Sleeves">Inner Sleeves</option>
-                    <option value="Disco Bags">Disco Bags</option>
-                </select>
-            </div>
-        </div>
-        <div class="vinyl_amount_wrap">
-            <div class="dropdown_label_wrap">
-                <label for="amount_of_sleeves">Amount:</label>   
-                <img src="img/info.png" class="tooltip info-tip" title="Minimum of 300 copies for printed matter." /> 
-            </div>
-            <input type="text" name="amount_of_sleeves">
-        </div>
+        </section>
     </div>
 
     <!--  COVER  -->
 
-    <div class="sleeves_wrap color-theme-select">
-        <h3>COVER<span class="h3_extra">| print</span></h3>
+    <div class="sleeves_wrap cover_bottom_border color-theme-select">
+        <h3>COVER <span class="h3_extra">| print</span></h3>
         <div class="sleeves_print_radios">
             <div class="sleeves_print_radio">
                 <input type="radio" id="cover_print_default" value="cover_print_default" name="cover_color_radios" />
@@ -257,77 +260,75 @@
                 <p>custom layout</p> 
             </div>
         </div>
-        <div id="type_of_cover" class="dropdown_wrap">
-            <div class="dropdown_label_wrap">
-                <label for="type_of_sleeve">Type of Cover:</label>
+        <section class="sleeve_info_wrap">
+            <div id="type_of_cover" class="sleeve_dropdown_wrap">
+                <div class="dropdown_label_wrap">
+                    <label for="type_of_sleeve">Type of Cover:</label>
+                </div>
+                <div class="select_field">
+                    <select name="type_of_sleeve" id="type_of_sleeve" size="1">
+                        <option value="None">None</option>
+                        <option value="Cover White">Cover White</option>
+                        <option value="Cover White inside out">Cover White inside out</option>
+                        <option value="Cover Black">Cover Black</option>
+                        <option value="Cover Black inside out">Cover Black inside out</option>
+                        <option value="Cover Brown">Cover Brown</option>
+                    </select>
+                </div>
             </div>
-            <div class="select_field">
-                <select name="type_of_sleeve" id="type_of_sleeve" size="1">
-                    <option value="None">None</option>
-                    <option value="Cover White">Cover White</option>
-                    <option value="Cover White inside out">Cover White inside out</option>
-                    <option value="Cover Black">Cover Black</option>
-                    <option value="Cover Black inside out">Cover Black inside out</option>
-                    <option value="Cover Brown">Cover Brown</option>
-                </select>
+            <div id="type_of_cover_color" class="sleeve_dropdown_wrap type_of_cover_color_off">
+                <div class="dropdown_label_wrap">
+                    <label for="type_of_sleeve">Type of Cover:</label>
+                    <img src="img/info.png" class="tooltip info-tip" title="Standard grammage at 3mm back: GC2 350g and GC1 300g for all other options. Different paper thicknesses, print on rough side and matt lacquer possible on request." /> 
+                </div>
+                <div class="select_field">
+                    <select name="type_of_sleeve_color" id="type_of_sleeve" size="1">
+                        <option value="Nothing selected">None</option>
+                        <option value="3mm Cover">3mm Cover</option>
+                        <option value="5mm Cover (for 2 LPs)">5mm Cover (for 2 LPs)</option>
+                        <option value="7mm Cover (for 2 LPs)">7mm Cover (for 3 LPs)</option>
+                        <option value="7mm Gatefold (for 1-2 LPs)">7mm Gatefold (for 1-2 LPs)</option>
+                    </select>
+                </div>
             </div>
-        </div>
-        <div id="type_of_cover_color" class="dropdown_wrap type_of_cover_color_off">
-            <div class="dropdown_label_wrap">
-                <label for="type_of_sleeve">Type of Cover:</label>
-                <img src="img/info.png" class="tooltip info-tip" title="Standard grammage at 3mm back: GC2 350g and GC1 300g for all other options. Different paper thicknesses, print on rough side and matt lacquer possible on request." /> 
+            <div class="color_amount_wrap">
+                <div class="dropdown_label_wrap">
+                    <label for="amount_of_covers">Amount:</label>   
+                    <img src="img/info.png" class="tooltip info-tip" title="minimum of 300 copies for printed matter." /> 
+                </div>
+                <input type="text" name="amount_of_covers">
             </div>
-            <div class="select_field">
-                <select name="type_of_sleeve_color" id="type_of_sleeve" size="1">
-                    <option value="Nothing selected">None</option>
-                    <option value="3mm Cover">3mm Cover</option>
-                    <option value="5mm Cover (for 2 LPs)">5mm Cover (for 2 LPs)</option>
-                    <option value="7mm Cover (for 2 LPs)">7mm Cover (for 3 LPs)</option>
-                    <option value="7mm Gatefold (for 1-2 LPs)">7mm Gatefold (for 1-2 LPs)</option>
-                </select>
-            </div>
-        </div>
-        <div class="vinyl_amount_wrap">
-            <div class="dropdown_label_wrap">
-                <label for="amount_of_covers">Amount:</label>   
-                <img src="img/info.png" class="tooltip info-tip" title="minimum of 300 copies for printed matter." /> 
-            </div>
-            <input type="text" name="amount_of_covers">
-        </div>
+        </section>
     </div>
 
     <!--  PE AND PVC SLEEVES -->
 
     <div class="pvc_wrap">
-        <h3>SLEEVES<span class="h3_extra">| PE and PVC</span></h3>
-        <div class="vinyl_amount_wrap">
-            <div class="dropdown_label_wrap">
-                <label for="amount_of_pe_pvc_sleeves">Amount:</label>   
+        <h3>SLEEVES <span class="h3_extra">| PE and PVC</span></h3>
+        <div class="pvc_drop_wrap">
+            <div class="pvc_amount_wrap">
+                <div class="dropdown_label_wrap">
+                    <label for="amount_of_pe_pvc_sleeves">Amount:</label>   
+                </div>
+                <input type="text" name="amount_of_pe_pvc_sleeves">
             </div>
-            <input type="text" name="amount_of_pe_pvc_sleeves">
+            <div class="dropdown_wrap">
+                <div class="dropdown_label_wrap">
+                    <label for="type_of_pe_pvc_sleeves">Type of PE and PVC Sleeves:</label>
+                    <img src="img/info.png" class="tooltip info-tip" title="Depending on size of the PE and PVC sleeves they can be used as inlay or outer cover." /> 
+                </div>
+                <div class="select_field">
+                    <select name="type_of_pe_pvc_sleeves" size="1">
+                        <option value="Nothing selected">None</option>
+                        <option value="PE SLeeve (thin, small)">PE SLeeve (thin, small)</option>
+                        <option value="PE Cover (thin, large)">PE Cover (thin, large)</option>
+                        <option value="PE Cover with flap">PE Cover with flap</option>
+                        <option value="PVC Sleeve (heavy, small)">PVC Sleeve (heavy, small)</option>
+                        <option value="PVC Cover (heavy, big)">PVC Cover (heavy, big)</option>
+                    </select>
+                </div>
+            </div>
         </div>
-        <div class="dropdown_wrap">
-            <div class="dropdown_label_wrap">
-                <label for="type_of_pe_pvc_sleeves">Type of PE and PVC Sleeves:</label>
-                <img src="img/info.png" class="tooltip info-tip" title="Depending on size of the PE and PVC sleeves they can be used as inlay or outer cover." /> 
-            </div>
-            <div class="select_field">
-                <select name="type_of_pe_pvc_sleeves" size="1">
-                    <option value="Nothing selected">None</option>
-                    <option value="PE SLeeve (thin, small)">PE SLeeve (thin, small)</option>
-                    <option value="PE Cover (thin, large)">PE Cover (thin, large)</option>
-                    <option value="PE Cover with flap">PE Cover with flap</option>
-                    <option value="PVC Sleeve (heavy, small)">PVC Sleeve (heavy, small)</option>
-                    <option value="PVC Cover (heavy, big)">PVC Cover (heavy, big)</option>
-                </select>
-            </div>
-        </div>
-
-    </div>
-
-    <!--  Further Packaging Services  -->
-
-    <div class="further_packaging_wrap">
 
     </div>
 </section>

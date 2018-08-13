@@ -101,7 +101,7 @@
 
     p
         width: 90%
-        margin: 15px 5%
+        margin: 15px 5% 25px
         color: #ddd
         font-size: 16px
 
@@ -113,13 +113,39 @@
     display: block
     font-size: 10px
 
+.test_pressing_wrap
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    border-top: 1px solid #666666
+    border-bottom: 1px solid #666666
+    padding: 20px 0
+    min-width: 100px
+
+    @media (min-width: $mobile-break)
+        width: 48%
+        border-top: none
+        margin: 0 0 0 2%
+
+    label
+        color: white
+        font-size: 12px
+
+    select
+        font-size: 13px
+        color: white
+        font-weight: 700
+
+
 #test_pressing_amount
     display: inline-block
     width: 20%
-    margin: 0px
+    margin: 0 0 0 15px
     padding: 0px
     background-color: #9B9B9B
-    color: #4A4A4A
+    color: black
     font-family: "Open Sans Condensed", sans-serif
     position: relative
     z-index: 1

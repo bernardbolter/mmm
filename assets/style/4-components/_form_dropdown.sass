@@ -1,13 +1,7 @@
 .dropdown_wrap
-    width: 100%
     display: flex
     flex-direction: column
     justify-content: center
-    margin: 10px 0
-
-    @media (min-width: $mobile-break)
-        width: 46%
-        margin: 0 0 10px 0
 
     label
         font-family: $body-font
@@ -69,5 +63,11 @@
 .dropdown_label_wrap
     display: flex
     flex-direction: row
-    justify-content: space-between
+    justify-content: flex-start
     align-items: center
+
+#color_of_label
+    width: 50%
+
+select
+    background: #bbb

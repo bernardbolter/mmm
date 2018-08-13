@@ -1,9 +1,12 @@
 .sleeves_wrap
     width: 100%
+    padding: 15px 0 25px
+    border-bottom: 1px solid #666
 
     @media (min-width: $mobile-break)
         width: 46%
         margin: 0 2% 20px
+        padding: 0
 
     h3
         color: white
@@ -19,7 +22,7 @@
 
     @media (min-width: $mobile-break)
         width: auto
-        margin: 0 40px 40px 0
+        margin: 0 0 25px 0
 
     h3
         width: 100%
@@ -32,13 +35,15 @@
         padding: 0
         appearance: none
 
-        &:checked + .label_print_image
+        &:checked + .sleeves_print_image
             background-color: rgba(255,255,255,0.1)
             opacity: 1
+            border: 1px solid #ccc
 
-        &:active + .label_print_image
+        &:active + .sleeves_print_image
             background-color: rgba(255,255,255,0.1)
             opacity: 1
+            border: 1px solid #ccc
 
 .sleeves_print_radio
     display: flex
@@ -71,9 +76,7 @@
     background-color: transparent
     margin: 10px
     opacity: 0.7
-
-    @media (min-width: $mobile-break)
-        margin: 0 20px 0 0
+    border: 1px solid transparent
 
     &:hover
         transition: all 300ms ease-in
@@ -81,6 +84,40 @@
 
 .sleeves_print_default
     background-image: url('img/sleeve_default.png')
+
+.sleeve_dropdown_wrap
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 50%
+
+    label
+        font-family: $body-font
+        color: $light-text
+        font-size: 12px
+        font-weight: 700
+        margin-bottom: 5px
+
+    p
+        margin: -5px 0 8px 0
+        padding: 0
+        font-family: $body-font
+        color: $light-text
+        font-size: 11px
+        opacity: 0.5
+        font-weight: 700
+
+    input
+        height: 30px
+        background: $form-back
+        font-size: 18px
+        padding: 0 5px
+        border: none
+        border: 1px solid $form-back
+
+    &:focus
+        border: 1px solid white
+        background: $form-focus
 
 .sleeves_print_1c
     background-image: url('img/sleeve_1c.png')
@@ -111,3 +148,11 @@
 .type_of_cover_color_off
     display: none
 
+.sleeve_info_wrap
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+.cover_bottom_border
+    border-bottom: none !important

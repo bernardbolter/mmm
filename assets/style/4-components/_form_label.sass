@@ -2,12 +2,13 @@
     width: 100%
     display: flex
     flex-direction: column
-    margin: 0
+    margin: 20px 0 0 0
+    border-bottom: 1px solid #666666
+    padding: 0 0 25px 0
 
     @media (min-width: $mobile-break)
-        width: 96%
-        margin: 0 2% 25px
-        flex-direction: row
+        width: 46%
+        margin: 20px 2% 0
 
     h3
         color: white
@@ -18,15 +19,16 @@
     margin: 0 2%
 
     @media (min-width: $mobile-break)
-        width: 46%
+        width: 100%
+        margin: 0
         
 
 .label_inputs_wrap
-    width: 96%
-    margin: 0 2%
-
+    width: 100%
+    display: flex
     @media (min-width: $mobile-break)
-        width: 46%
+        margin-top: 20px
+    
 
 
 .label_print_radios
@@ -35,11 +37,10 @@
     flex-direction: row
     flex-wrap: wrap
     justify-content: space-between
-    margin: 0 0 20px 0
+    margin: 0 0 25px 0
 
     @media (min-width: $mobile-break)
         width: auto
-        margin: 0 40px 0 0
 
     h3
         width: 100%
@@ -92,9 +93,6 @@
     margin: 10px
     opacity: 0.7
 
-    @media (min-width: $mobile-break)
-        margin: 0 20px 0 0
-
     &:hover
         transition: all 300ms ease-in
         opacity: 0.9
@@ -110,3 +108,35 @@
 
 .color_of_label_on
     display: none
+
+.color_amount_wrap
+    width: 45%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin: 0 0 0 5%
+
+    label
+        font-family: $body-font
+        color: $light-text
+        font-size: 12px
+        font-weight: 700
+        margin-bottom: 5px
+
+    p
+        margin: -5px 0 8px 0
+        padding: 0
+        font-family: $body-font
+        color: $light-text
+        font-size: 11px
+        opacity: 0.5
+        font-weight: 700
+
+    input
+        height: 30px
+        background: $form-back
+        font-size: 18px
+        padding: 0 5px
+        border: none
+        border: 1px solid $form-back
+        max-width: 150px
