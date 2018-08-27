@@ -1,13 +1,4 @@
-@font-face {
-  font-family: 'SkyhookMono-Bold';
-  src: url('fonts/skyhook.woff') format('woff'),
-      url('fonts/skyhook.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700');
-@import url('https://fonts.googleapis.com/css?family=Raleway:200,400');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200, 300, 400, 700');
 
 html {
   font-size: 62.5%;
@@ -15,6 +6,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+$the-font: 'Raleway', sans-serif;
+
 $heading-font: 'Raleway', sans-serif;
 
-$body-font: "Open Sans Condensed", sans-serif;
+$body-font: 'Raleway', sans-serif;
