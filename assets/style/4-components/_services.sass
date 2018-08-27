@@ -2,65 +2,39 @@
   width: 100%
   height: auto
 
-  h1
-    font-family: $heading-font
-    font-weight: 200
-    letter-spacing: 0.05em
-    font-size: 30px
-    color: $dark-text
-    position: relative
-    padding: 30px 0 20px 5%
-    margin: 0
-    width: 95%
-    background: $light-text
+.services-header
+  width: 100%
+  background-color: $light-back
 
-    @media (min-width: $mobile-break)
-      font-size: 36px
-      padding: 20px 0 20px 5%
-      width: auto
+.service-header-font
+  @extend %header-font
+  color: $dark-text
 
-.services-text
+.services-wrap
   width: 100%
   background: url('img/services.jpg') no-repeat center center
   background-size: cover
-  border-bottom: 10px solid $form-focus
+  position: relative
 
-.services-container
-  max-width: 1200px
-  display: flex
-  flex-direction: column
-  justify-content: center
-  margin: 0 auto
+.services-text-wrap
+  position: relative
 
-  @media (min-width: $mobile-break)
-    flex-direction: row
-
-.services-info
-  width: 90%
-  margin: 30px 5%
+.services-text
+  padding: $margin 0
+  margin-left: 5%
 
   @media (min-width: $mobile-break)
-    width: 70%
-    margin: 15px 0 15px 2.5%
-    padding: 15px 7.5% 15px 100px
-    background: rgba(0,0,0,0.2)
-    border-radius: 130px 0 0 130px
-
-  h2
-    font-family: $heading-font
-    font-size: 30px
-    color: $light-text
-    margin: 20px 0
-    text-align: left
+    margin-left: 10%
 
   p
-    font-family: $body-font
-    font-size: 20px
+    font-family: $the-font
     font-weight: 700
-    color: $light-text
-    margin: 7px 0
-    padding: 0
-    text-align: left
+    color: white
+    font-size: 16px
+    line-height: 1
+
+    @media (min-width: $mobile-break)
+      font-size: 20px
 
 .services-link
   width: 100%
@@ -71,11 +45,16 @@
   align-items: center
   text-decoration: none
   padding: 50px 0
-  transition: all 1s ease-in-out
+  transition: background 1s ease-in-out
   color: $dark-text
 
   @media (min-width: $mobile-break)
-    width: 50%
+    width: 40%
+    transform: skew(-2deg)
+    position: absolute
+    right: -40px
+    top: 0
+    bottom: 0
 
   &:hover
     background: rgba(255,255,255,0.9)
@@ -84,6 +63,7 @@
 
 .services-request-wrap
   width: 100%
+  tranform: skew(2deg)
 
   p
     padding: 0
@@ -92,3 +72,9 @@
     color: $dark-text
     font-size: 36px
     text-align: center
+
+.services-bottom-white
+  height: $margin
+  background: $light-back
+  display: block
+  width: 100%
