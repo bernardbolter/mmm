@@ -5,29 +5,33 @@
   overflow: hidden
   background: $dark-back
 
-  h1
-    font-family: $heading-font
-    font-weight: 200
-    letter-spacing: 0.05em
-    font-size: 30px
-    color: $light-text
-    position: relative
-    padding: 30px 0 0 5%
-    margin: 0
-    width: 95%
-    background: $dark-back
+.order-header-font
+  @extend %header-font
+  color: $light-text
 
-    @media (min-width: $mobile-break)
-      font-size: 36px
-      padding: 20px 0 0 5%
-      width: auto
+.order-return
+  font-family: $body-font
+  font-weight: 300
+  font-size: 10px
+  color: $light-text
+  width: 90%
+  margin: -20px 5% 0
+
+  @media (min-width: $mobile-break)
+    font-size: 12px
+    width: 80%
+    margin: -20px 10% 0
 
 .order-container
-  width: 100%
-  margin: 0 auto
+  width: 90%
+  margin: 0 5%
   background: $dark-back
-  padding: 30px 0
-  max-width: 1200px
+
+  @media (min-width: $mobile-break)
+    width: 80%
+    margin: 0 10%
+
+// ORDER BOTTOM
 
 .order-wetransfer
   display: flex
@@ -43,7 +47,6 @@
     width: 90%
     margin: 0 5% 20px
     align-items: center
-
 
 .order-wetranfer-send
   display: flex
@@ -95,17 +98,6 @@
     color: $light-text
     font-weight: 300
     font-size: 15px
-
-.order-return
-  font-family: $body-font
-  font-weight: 700
-  font-size: 16px
-  color: $light-text
-  width: 90%
-  margin: 10px 5%
-
-  @media (min-width: $mobile-break)
-    margin: 10px 7%
 
 .manmade-radio-privacy-text
   width: 80%
