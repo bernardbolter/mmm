@@ -13,50 +13,65 @@
 <!-- MANUFACTURING SECTION -->
 
 <section class="manufacturing_wrap manufacturing_wrap_on">
-    <div class="manufactoring_header_wrap">
-        <div class="test_pressing_wrap">
-            <label for="additional_test_pressings">Test Pressings <br />(2 test pressings w/ every order are free)<span class="text_pressings_footnote">*If you require addition test pressings please select this quantity from the dropdown.</span></label>   
-            <select id="test_pressing_amount" name="test_pressing_amount"></select>
+
+    <!--  VINYL Size -->
+
+    <div class="vinyl-size-wrap">
+        <div class="vinyl-header">
+            <p>Vinyl Size</p>
+            <div class="vinyl-header-line"></div>
         </div>
-        <p></p>
-    </div>
-
-    <!--  VINYL SELECTIONS -->
-
-    <div class="form_vinyl_selections_wrap color-theme-select">
-        <div class="form_vinyl_size">
-            <div class="form_vinyl_selections_radios">
-                <h3>VINYL <span class="h3_extra">| size</span></h3>
-                <input type="radio" id="manufacturing_7inch" value="manufacturing_7inch" name="manufacturing_vinyl_size" />
-                <label class="manufaturing_image manufacturing_vinyl_7" for="manufacturing_7inch"><span class="manufacturing_vinyl_font">7"</span></label> 
-
-                <input type="radio" id="manufacturing_10inch" value="manufacturing_10inch" name="manufacturing_vinyl_size" />
-                <label class="manufaturing_image manufacturing_vinyl_10" for="manufacturing_10inch"><span class="manufacturing_vinyl_font">10"</span></label> 
-
-                <input type="radio" id="manufacturing_12inch" value="manufacturing_12inch" name="manufacturing_vinyl_size" />
-                <label class="manufaturing_image manufacturing_vinyl_12" for="manufacturing_12inch"><span class="manufacturing_vinyl_font">12"</span></label> 
+        <p class="vinyl-choose-one">choose one</p>
+        <div class="vinyl-size-radios">
+            <div class="vinyl-size-radio-sizing">
+                <label for="manufacturing_12inch">
+                    <input type="radio" id="manufacturing_12inch" value="manufacturing_12inch" name="manufacturing_vinyl_size" />
+                    <img src="./img/vinyl_12.png" alt="image of 12 vinyl" />
+                    <p>12"</p>
+                </label>
             </div>
-            <div class="form_vinyl_selections_amount">
-                <div class="vinyl-radio-button">
+            <div class="vinyl-size-radio-sizing">
+                <label for="manufacturing_10inch">
+                    <input type="radio" id="manufacturing_10inch" value="manufacturing_10inch" name="manufacturing_vinyl_size" />
+                    <img src="./img/vinyl_10.png" alt="image of 10 vinyl" />
+                    <p>10"</p>
+                </label> 
+            </div>
+            <div class="vinyl-size-radio-sizing">
+                <label for="manufacturing_7inch">
+                    <input type="radio" id="manufacturing_7inch" value="manufacturing_7inch" name="manufacturing_vinyl_size" />
+                    <img src="./img/vinyl_7.png" alt="image of 7 vinyl" />
+                    <p>7"</p>
+                </label> 
+            </div>
+        </div>
+        <div class="form_vinyl_selections_amount">
+            <div class="manmade-radio-buttons">
+                <div>
                     <input checked="checked" type="radio" id="140G_vinyl" value="140G_vinyl" name="vinyl_weight" />
                     <label for="vinyl_weight">140G Vinyl</label>
+                </div>
+                <div>
                     <input type="radio" id="180G_vinyl" value="180G_vinyl" name="vinyl_weight" />
                     <label for="vinyl_weight">180G Vinyl</label>
                 </div>
-                <div class="vinyl_amount_wrap">
-                    <div class="dropdown_label_wrap">
-                    <label for="amount_of_vinyl">How many units would like to order?<span class="vinyl_amount_footnote">(minimum 100 units, no test pressing issued)</span></label>   
-                    <input type="text" name="amount_of_vinyl">
-                </div>
+            </div>
+            <div class="vinyl_amount_wrap">
+                <label for="amount_of_vinyl">How many units would like to order?<span class="vinyl_amount_footnote">(minimum 100 units, no test pressing issued)</span></label>   
+                <input type="text" name="amount_of_vinyl">
             </div>
         </div>
     </div>
 
     <!--  VINYL COLOR  -->
 
-    <div class="vinyl_color_wrap">
-        <h3>VINYL <span class="h3_extra">| color</span></h3>
+    <div class="vinyl-color-wrap">
+        <div class="vinyl-header">
+            <p>Vinyl Color</p>
+            <div class="vinyl-header-line"></div>
+        </div>
         <section class="vinyl_color_selection_wrap">
+            <p class="vinyl-choose-one">choose one</p>
             <div class="vinyl_color_display_wrap">
                 <img id="vinyl_color_disc" src="img/vinyl_color_black_disc.png" alt="example of vinyl color">
                 <p id="vinyl_color_text">Black (default)</p>
