@@ -98,72 +98,83 @@
       maxWidth: 230
     });
 
-  // add dropdown to the test pressing
-
-  for(var i=1; i<=24; i++){
-      var select = document.getElementById("test_pressing_amount");
-      var option = document.createElement("OPTION");
-    select.options.add(option);
-    option.text = i-1;
-    option.value = i-1;
-  }
-
   // Change text of vinyl color selector
 
   $( "input[name=vinyl_color]" ).on("change", function() {
     var colorVal = this.value;
+    console.log(colorVal);
     switch (colorVal) {
       case 'vinyl_color_black':
-         $('#vinyl_color_text').html('BLACK (default)');
-         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_black_disc.png');
-         break;
-      case 'vinyl_color_transparent':
-         $('#vinyl_color_text').html('TRANSPARENT');
-         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_transparent_disc.png');
+         $('#vinyl-color-disc-text').html('Black');
+         $('#vinyl-color-disc-text-span').addClass( "vinyl-color-disc-text-span-show" );
+         $('#vinyl-color-disc').removeClass();
+         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap black-disc");
          break;
       case 'vinyl_color_white':
-         $('#vinyl_color_text').html('WHITE');
-         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_white_disc.png');
+         $('#vinyl-color-disc-text').html('White');
+         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
+         $('#vinyl-color-disc').removeClass();
+         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap white-disc");
          break;
       case 'vinyl_color_gold':
-         $('#vinyl_color_text').html('GOLD');
-         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_gold_disc.png');
+         $('#vinyl-color-disc-text').html('Gold');
+         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
+         $('#vinyl-color-disc').removeClass();
+         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap gold-disc");
          break;
       case 'vinyl_color_yellow':
-         $('#vinyl_color_text').html('YELLOW');
-         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_yellow_disc.png');
+        $('#vinyl-color-disc-text').html('Yellow');
+        $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
+        $('#vinyl-color-disc').removeClass();
+        $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap yellow-disc");
          break;
       case 'vinyl_color_yellow_translucent':
-         $('#vinyl_color_text').html('YELLOW TRANSLUCENT');
-         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_yellow_translucent_disc.png');
+        $('#vinyl-color-disc-text').html('Yellow Translucent');
+        $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
+        $('#vinyl-color-disc').removeClass();
+        $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap yellow-translucent-disc");
          break;
       case 'vinyl_color_orange':
-         $('#vinyl_color_text').html('ORANGE');
-         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_orange_disc.png');
+        $('#vinyl-color-disc-text').html('Orange');
+        $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
+        $('#vinyl-color-disc').removeClass();
+        $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap orange-disc");
          break;
       case 'vinyl_color_red':
-         $('#vinyl_color_text').html('RED');
-         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_red_disc.png');
+        $('#vinyl-color-disc-text').html('Red');
+        $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
+        $('#vinyl-color-disc').removeClass();
+        $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap red-disc");
          break;
       case 'vinyl_color_red_translucent':
-         $('#vinyl_color_text').html('RED TRANSLUCENT');
-         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_red_translucent_disc.png');
+        $('#vinyl-color-disc-text').html('Red Translucent');
+        $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
+        $('#vinyl-color-disc').removeClass();
+        $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap red-translucent-disc");
          break;
       case 'vinyl_color_blue':
-         $('#vinyl_color_text').html('BLUE');
-         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_blue_disc.png');
+        $('#vinyl-color-disc-text').html('Blue');
+        $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
+        $('#vinyl-color-disc').removeClass();
+        $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap blue-disc");
          break;
       case 'vinyl_color_blue_translucent':
-         $('#vinyl_color_text').html('BLUE TRANSLUCENT');
-         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_blue_translucent_disc.png');
+        $('#vinyl-color-disc-text').html('Blue Translucent');
+        $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
+        $('#vinyl-color-disc').removeClass();
+        $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap blue-translucent-disc");
          break;
       case 'vinyl_color_green':
-         $('#vinyl_color_text').html('GREEN');
-         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_green_disc.png');
+        $('#vinyl-color-disc-text').html('Green');
+        $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
+        $('#vinyl-color-disc').removeClass();
+        $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap green-disc");
          break;
       case 'vinyl_color_green_translucent':
-         $('#vinyl_color_text').html('GREEN TRANSLUCENT');
-         $('#vinyl_color_disc').attr('src', 'img/vinyl_color_green_translucent_disc.png');
+        $('#vinyl-color-disc-text').html('Green Translucent');
+        $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
+        $('#vinyl-color-disc').removeClass();
+        $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap green-translucent-disc");
          break;
       default:
         console.log('no match');
