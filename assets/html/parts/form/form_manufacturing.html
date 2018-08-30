@@ -176,7 +176,7 @@
 
     <div class="label_wrap">
         <div class="vinyl-header">
-            <p>Vinyl Color</p>
+            <p>Label</p>
             <div class="vinyl-header-line"></div>
         </div>
         <div class="label_radios_wrap">
@@ -332,23 +332,23 @@
         </div>
         <div class="sleeves_print_radios">
             <p class="vinyl-choose-one">choose one</p>
-            <div class="sleeves_print_radio">
+                <label class="sleeves_print_image" for="cover_print_default">
                 <input type="radio" id="cover_print_default" value="cover_print_default" name="cover_color_radios" />
-                <label class="sleeves_print_image cover_print_default" for="cover_print_default"></label> 
-                <h5>default</h5>
-            </div>
-            <div class="sleeves_print_radio">
+                <img src="./img/album_default.png" alt="default color album example" />
+                <h4>default</h4>
+            </label>
+            <label for="cover_print_1c">
                 <input type="radio" id="cover_print_1c" value="cover_print_1c" name="cover_color_radios" />
-                <label class="sleeves_print_image cover_print_1c" for="cover_print_1c"></label> 
-                <h5>1c</h5>
-                <p>custom layout</p> 
-            </div>
-            <div class="sleeves_print_radio">
+                <img src="./img/album_1c.png" alt="1 color album example" />
+                <h4>1c</h4>
+                <h5>custom layout</h5> 
+            </label>
+            <label for="cover_print_4c">
                 <input type="radio" id="cover_print_4c" value="cover_print_4c" name="cover_color_radios" />
-                <label class="sleeves_print_image cover_print_4c" for="cover_print_4c"></label>
-                <h5>4c</h5>
-                <p>custom layout</p> 
-            </div>
+                <img src="./img/album_4c.png" alt="4 color album example" />
+                <h4>4 color</h4>
+                <h5>custom layout</h5> 
+            </label>
         </div>
         <section class="sleeve_info_wrap">
             <div id="type_of_cover" class="sleeve_dropdown_wrap">
@@ -391,11 +391,21 @@
         </section>
     </div>
 
-    <!--  PE AND PVC SLEEVES -->
+    <!--  TEST PRESSINGS -->
 
-    <div class="pvc_wrap">
-        <h3>SLEEVES <span class="h3_extra">| PE and PVC</span></h3>
-        
-
+    <div class="test-pressings-wrap">
+        <div class="vinyl-header">
+            <p>Test Pressings</p>
+            <div class="vinyl-header-line"></div>
+        </div>
+        <div class="test-pressings-text">
+            <h3>2 test pressings w/ every order are free</h3>
+            <h4>*If you require addition test pressings, please enter the amount </h4>
+        </div>
+        <div class="manmade-input input-test-pressings">
+            <label for="test_pressing_amount">
+                <input type="text" name="test_pressing_amount" />
+             </label>    
+        </div>
     </div>
 </section>
