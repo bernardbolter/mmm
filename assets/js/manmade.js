@@ -185,6 +185,7 @@
 
   $( "input[name=label_color_radios]" ).on("change", function() {
     var labelChecked = this.value;
+    console.log(labelChecked);
     switch (labelChecked) {
       case 'label_print_1c':
         $('#color_of_label').addClass('color_of_label_on');

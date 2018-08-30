@@ -174,27 +174,35 @@
 
     <!-- LABEL -->
 
-    <div class="label_wrap color-theme-select">
+    <div class="label_wrap">
+        <div class="vinyl-header">
+            <p>Vinyl Color</p>
+            <div class="vinyl-header-line"></div>
+        </div>
         <div class="label_radios_wrap">
-            <h3>CENTER LABELS <span class="h3_extra">| print</span></h3>
-            <div class="label_print_radios">
-                <div class="label_print_radio">
-                    <input type="radio" id="label_print_default" value="label_print_default" name="label_color_radios" />
-                    <label class="label_print_image label_print_default" for="label_print_default"></label> 
-                    <h5>default</h5>
-                </div>
-                <div class="label_print_radio">
-                    <input type="radio" id="label_print_1c" value="label_print_1c" name="label_color_radios" />
-                    <label class="label_print_image label_print_1c" for="label_print_1c"></label> 
-                    <h5>1c</h5>
-                    <p>custom layout</p> 
-                </div>
-                <div class="label_print_radio">
-                    <input type="radio" id="label_print_4c" value="label_print_4c" name="label_color_radios" />
-                    <label class="label_print_image label_print_4c" for="label_print_4c"></label>
-                    <h5>4c</h5>
-                    <p>custom layout</p> 
-                </div>
+            <p class="vinyl-choose-one">choose one</p>
+            <div>
+                <label for="label_print_default">
+                <input type="radio" id="label_print_default" value="label_print_default" name="label_color_radios" />
+                <img src="./img/label_default.png" alt="default image for label selection" />
+                <h4>default</h4>
+            </label>  
+            </div>
+            <div>
+                <label for="label_print_1c">
+                <input type="radio" id="label_print_1c" value="label_print_1c" name="label_color_radios" />
+                <img src="./img/label_1c.png" alt="one color image for label selection" />
+                <h4>1 Color</h4>
+                <h5>custom layout</h5> 
+                </label> 
+            </div>
+            <div>
+                <label for="label_print_4c">
+                <input type="radio" id="label_print_4c" value="label_print_4c" name="label_color_radios" />
+                <img src="./img/label_4c.png" alt="four color image for label selection" />
+                <h4>4 Color</h4>
+                <h5>custom layout</h5> 
+                </label>
             </div>
         </div>
         <div class="label_inputs_wrap">
@@ -223,26 +231,31 @@
 
     <!--  INNER SLEEVES AND DISCO SLEEVES -->
 
-    <div class="sleeves_wrap color-theme-select">
-        <h3>SLEEVES <span class="h3_extra">| inner and disco</span></h3>
+    <div class="sleeves_wrap">
+        <div class="vinyl-header">
+            <p>Sleeves</p>
+            <div class="vinyl-header-line"></div>
+        </div>
+        <p class="vinyl-sleeves-heading">Inner and Disco</p>
+        <p class="vinyl-choose-one">choose one</p>
         <div class="sleeves_print_radios">
-            <div class="sleeves_print_radio">
+            <label for="sleeves_print_default">
                 <input type="radio" id="sleeves_print_default" value="sleeves_print_default" name="sleeves_color_radios" />
-                <label class="sleeves_print_image sleeves_print_default" for="sleeves_print_default"></label> 
-                <h5>default</h5>
-            </div>
-            <div class="sleeves_print_radio">
+                <img src="./img/album_default.png" alt="n color album example" />
+                <h4>default</h4>
+            </label>  
+            <label for="sleeves_print_1c">
                 <input type="radio" id="sleeves_print_1c" value="sleeves_print_1c" name="sleeves_color_radios" />
-                <label class="sleeves_print_image sleeves_print_1c" for="sleeves_print_1c"></label> 
-                <h5>1c</h5>
-                <p>custom layout</p> 
-            </div>
-            <div class="sleeves_print_radio">
+                <img src="./img/album_1c.png" alt="1 color album example" />
+                <h4>1 Color</h4>
+                <h5>custom layout</h5> 
+            </label>
+            <label for="sleeves_print_4c">
                 <input type="radio" id="sleeves_print_4c" value="sleeves_print_4c" name="sleeves_color_radios" />
-                <label class="sleeves_print_image sleeves_print_4c" for="sleeves_print_4c"></label>
-                <h5>4c</h5>
-                <p>custom layout</p> 
-            </div>
+                <img src="./img/album_4c.png" alt="4 color album example" />
+                <h4>4 Color</h4>
+                <h5>custom layout<h5> 
+            </label>
         </div>
         <section class="sleeve_info_wrap">
             <div id="type_of_sleeve" class="sleeve_dropdown_wrap">
@@ -283,13 +296,42 @@
                 <input type="text" name="amount_of_sleeves">
             </div>
         </section>
+        <p class="vinyl-sleeves-heading">PE and PVC</p>
+        <div class="pvc_drop_wrap">
+            <div class="pvc_amount_wrap">
+                <div class="dropdown_label_wrap">
+                    <label for="amount_of_pe_pvc_sleeves">Amount:</label>   
+                </div>
+                <input type="text" name="amount_of_pe_pvc_sleeves">
+            </div>
+            <div class="dropdown_wrap">
+                <div class="dropdown_label_wrap">
+                    <label for="type_of_pe_pvc_sleeves">Type of PE and PVC Sleeves:</label>
+                    <img src="img/info.png" class="tooltip info-tip" title="Depending on size of the PE and PVC sleeves they can be used as inlay or outer cover." /> 
+                </div>
+                <div class="select_field">
+                    <select name="type_of_pe_pvc_sleeves" size="1">
+                        <option value="Nothing selected">None</option>
+                        <option value="PE SLeeve (thin, small)">PE Sleeve (thin, small)</option>
+                        <option value="PE Cover (thin, large)">PE Cover (thin, large)</option>
+                        <option value="PE Cover with flap">PE Cover with flap</option>
+                        <option value="PVC Sleeve (heavy, small)">PVC Sleeve (heavy, small)</option>
+                        <option value="PVC Cover (heavy, big)">PVC Cover (heavy, big)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!--  COVER  -->
 
-    <div class="sleeves_wrap cover_bottom_border color-theme-select">
-        <h3>COVER <span class="h3_extra">| print</span></h3>
+    <div class="sleeves_wrap">
+        <div class="vinyl-header">
+            <p>Sleeves</p>
+            <div class="vinyl-header-line"></div>
+        </div>
         <div class="sleeves_print_radios">
+            <p class="vinyl-choose-one">choose one</p>
             <div class="sleeves_print_radio">
                 <input type="radio" id="cover_print_default" value="cover_print_default" name="cover_color_radios" />
                 <label class="sleeves_print_image cover_print_default" for="cover_print_default"></label> 
@@ -353,30 +395,7 @@
 
     <div class="pvc_wrap">
         <h3>SLEEVES <span class="h3_extra">| PE and PVC</span></h3>
-        <div class="pvc_drop_wrap">
-            <div class="pvc_amount_wrap">
-                <div class="dropdown_label_wrap">
-                    <label for="amount_of_pe_pvc_sleeves">Amount:</label>   
-                </div>
-                <input type="text" name="amount_of_pe_pvc_sleeves">
-            </div>
-            <div class="dropdown_wrap">
-                <div class="dropdown_label_wrap">
-                    <label for="type_of_pe_pvc_sleeves">Type of PE and PVC Sleeves:</label>
-                    <img src="img/info.png" class="tooltip info-tip" title="Depending on size of the PE and PVC sleeves they can be used as inlay or outer cover." /> 
-                </div>
-                <div class="select_field">
-                    <select name="type_of_pe_pvc_sleeves" size="1">
-                        <option value="Nothing selected">None</option>
-                        <option value="PE SLeeve (thin, small)">PE SLeeve (thin, small)</option>
-                        <option value="PE Cover (thin, large)">PE Cover (thin, large)</option>
-                        <option value="PE Cover with flap">PE Cover with flap</option>
-                        <option value="PVC Sleeve (heavy, small)">PVC Sleeve (heavy, small)</option>
-                        <option value="PVC Cover (heavy, big)">PVC Cover (heavy, big)</option>
-                    </select>
-                </div>
-            </div>
-        </div>
+        
 
     </div>
 </section>

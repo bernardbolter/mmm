@@ -1,60 +1,77 @@
 .sleeves_wrap
     width: 100%
     padding: 15px 0 25px
-
-    @media (min-width: $mobile-break)
-        width: 46%
-        margin: 0 2% 20px
-        padding: 0
-
-    h3
-        color: white
-        width: 100%
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
 
 .sleeves_print_radios
     width: 100%
     display: flex
     flex-direction: row
-    flex-wrap: wrap
     justify-content: space-between
-    margin: 0 0 20px 0
+    margin: 0 0 25px
 
-    @media (min-width: $mobile-break)
-        width: auto
+    @media (min-width: $vinyl-break)
+        width: 65%
+        margin: 0 5% 0 0
 
-    h3
-        width: 100%
-        color: white
+    label
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 33%
+
+    img
+        width: 80%
+        padding: 10%
+        cursor: pointer
+
+    h4
+        font-family: $the-font
+        font-weight: 700
+        font-size: 10px
+        color: $light-text
+        margin: 3px 0 0 0
+        padding: 0
+
+    h5
+        font-family: $the-font
+        font-weight: 200
+        font-size: 9px
+        color: $light-text
         margin: 0
-        padding: 10px 0
+        padding: 0
 
     input
         margin: 0
         padding: 0
-        appearance: none
+        display: none
 
-        &:checked + .sleeves_print_image
+        &:checked + img
             background-color: rgba(255,255,255,0.1)
             opacity: 1
-            border: 1px solid #ccc
 
-        &:active + .sleeves_print_image
+        &:active + img
             background-color: rgba(255,255,255,0.1)
             opacity: 1
-            border: 1px solid #ccc
 
 .sleeves_print_radio
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
+    width: 100%
+
+    @media (min-width: $vinyl-break)
+        width: 30%
 
     h5
         color: white
         font-size: 15px
         margin: 0
         padding: 0
-        font-weight: 700
+        font-weight: 400
 
     p
         color: white
@@ -63,25 +80,17 @@
         margin: 0
         padding: 0
 
-.sleeves_print_image
-    cursor: pointer
-    background-size: cover
-    background-repeat: no-repeat
-    background-position: center center
-    width: 100px
-    height: 100px
-    transition: all 300ms ease-in
-    background-color: transparent
-    margin: 10px
-    opacity: 0.7
-    border: 1px solid transparent
+.sleeve_info_wrap
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
 
-    &:hover
-        transition: all 300ms ease-in
-        opacity: 0.9
+    @media (min-width: $vinyl-break)
+        width: 30%
+        flex-direction: column
+        justify-content: flex-end
 
-.sleeves_print_default
-    background-image: url('img/sleeve_default.png')
 
 .sleeve_dropdown_wrap
     display: flex
@@ -89,11 +98,15 @@
     justify-content: center
     width: 50%
 
+    @media (min-width: $vinyl-break)
+        width: 100%
+        margin: 0 0 25px 0
+
     label
         font-family: $body-font
         color: $light-text
         font-size: 12px
-        font-weight: 700
+        font-weight: 400
         margin-bottom: 5px
 
     p
@@ -117,12 +130,6 @@
         border: 1px solid white
         background: $form-focus
 
-.sleeves_print_1c
-    background-image: url('img/sleeve_1c.png')
-
-.sleeves_print_4c
-    background-image: url('img/sleeve_4c.png')
-
 .type_of_sleeve_off
     display: none
 
@@ -145,12 +152,6 @@
 
 .type_of_cover_color_off
     display: none
-
-.sleeve_info_wrap
-    width: 100%
-    display: flex
-    flex-direction: row
-    justify-content: space-between
 
 .cover_bottom_border
     border-bottom: none !important
