@@ -5,15 +5,19 @@
   flex-direction: column
 
   @media (min-width: $mobile-break)
-    width: 46%
-    margin: 0 2%
+    width: 48%
+    margin: 0 2% 0 0
 
 .manmade-radio-buttons-title
   font-family: $body-font
   color: $light-text
   font-size: 12px
-  font-weight: 700
+  font-weight: 400
   margin-bottom: 5px
+  letter-spacing: 0.05em
+
+  @media (min-width: $mobile-break)
+    font-size: 13px
 
 .manmade-radio-buttons-title-2
   font-family: $body-font
@@ -25,9 +29,9 @@
 .manmade-radio-buttons
   width: 100%
   display: flex
-  flex-direction: row
+  flex-direction: column
   justify-content: flex-start
-  align-items: center
+  align-items: flex-start
   flex-wrap: wrap
 
   div
@@ -42,8 +46,9 @@
     right: 0
     bottom: 0
     left: 0
-    height: 30px
-    width: 30px
+    height: 20px
+    width: 20px
+    border-radius: 50%
     background: $form-back
     border: none
     color: $dark-text
@@ -60,14 +65,15 @@
     background: $light-text
 
   input:checked::before
-    height: 30px
-    width: 30px
+    height: 20px
+    width: 20px
     position: absolute
-    content: '✔'
+    content: '●'
     display: inline-block
     font-size: 18px
+    font-weight: 700
     text-align: center
-    line-height: 30px
+    line-height: 20px
 
   input:checked::after
     background: #40e0d0
@@ -79,7 +85,16 @@
   label
     font-family: $body-font
     color: $light-text
-    font-size: 18px
-    font-weight: 700
+    font-size: 16px
+    font-weight: 400
     margin: 0 10px 0 5px
     cursor: pointer
+
+.radio-yes-no
+  flex-direction: row !important
+
+.radio-yes-no-wrap
+  margin: -10px 0 0 0 !important
+
+  @media (min-width: $mobile-break)
+    margin: 0 0 0 2% !important

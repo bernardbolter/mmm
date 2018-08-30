@@ -16,45 +16,44 @@
     
 .mastering-top-block
     display: flex
-    flex-direction: row
+    flex-direction: column
     justify-content: flex-start
-    width: 96%
-    margin: 2px 2% 5px
-
-.mastering-top-block-wrap
-    display: flex
-    flex-direction: row
-    justify-content: flex-start
-
-.mastering-top-block-heading
-    font-size: 12px
-    color: $light-text
-    font-family: $body-font
-    font-weight: 600
-    margin: 0 10px 0 0
-    min-width: 50px
-    opacity: 0.7
+    width: 100%
+    margin: 2px 0 5px
 
     @media (min-width: $mobile-break)
-        font-size: 14px
+        flex-direction: row
+        margin: 2px 0 15px
+
+.mastering-top-block-heading
+    font-size: 9px
+    color: $light-text
+    font-family: $the-font
+    font-weight: 200
+    margin: 0 10px 10px 0
+    min-width: 65px
+    text-transform: uppercase
+
+    @media (min-width: $mobile-break)
+        font-size: 11px
+        margin: 2px 10px 10px 0
 
 .mastering-top-block-inside
     display: flex
     flex-direction: column
-    justify-content: center
+    justify-content: flex-start
 
     p
-        font-family: $body-font
-        font-size: 12px
+        font-family: $the-font
+        font-size: 11px
         color: $light-text
-        font-family: $body-font
-        font-weight: 700
-        line-height: 1.4
-        padding: 2px 0
-        margin: 0
+        font-weight: 400
+        padding: 0
+        margin: 0 0 3px
+        line-height: 1.5
 
         @media (min-width: $mobile-break)
-            font-size: 14px
+            font-size: 12px
 
     a
         color: $light-text
@@ -64,6 +63,24 @@
         &:hover
             opacity: 1
             text-decoration: underline
+
+.mastering-top-radios-wrap
+    width: 100%
+    display: flex
+    flex-direction: row
+
+    @media (min-width: $mobile-break)
+        width: 48%
+        margin: 0 2% 0 0
+
+.mastering-top-input
+    width: 100%
+    display: flex
+    flex-direction: column
+
+    @media (min-width: $mobile-break)
+        width: 48%
+        margin: 12px 0 0 2%
 
 .mastering-info-wrap
     display: flex
@@ -78,38 +95,26 @@
 
 .mastering-heading-wrap
     width: 100%
-    margin: 16px 0 5px
-
-    @media (min-width: $mobile-break)
-        width: 96%
-        margin: 20px 2%
+    margin: 16px 0 10px
 
 .mastering-heading
-    font-size: 14px
+    font-size: 12px
     color: $light-text
     font-family: $body-font
-    font-weight: 700
+    font-weight: 400
     margin: 0
     padding: 0
 
     @media (min-width: $mobile-break)
-       font-size: 16px
+       font-size: 13px
 
 .mastering-subheading
     font-size: 11px
     color: $light-text
     font-family: $body-font
-    font-weight: 700
-    margin: 0
+    font-weight: 400
+    margin: 4px 0 0 0
     padding: 0
-    opacity: 0.5
-
-
-.cat-number-span
-    display: inline-block
-    font-size: 12px
-    color: $light-text
-    font-weight: 700
     opacity: 0.5
 
 .mastering_info_button
@@ -129,4 +134,38 @@
     width: 100%
     display: flex
     flex-wrap: wrap
+    margin: 5px 0 0 0
 
+    @media (min-width: $mobile-break)
+        margin: 10px 0 0 0
+
+.pressing-text-wrap
+    width: 100%
+    margin: 0 0 15px
+
+    h4
+        font-family: $the-font
+        color: $light-text
+        font-size: 12px
+        font-weight: 400
+        margin: 0
+        padding: 0
+
+        @media (min-width: $mobile-break)
+            font-size: 13px
+
+    p
+        font-family: $the-font
+        color: $light-text
+        font-size: 10px
+        font-weight: 300
+        margin: 3px 0 0 0
+        padding: 0
+
+        @media (min-width: $mobile-break)
+            font-size: 11px
+
+.pressing-span
+    text-transform: uppercase
+    font-weight: 200
+    font-size: 9px

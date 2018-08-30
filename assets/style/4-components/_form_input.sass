@@ -1,15 +1,19 @@
 .manmade-input
     display: flex
     flex-direction: column
-    justify-content: center
-    margin: 0 0 10px
+    justify-content: flex-end
+    margin: 0 0 12px
 
     label
         font-family: $the-font
         color: $light-text
         font-size: 12px
-        font-weight: 300
+        font-weight: 400
         margin-bottom: 5px
+        letter-spacing: 0.05em
+
+        @media (min-width: $mobile-break)
+            font-size: 13px
 
     input
         height: 30px
@@ -28,13 +32,13 @@
         background: $form-focus
 
     p
-        margin: -5px 0 8px 0
+        margin: -2px 0 8px 0
         padding: 0
-        font-family: $body-font
+        font-family: $the-font
         color: $light-text
         font-size: 11px
         opacity: 0.5
-        font-weight: 700
+        font-weight: 400
 
 .input-label-wrap
     display: flex
@@ -80,3 +84,57 @@
 
     @media (min-width: $mobile-break)
         width: 65%
+
+.input-city
+    width: 100%
+
+    @media (min-width: $mobile-break)
+        width: 65%
+        margin-right: 5%
+
+.input-postal-code
+    width: 100%
+
+    @media (min-width: $mobile-break)
+        width: 30%
+
+.input-country
+    width: 100%
+
+    @media (min-width: $mobile-break)
+        width: 50%
+
+.input-catalogue-number
+    width: 100%
+
+    @media (min-width: $mobile-break)
+        width: 48%
+        margin: 0 2% 0 0
+
+.input-side-a
+    width: 100%
+
+    @media (min-width: $mobile-break)
+        width: 48%
+        margin: 0 2% 0 0
+
+.input-side-b
+    width: 100%
+
+    @media (min-width: $mobile-break)
+        width: 48%
+        margin: 0 0 0 2%
+
+.input-pressing-plant
+    width: 100%
+
+    @media (min-width: $mobile-break)
+        width: 48%
+        margin: 0 2% 0 0
+
+.input-contact-person
+    width: 100%
+
+    @media (min-width: $mobile-break)
+        width: 48%
+        margin: 0 0 0 2%
