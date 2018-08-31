@@ -12,13 +12,13 @@
     font-family: $heading-font
     font-weight: 200
     letter-spacing: 0.05em
-    font-size: 30px
+    font-size: 26px
     color: $dark-text
-    padding: 30px 0 20px 10px
+    padding: 20px 0 20px 10px
     margin: 0
 
     @media (min-width: $mobile-break)
-      font-size: 36px
+      font-size: 34px
       width: auto
 
 .team-button
@@ -27,7 +27,13 @@
   justify-content: flex-start
   align-items: center
   cursor: pointer
-  margin: 0 0 0 5%
+  margin: 0 5%
+  width: 90%
+
+  @media (min-width: $mobile-break)
+    margin: 0 10%
+    width: 80%
+
   svg
     transition: all 0.5s ease-in-out
 
@@ -80,38 +86,59 @@
   display: none
 
 .team-component-wrap
-  width: 100%
+  width: 90%
+  margin: 0 5%
   display: flex
   flex-direction: row
   justify-content: flex-end
   flex-wrap: wrap
   max-height: 0
   overflow: hidden
-  max-width: 1200px
-  margin: 0 auto
   transition: max-height 1s ease-in-out
 
-.team-component
-  width: 90%
-  margin: 0 5% 25px
+  @media (min-width: $mobile-break)
+    width: 80%
+    margin: 0 10%
+
+.team-component-left
+  margin: 0
 
   @media (min-width: $mobile-break)
-    width: 40%
+    margin: 0 5% 25px 0 !important
+
+.team-component-right
+  margin: 0
+
+  @media (min-width: $mobile-break)
+    margin: 0 0 25px 5% !important
+
+.team-component
+  width: 100%
+  margin: 0 0 25px
+
+  @media (min-width: $mobile-break)
+    width: 45%
 
   h3
     font-family: $heading-font
-    font-size: 16px
+    font-size: 14px
     color: $dark-text
     margin: 5px 0 0 0
     padding: 0
 
+    @media (min-width: $mobile-break)
+      font-size: 16px
+
   h5
     font-family: $body-font
-    font-size: 13px
+    font-size: 11px
     font-weight: 300
     color: $dark-text
     margin: 0
     padding: 0
+
+    @media (min-width: $mobile-break)
+      font-size: 13px
 
   p
     font-family: $body-font
@@ -125,4 +152,3 @@
 
   img
     width: 100%
-    border: 1px solid $dark-text

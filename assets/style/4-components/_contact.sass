@@ -7,13 +7,13 @@
   font-family: $heading-font
   font-weight: 200
   letter-spacing: 0.05em
-  font-size: 30px
+  font-size: 26px
   color: $light-text
   position: relative
   margin: 20px 0 20px 5%
 
   @media (min-width: $mobile-break)
-    font-size: 36px
+    font-size: 34px
     margin: 20px 0 20px 5%
     width: auto
 
@@ -35,20 +35,38 @@
   @media (min-width: $mobile-break)
     width: 50%
 
-  p
+  h1
     font-family: $body-font
     font-weight: 700
     color: $light-text
-    font-size: 18px
+    font-size: 15px
+    margin: 20px 0 0
+
+    @media (min-width: $mobile-break)
+      font-size: 17px
+
+  p
+    font-family: $body-font
+    font-weight: 400
+    color: $light-text
+    font-size: 14px
     margin: 0
+    line-height: 1.5
+
+    @media (min-width: $mobile-break)
+      font-size: 15px
 
 .contact-email
   margin: 30px 0 0 0 !important
 
 .contact-email-message
   color: $light-text !important
-  font-size: 15px !important
+  font-size: 11px !important
   font-weight: 400 !important
+  line-height: 1.2
+
+  @media (min-width: $mobile-break)
+    font-size: 12px
 
 .contact-affiliates
   width: 100%
