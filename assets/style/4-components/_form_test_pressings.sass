@@ -4,31 +4,48 @@
     flex-direction: row
     flex-wrap: wrap
     justify-content: flex-start
+    align-items: center
+    margin: 0 0 20px 0
 
-.test-pressings-text
-    width: 70%
-    margin: 0 5% 0 0
-    margin: 20px 0 0 0
+.test-pressings-text-header
+    width: 100%
+    margin: 10px 0
     padding: 0
-    
+
     h3
         font-family: $the-font
         color: $light-text
-        font-size: 11px
+        font-size: 13px
         line-height: 1.2
         font-weight: 400
         padding: 0
         margin: 0
+        text-align: left
+
+.test-pressings-text
+    width: auto
+    margin: 0 5% 0 0
+    padding: 0
 
     h4
         font-family: $the-font
         color: $light-text
-        font-size: 9px
+        font-size: 10px
         line-height: 1.2
         font-weight: 400
         padding: 0
         margin: 0
+        text-align: left
+        max-width: 130px
 
 .input-test-pressings
-    width: 25%
-    margin: 20px 0 0 0
+    width: 100px
+    margin: 0
+
+    label
+        margin: 0
+
+    input
+        width: 70%
+        color: $dark-text
+        padding: 3px 15%
