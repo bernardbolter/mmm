@@ -1,33 +1,33 @@
 .studio
   width: 100%
-  max-width: 1200px
+  margin: 25px auto
+
+.studio-wrap
+  width: 90%
+  margin: -10px 5% 0
   display: flex
   flex-direction: row
   flex-wrap: wrap
-  margin: 25px auto
 
   @media (min-width: $mobile-break)
-    padding-top: 65px
+    width: 80%
+    margin: -25px 10% 0
 
-  h1
-    font-family: $heading-font
-    font-weight: 200
-    letter-spacing: 0.05em
-    font-size: 30px
-    color: $dark-text
-    width: 100%
-    position: relative
-    margin: 20px 0 10px 5%
+.studio-component-left
+  margin: 0
 
-    @media (min-width: $mobile-break)
-      font-size: 36px
-      position: absolute
-      margin: -40px 0 0 5%
-      width: auto
+  @media (min-width: $mobile-break)
+    margin: 15px 5% 15px 0 !important
+
+.studio-component-right
+  margin: 0
+
+  @media (min-width: $mobile-break)
+    margin: 15px 0 15px 5% !important
 
 .studio-component
-  width: 90%
-  margin: 10px 5%
+  width: 100%
+  margin: 10px 0
   display: flex
   flex-direction: column
   justify-content: flex-end
@@ -51,9 +51,7 @@
   img
     width: 100%
     margin: 20px 0 0 0
-    border: 1px solid $dark-text
 
   @media (min-width: $mobile-break)
-    width: 40%
-    margin: 10px 5%
     justify-content: flex-end
+    width: 45%
