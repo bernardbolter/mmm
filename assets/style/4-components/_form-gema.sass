@@ -1,0 +1,61 @@
+.gema-wrap
+    width: 100%
+    display: flex
+    flex-direction: column
+
+.gema-heading
+    font-family: $the-font
+    color: $light-text
+    font-size: 9px
+    font-weight: 200
+    width: 100%
+    margin: 0 10px 10px 0
+    padding: 0
+
+    @media (min-width: $mobile-break)
+        font-size: 11px
+    
+.gema-bulletpoints
+    width: 100%
+    margin: 0
+    pading: 0
+
+    p
+        font-family: $the-font
+        color: $light-text
+        font-weight: 400
+        font-size: 11px
+        line-height: 1.5
+        margin: 0 0 10px
+
+        @media (min-width: $mobile-break)
+            font-size: 13px
+
+.gema-link
+    display: block
+    width: 140px
+    text-align: center
+    cursor: pointer
+    border: 1px solid $light-text
+    background: rgba(255,255,255,0)
+    margin: 10px 0
+
+    p
+        padding: 5px
+        margin: 0
+        font-size: 12px
+        font-family: $the-font
+        color: $light-text
+        font-weight: 400
+
+    &:hover
+     background: rgba(255,255,255,0.2)
+
+.gema-hr
+    width: 100%
+    height: 1px
+    background: $light-text
+    margin: 15px 0
+    padding: 0
+    opacity: 0.5
+
