@@ -3,7 +3,7 @@
     display: flex
     flex-direction: row
     flex-wrap: wrap
-    padding: 0 0 20px 0
+    padding: 0 0 10px 0
     
 .vinyl-size-radios
     width: 100%
@@ -11,10 +11,34 @@
     flex-direction: row
     flex-wrap: wrap
     justify-content: space-between
+    margin: 7px 0 0 0
 
     @media (min-width: $vinyl-break)
         width: 68%
-        margin: 0 2% 0 0
+        margin: 12px 2% 0 0
+
+#vinyl_size_12_double_triple
+    display: none
+
+.vinyl-size-small-radios
+    flex-direction: row
+
+.vinyl_12_inch_double_on
+    display: flex !important
+
+.vinyl-size-12-double-text
+    width: 40%
+    font-size: 12px
+    font-weight: 400
+    color: $light-text
+    font-family: $the-font
+    margin: 10px 60% 5px 0
+    padding: 3px 0
+    border-bottom: 1px solid $form-vinyl-header-line-color
+
+    @media (min-width: $vinyl-break)
+        width: 100%
+        margin: 12px 0
 
 .vinyl-size-radio-sizing
     width: 33.3%

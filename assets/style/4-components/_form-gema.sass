@@ -17,7 +17,7 @@
     
 .gema-bulletpoints
     width: 100%
-    margin: 0
+    margin: 15px 0 0 0
     pading: 0
 
     p
@@ -31,25 +31,38 @@
         @media (min-width: $mobile-break)
             font-size: 13px
 
+.gema-links
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+
+    @media (min-width: $mobile-break)
+        flex-direction: row
+
 .gema-link
     display: block
-    width: 140px
     text-align: center
     cursor: pointer
     border: 1px solid $light-text
     background: rgba(255,255,255,0)
-    margin: 10px 0
+    margin: 10px
+    text-decoration: none
+    transition: all 0.5s ease-in-out
 
     p
-        padding: 5px
+        padding: 10px
         margin: 0
         font-size: 12px
         font-family: $the-font
         color: $light-text
         font-weight: 400
 
+        @media (min-width: $mobile-break)
+            font-size: 14px
+
     &:hover
-     background: rgba(255,255,255,0.2)
+        background: rgba(255,255,255,0.2)
+        transition: all 0.5s ease-in-out
 
 .gema-hr
     width: 100%

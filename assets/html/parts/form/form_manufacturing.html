@@ -25,39 +25,52 @@
         <div class="vinyl-size-radios">
             <div class="vinyl-size-radio-sizing">
                 <label for="manufacturing_12inch">
-                    <input type="radio" id="manufacturing_12inch" value="manufacturing_12inch" name="manufacturing_vinyl_size" />
+                    <input type="checkbox" id="manufacturing_12inch" value="manufacturing_12inch" name="manufacturing_vinyl_size" />
                     <img src="./img/vinyl_12.png" alt="image of 12 vinyl" />
                     <p>12"</p>
                 </label>
             </div>
             <div class="vinyl-size-radio-sizing">
                 <label for="manufacturing_10inch">
-                    <input type="radio" id="manufacturing_10inch" value="manufacturing_10inch" name="manufacturing_vinyl_size" />
+                    <input type="checkbox" id="manufacturing_10inch" value="manufacturing_10inch" name="manufacturing_vinyl_size" />
                     <img src="./img/vinyl_10.png" alt="image of 10 vinyl" />
                     <p>10"</p>
                 </label> 
             </div>
             <div class="vinyl-size-radio-sizing">
                 <label for="manufacturing_7inch">
-                    <input type="radio" id="manufacturing_7inch" value="manufacturing_7inch" name="manufacturing_vinyl_size" />
+                    <input type="checkbox" id="manufacturing_7inch" value="manufacturing_7inch" name="manufacturing_vinyl_size" />
                     <img src="./img/vinyl_7.png" alt="image of 7 vinyl" />
                     <p>7"</p>
                 </label> 
             </div>
         </div>
         <div class="form_vinyl_selections_amount">
-            <div class="manmade-radio-buttons">
+            <div id="vinyl_size_12_double_triple" class="manmade-radio-buttons vinyl-size-small-radios">
+                <p class="vinyl-size-12-double-text">12" Options</p>
+                <div>
+                    <input checked="checked" type="radio" id="vinyl_size_12_single" value="vinyl_size_12_single" name="vinyl_size_12_double_triple" />
+                    <label for="vinyl_size_12_single">Single</label>
+                </div>
+                <div>
+                    <input type="radio" id="vinyl_size_12_double" value="vinyl_size_12_double" name="vinyl_size_12_double_triple" />
+                    <label for="vinyl_size_12_double">Double</label>
+                </div>
+                <div>
+                    <input type="radio" id="vinyl_size_12_triple" value="vinyl_size_12_triple" name="vinyl_size_12_double_triple" />
+                    <label for="vinyl_size_12_triple">Triple</label>
+                </div>
                 <div>
                     <input checked="checked" type="radio" id="140G_vinyl" value="140G_vinyl" name="vinyl_weight" />
-                    <label for="vinyl_weight">140G Vinyl</label>
+                    <label for="140G_vinyl">140G Vinyl</label>
                 </div>
                 <div>
                     <input type="radio" id="180G_vinyl" value="180G_vinyl" name="vinyl_weight" />
-                    <label for="vinyl_weight">180G Vinyl</label>
+                    <label for="180G_vinyl">180G Vinyl</label>
                 </div>
             </div>
             <div class="vinyl_amount_wrap">
-                <label for="amount_of_vinyl">How many units would like to order?<span class="vinyl_amount_footnote">(minimum 100 units, no test pressing issued)</span></label>   
+                <label for="amount_of_vinyl">How many units would like to order?<span class="vinyl_amount_footnote">(minimum 100 units, increments of 50, no test pressing issued)</span></label>   
                 <input type="text" name="amount_of_vinyl">
             </div>
         </div>
@@ -161,10 +174,6 @@
             </div>
             <div class="manmade-radio-buttons vinyl-color-radios">
                 <div>
-                    <input type="checkbox" id="marbled" value="marbled" name="marbled" />
-                    <label for="marbled">Marbled</label>
-                </div>
-                <div>
                     <input type="checkbox" id="transparent" value="transparent" name="transparent" />
                     <label for="transparent">Transparent</label>
                 </div>
@@ -182,18 +191,17 @@
         <div class="label_radios_wrap">
             <p class="vinyl-choose-one">choose one</p>
             <div>
-                <label for="label_print_default">
-                <input type="radio" id="label_print_default" value="label_print_default" name="label_color_radios" />
-                <img src="./img/label_default.png" alt="default image for label selection" />
-                <h4>default</h4>
+                <label for="label_print_black">
+                <input type="radio" id="label_print_black" value="label_print_black" name="label_color_radios" />
+                <img src="./img/label_black.png" alt="black image for label selection" />
+                <h4>Black</h4>
             </label>  
             </div>
             <div>
-                <label for="label_print_1c">
-                <input type="radio" id="label_print_1c" value="label_print_1c" name="label_color_radios" />
-                <img src="./img/label_1c.png" alt="one color image for label selection" />
-                <h4>1 Color</h4>
-                <h5>custom layout</h5> 
+                <label for="label_print_white">
+                <input type="radio" id="label_print_white" value="label_print_white" name="label_color_radios" />
+                <img src="./img/label_white.png" alt="white color image for label selection" />
+                <h4>White</h4>
                 </label> 
             </div>
             <div>
@@ -206,20 +214,7 @@
             </div>
         </div>
         <div class="label_inputs_wrap">
-            <div id="color_of_label" class="dropdown_wrap">
-                <div class="dropdown_label_wrap">
-                    <label for="delivery_of_audio_data">Color:</label>
-                </div>
-                <div class="select_field">
-                    <select name="color_of_default_label" id="color_of_default_label" size="1">
-                        <option value="Nothing selected">select one</option>
-                        <option value="White">White</option>
-                        <option value="Black">Black</option>
-                        <option value="Repress">Repress</option>
-                    </select>
-                </div>
-            </div>
-            <div class="color_amount_wrap">
+            <div class="color_amount_wrap label_amount_wrap">
                 <div class="dropdown_label_wrap">
                     <label for="amount_of_labels">Amount:</label>   
                     <img src="img/info.png" class="tooltip info-tip" title="The amount refers to paired labels. Minimum order of 500 labels." /> 
@@ -236,23 +231,21 @@
             <p>Sleeves</p>
             <div class="vinyl-header-line"></div>
         </div>
-        <p class="vinyl-sleeves-heading">Inner and Disco</p>
         <p class="vinyl-choose-one">choose one</p>
         <div class="sleeves_print_radios">
-            <label for="sleeves_print_default">
-                <input type="radio" id="sleeves_print_default" value="sleeves_print_default" name="sleeves_color_radios" />
-                <img src="./img/album_default.png" alt="n color album example" />
-                <h4>default</h4>
+            <label for="sleeves_black">
+                <input type="radio" id="sleeves_black" value="sleeves_black" name="sleeves_color_radios" />
+                <img src="./img/sleeve_black.png" alt="black sleeve example" />
+                <h4>Black</h4>
             </label>  
-            <label for="sleeves_print_1c">
-                <input type="radio" id="sleeves_print_1c" value="sleeves_print_1c" name="sleeves_color_radios" />
-                <img src="./img/album_1c.png" alt="1 color album example" />
-                <h4>1 Color</h4>
-                <h5>custom layout</h5> 
+            <label for="sleeves_white">
+                <input type="radio" id="sleeves_white" value="sleeves_white" name="sleeves_color_radios" />
+                <img src="./img/sleeve_white.png" alt="white album example" />
+                <h4>White</h4>
             </label>
-            <label for="sleeves_print_4c">
-                <input type="radio" id="sleeves_print_4c" value="sleeves_print_4c" name="sleeves_color_radios" />
-                <img src="./img/album_4c.png" alt="4 color album example" />
+            <label for="sleeves_4color">
+                <input type="radio" id="sleeves_4color" value="sleeves_4color" name="sleeves_color_radios" />
+                <img src="./img/sleeve_4color.png" alt="4 color sleeve example" />
                 <h4>4 Color</h4>
                 <h5>custom layout<h5> 
             </label>
@@ -265,13 +258,8 @@
                 <div class="select_field">
                     <select name="type_of_sleeve" id="type_of_sleeve" size="1">
                         <option value="Nothing selected">None</option>
-                        <option value="Inner Sleeve White">Inner Sleeve White</option>
-                        <option value="Inner Sleeve Black">Inner Sleeve Black</option>
-                        <option value="Inner Sleeve White Polylined">Inner Sleeve White Polylined</option>
-                        <option value="Inner Sleeve Black Polylined">Inner Sleeve Black Polylined</option>
-                        <option value="Disco Bag White">Disco Bag White</option>
-                        <option value="Disco Bag Black">Disco Bag Black</option>
-                        <option value="Disco Bag Brown">Disco Bag Brown</option>
+                        <option value="Inner Sleeve Regular">Inner Sleeve</option>
+                        <option value="Inner Sleeve Polylined">Inner Sleeve Polylined</option>
                     </select>
                 </div>
             </div>
@@ -283,8 +271,8 @@
                 <div class="select_field">
                     <select name="type_of_sleeve_color" id="type_of_sleeve" size="1">
                         <option value="Nothing selected">None</option>
-                        <option value="Inner Sleeves">Inner Sleeves</option>
-                        <option value="Disco Bags">Disco Bags</option>
+                        <option value="Print on Rough Side">Print on Rough Side</option>
+                        <option value="Matt Lacquer">Matt Lacquer</option>
                     </select>
                 </div>
             </div>
@@ -296,7 +284,7 @@
                 <input type="text" name="amount_of_sleeves">
             </div>
         </section>
-        <p class="vinyl-sleeves-heading">PE and PVC</p>
+        <!-- <p class="vinyl-sleeves-heading">PE and PVC</p>
         <div class="pvc_drop_wrap">
             <div class="pvc_amount_wrap">
                 <div class="dropdown_label_wrap">
@@ -320,7 +308,7 @@
                     </select>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <!--  COVER  -->
@@ -332,56 +320,85 @@
         </div>
         <div class="sleeves_print_radios">
             <p class="vinyl-choose-one">choose one</p>
-                <label class="sleeves_print_image" for="cover_print_default">
-                <input type="radio" id="cover_print_default" value="cover_print_default" name="cover_color_radios" />
-                <img src="./img/album_default.png" alt="default color album example" />
-                <h4>default</h4>
+            <label class="sleeves_print_image" for="cover_disco">
+                <input type="radio" id="cover_disco" value="cover_disco" name="cover_color_radios" />
+                <img id="disco_bag_image" src="./img/disco_black.png" alt="cover disco black example" />
+                <h4>Disco Bag</h4>
             </label>
-            <label for="cover_print_1c">
-                <input type="radio" id="cover_print_1c" value="cover_print_1c" name="cover_color_radios" />
-                <img src="./img/album_1c.png" alt="1 color album example" />
-                <h4>1c</h4>
-                <h5>custom layout</h5> 
+            <label for="cover_solid_color">
+                <input type="radio" id="cover_solid_color" value="cover_solid_color" name="cover_color_radios" />
+                <img id="cover_solid_image" src="./img/cover_solid_black.png" alt="solid color cover example" />
+                <h4>Solid Color</h4>
             </label>
             <label for="cover_print_4c">
                 <input type="radio" id="cover_print_4c" value="cover_print_4c" name="cover_color_radios" />
-                <img src="./img/album_4c.png" alt="4 color album example" />
+                <img id="4color_hole_image" src="./img/cover_4color.png" alt="4 color album example" />
                 <h4>4 color</h4>
                 <h5>custom layout</h5> 
             </label>
         </div>
         <section class="sleeve_info_wrap">
-            <div id="type_of_cover" class="sleeve_dropdown_wrap">
+            <div id="color_of_disco_bag" class="sleeve_dropdown_wrap cover_drop_wrap color_of_disco_bag_off">
                 <div class="dropdown_label_wrap">
-                    <label for="type_of_sleeve">Type of Cover:</label>
+                    <label for="type_of_sleeve">Disco Bag Color Options:</label>
                 </div>
                 <div class="select_field">
-                    <select name="type_of_sleeve" id="type_of_sleeve" size="1">
-                        <option value="None">None</option>
-                        <option value="Cover White">Cover White</option>
-                        <option value="Cover White inside out">Cover White inside out</option>
-                        <option value="Cover Black">Cover Black</option>
-                        <option value="Cover Black inside out">Cover Black inside out</option>
-                        <option value="Cover Brown">Cover Brown</option>
+                    <select name="color_of_disco_bag" id="color_of_disco_bag" size="1">
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Brown">Brown</option>
                     </select>
                 </div>
             </div>
-            <div id="type_of_cover_color" class="sleeve_dropdown_wrap type_of_cover_color_off">
+            <div id="type_of_cover" class="sleeve_dropdown_wrap cover_drop_wrap type_of_cover_off">
                 <div class="dropdown_label_wrap">
-                    <label for="type_of_sleeve">Type of Cover:</label>
+                    <label for="solid_color_cover_option">Solid Color Options:</label>
+                </div>
+                <div class="select_field">
+                    <select name="solid_color_cover_option" id="solid_color_cover" size="1">
+                        <option value="Solid Black">Solid Black</option>
+                        <option value="Solid Black inside out">Solid Black | Inside Out</option>
+                        <option value="Solid White">Solid White</option>
+                        <option value="Solid White inside out">Solid White | Inside Out</option>
+                        <option value="Solid Brown">Solid Brown</option>
+                    </select>
+                </div>
+                <div id="solid_color_hole" class="manmade-radio-buttons cover-with-hole">
+                    <input type="checkbox" id="solid_color_cover_hole" value="solid_color_cover_hole" name="solid_color_cover_hole" />
+                    <label for="solid_color_cover_hole">With Center Hole</label>
+                </div>
+            </div>
+            <div id="type_of_cover_color" class="sleeve_dropdown_wrap cover_drop_wrap type_of_cover_color_off">
+                <div class="dropdown_label_wrap">
+                    <label for="thickness_of_4_color_cover">4 Color Thickness Options:</label>
                     <img src="img/info.png" class="tooltip info-tip" title="Standard grammage at 3mm back: GC2 350g and GC1 300g for all other options. Different paper thicknesses, print on rough side and matt lacquer possible on request." /> 
                 </div>
                 <div class="select_field">
-                    <select name="type_of_sleeve_color" id="type_of_sleeve" size="1">
-                        <option value="Nothing selected">None</option>
+                    <select name="thickness_of_4_color_cover" id="thickness_of_4_color_cover" size="1">
+                        <option value="None Selected">Select One</option>
                         <option value="3mm Cover">3mm Cover</option>
                         <option value="5mm Cover (for 2 LPs)">5mm Cover (for 2 LPs)</option>
                         <option value="7mm Cover (for 2 LPs)">7mm Cover (for 3 LPs)</option>
                         <option value="7mm Gatefold (for 1-2 LPs)">7mm Gatefold (for 1-2 LPs)</option>
                     </select>
                 </div>
+                <div class="dropdown_label_wrap color_drop_spacing">
+                    <label for="finish_of_4_color_cover">4 Color Finish Options:</label>
+                </div>
+                <div class="select_field">
+                    <select name="finish_of_4_color_cover" id="finish_of_4_color_cover" size="1">
+                        <option value="None Selected">Select One</option>
+                        <option value="Matte">Matte</option>
+                        <option value="Glossy">Glossy</option>
+                        <option value="Inside Out">Inside Out</option>
+                    </select>
+                </div>
+                <div id="4_color_hole" class="manmade-radio-buttons cover-with-hole">
+                    <input type="checkbox" id="4_color_cover_hole" value="4_color_cover_hole" name="4_color_cover_hole" />
+                    <label for="4_color_cover_hole">With Center Hole</label>
+                </div>
             </div>
-            <div class="color_amount_wrap">
+            <div class="color_amount_wrap cover_amount_wrap">
                 <div class="dropdown_label_wrap">
                     <label for="amount_of_covers">Amount:</label>   
                     <img src="img/info.png" class="tooltip info-tip" title="minimum of 300 copies for printed matter." /> 
@@ -409,5 +426,27 @@
                 <input type="text" name="test_pressing_amount" />
              </label>    
         </div>
+    </div>
+
+    <!-- GEMA information-->
+
+    <div class="gema-wrap">
+    <div class="vinyl-header">
+        <p>GEMA Information</p>
+        <div class="vinyl-header-line"></div>
+    </div>
+    <div class="gema-bulletpoints">
+        <p>&middot; In order for us to complete your pressing order each label-group must fill in the GEMA form attached below</p>
+        <p>&middot; Next mail the filled in form by post to GEMA</p>
+        <p>&middot; When your record release is documented by GEMA you will receive a return paper by post called: Auslieferungsgenehmigung (License Proof)</p>
+        <p>&middot; Once this form is received please scan and email the image to office@manmademastering.com with your catalog number in the subject line of the email</p>
+    </div>
+    <div class="gema-links">
+        <a href="#" class="gema-link">
+            <p>Download GEMA Form | English</p>
+        </a>
+        <a href="#" class="gema-link">
+            <p>Download GEMA Form | Deutsch</p>
+        </a>
     </div>
 </section>
