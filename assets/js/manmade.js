@@ -335,5 +335,40 @@
     }
   });
 
+  // CHECK DATA and then SEND TO PHP
+
+  $("#manmade-intake-form").submit(function(e) {
+    $('#ajax-progress').show();
+    $.ajax({
+      type: "POST",
+      url: "./test.php",
+      data: $("#manmade-intake-form").serialize(),
+      success: function(data) {
+         setTimeout(function() {
+            $("#ajax-progress").hide();
+            $("#form_success_message").show();
+            $("#manmade-intake-form")[0].reset();
+          }, 500);
+        },
+      error: function() {
+          setTimeout(function() {
+            $("#ajax-progress").hide();
+            $("#form_error_message").show();
+            $("#manmade-intake-form")[0].reset();
+          }, 500);
+        },
+    });
+
+    e.preventDefault();
+  });
+
+  // clear success and error messages if user fills out the form again
+
+  $('#company_input').focus(function() {
+    $("#ajax-progress").hide();
+    $("#form_success_message").hide();
+    $("#form_error_message").hide();
+  });
+
 
 })(jQuery);

@@ -5,3 +5,4 @@
 /assets/videos/
 .DS_Store
 npm-debug.log
+/assets/php/
