@@ -30,21 +30,21 @@
   <section class="mastering-top-radios-wrap">
     <div class="manmade-radio-buttons-wrap">
       <p class="manmade-radio-buttons-title">Release Format</p>
-      <div class="manmade-radio-buttons">
+      <div id="release_formats" class="manmade-radio-buttons">
           <div>
-            <input type="checkbox" id="vinyl" value="vinyl" name="format" />
+            <input type="checkbox" id="vinyl" value="vinyl" name="release_format" />
             <label for="vinyl">Vinyl</label>
           </div>
           <div>
-            <input type="checkbox" id="cd" value="cd" name="format" />
+            <input type="checkbox" id="cd" value="cd" name="release_format" />
             <label for="cd">CD</label>
           </div>
           <div>
-            <input type="checkbox" id="digital" value="digital" name="format" />
+            <input type="checkbox" id="digital" value="digital" name="release_format" />
             <label for="digital">Digital</label>
           </div>
           <div>
-            <input type="checkbox" id="cutting_only" value="cutting_only" name="format" />
+            <input type="checkbox" id="cutting_only" value="cutting_only" name="release_format" />
             <label for="cutting_only">Cutting Only</label>
           </div>
           </div>
@@ -52,17 +52,17 @@
     
       <div class="manmade-radio-buttons-wrap">
         <p class="manmade-radio-buttons-title">Vinyl Diameter Format</p>
-        <div class="manmade-radio-buttons">
+        <div id="vinyl_diameter_formats" class="manmade-radio-buttons">
           <div>
-            <input type="checkbox" id="12inch" value="12inch" name="vinyl_diameter_size" />
+            <input type="checkbox" id="12inch" value="12inch" name="vinyl_diameter_formats" />
             <label for="12inch">12"</label>
           </div>
           <div>
-            <input type="checkbox" id="10inch" value="10inch" name="vinyl_diameter_size" />
+            <input type="checkbox" id="10inch" value="10inch" name="vinyl_diameter_formats" />
             <label for="10inch">10"</label>
           </div>
           <div>
-            <input type="checkbox" id="7inch" value="7inch" name="vinyl_diameter_size" />
+            <input type="checkbox" id="7inch" value="7inch" name="vinyl_diameter_formats" />
             <label for="7inch">7"</label>
           </div>
         </div>
@@ -91,56 +91,56 @@
         <input type="text" name="catalogue_number">
       </div>
       <div class="manmade-radio-buttons-wrap radio-yes-no-wrap">
-        <p class="manmade-radio-buttons-title">Attendance:</p>
+        <p class="manmade-radio-buttons-title">Attendance</p>
         <div class="manmade-radio-buttons radio-yes-no">
           <div>
             <input type="radio" id="attend_yes" value="yes" name="attendance" />
-            <label for="attend_yes">YES</label>
+            <label>YES</label>
           </div>
           <div>
             <input type="radio" id="attend_no" value="no" name="attendance" />
-            <label for="attend_no">NO</label>
+            <label>NO</label>
           </div>
         </div>
-      </div>
-    
-      <!-- ADDITIONAL ENGRAVING -->
-    
-      <div class="mastering-heading-wrap">
-        <p class="mastering-heading">Additional Engraving:</p>
-        <p class="mastering-subheading">(optional, extra charges apply)</p>
-      </div>
-    
-      <div class="manmade-input input-side-a">
-        <label for="engraving_side_a">Side A:</label>
-        <input type="text" name="engraving_side_a">
-      </div>
-      <div class="manmade-input input-side-b">
-        <label for="emgraving_side_b">Side B:</label>
-        <input type="text" name="engraving_side_b">
       </div>
     
       <!-- VINYL TRACKS -->
     
       <div class="manmade-textarea">
-        <label for="vinyl_positions">Track Titles and Running Order:</label>
+        <label for="vinyl_positions">Track Titles and Running Order</label>
         <p>Be sure to site vinyl positions, A1, A2, B1, B2, C1, etc. Also include song titles and time duration.</p>
-        <textarea type="textarea" name="vinyl_positions" /></textarea>
+        <textarea type="textarea" name="vinyl_positions"></textarea>
       </div>
+
+      <!-- ADDITIONAL ENGRAVING -->
+
+      <div class="mastering-heading-wrap">
+          <p class="mastering-heading">Additional Engraving</p>
+          <p class="mastering-subheading">(optional, extra charges apply)</p>
+        </div>
+      
+        <div class="manmade-input input-side-a">
+          <label for="engraving_side_a">Side A:</label>
+          <input type="text" name="engraving_side_a">
+        </div>
+        <div class="manmade-input input-side-b">
+          <label for="emgraving_side_b">Side B:</label>
+          <input type="text" name="engraving_side_b">
+        </div>
 
       <!-- PRESSING PLANT CONTACT FORM -->
 
       <section class="mastering_plant_contact">
           <div class="pressing-text-wrap">
-            <h4>Pressing / Manufacturing Shipping Information:</h4>
+            <h4>Pressing / Manufacturing Shipping Information</h4>
             <p><span class="pressing-span">Please note:</span> Vinyl master lacquers will be shipped to pressing plants ONLY.</p>
           </div>
           <div class="manmade-input input-pressing-plant">
-              <label for="pressing_plant">Pressing Plant:</label>
+              <label for="pressing_plant">Pressing Plant</label>
               <input type="text" name="pressing_plant">
           </div>
           <div class="manmade-input input-contact-person">
-              <label for="contact_person">Contact Person:</label>
+              <label for="contact_person">Contact Person</label>
               <input type="text" name="contact_person">
           </div>
       </section>

@@ -339,22 +339,120 @@
 
   $("#manmade-intake-form").submit(function(e) {
     $('#ajax-progress').show();
+    var formData = {};
+
+    // Contact Information Variables
+    formData.company = $('input[name="company"]').val();
+    formData.mobile_number = $('input[name="mobile_number"]').val();
+    formData.name = $('input[name="name"]').val();
+    formData.street_number = $('input[name="street_number"]').val();
+    formData.tax_id = $('input[name="tax_id"]').val();
+    formData.email = $('input[name="email"]').val();
+    formData.city = $('input[name="city"]').val();
+    formData.postal_code = $('input[name="postal_code"]').val();
+    formData.country = $('input[name="country"]').val();
+
+    // Mastering and Cutting Order Variables
+    formData.project_title = $('input[name="project_title"]').val();
+    formData.release_title = $('input[name="release_title"]').val();
+    formData.preferred_engineer = $('input[name="preferred_engineer"]').val();
+    formData.catalogue_number = $('input[name="catalogue_number"]').val();
+      // Attendance
+      if ($('input:radio[name="attendance"]').is(":checked")) {
+        if (document.getElementById('attend_yes').checked) {
+          formData.attendance = "yes";
+        } else {
+          formData.attendance = "no";
+        }
+      } else {
+        formData.attendance = "";
+      }
+    formData.engraving_side_a = $('input[name="engraving_side_a"]').val();
+    formData.engraving_side_b = $('input[name="engraving_side_b"]').val();
+    formData.vinyl_positions = $('textarea[name="vinyl_positions"]').val();
+    formData.vinyl_positions = formData.vinyl_positions.replace(/\n/g, "<br />");
+    formData.pressing_plant = $('input[name="pressing_plant"]').val();
+    formData.contact_person = $('input[name="contact_person"]').val();
+    // Release Formats
+      var formatsArray = [];
+      $('#release_formats input:checked').each(function() {
+        formatsArray.push($(this).val());
+      });
+      var release_formats;
+      release_formats = formatsArray.join(', ');
+      formData.release_formats = release_formats;
+    // Vinyl Diameter Formats
+      var diameterArray = [];
+      $('#vinyl_diameter_formats input:checked').each(function() {
+        diameterArray.push($(this).val());
+      });
+      var vinyl_diameter_formats = diameterArray.join(', ');
+      formData.vinyl_diameter_formats = vinyl_diameter_formats;
+    
+    // Vinyl Manufactoring Variables
+      // Vinyl Sizes
+      var vinylSizesArray = [];
+      $('#man_vinyl_sizes input:checked').each(function() {
+        vinylSizesArray.push($(this).val());
+      });
+      var manufacturing_vinyl_size = vinylSizesArray.join((', '));
+      formData.manufacturing_vinyl_size = manufacturing_vinyl_size;
+
+      // 12inch options
+
+      if (manufacturing_vinyl_size.match(/12inch/g)) {
+        if (document.getElementById('vinyl_size_12_triple').checked) {
+          formData.amount_of_12inch = "triple";
+        } else if (document.getElementById('vinyl_size_12_double').checked) {
+          formData.amount_of_12inch = "double";
+        } else {
+          formData.amount_of_12inch = "single";
+        } 
+        if (document.getElementById('140G_vinyl').checked) {
+          formData.vinyl_weight_12inch = "140G";
+        } else  {
+          formData.vinyl_weight_12inch = "180G";
+        }
+      } else {
+        formData.amount_of_12inch = "";
+        formData.vinyl_weight_12inch = "";
+      }
+
+      // Vinyl Color
+
+      if ($('input[name="transparent"]').is(":checked")) {
+        formData.vinyl_color = "transparent";
+      } else {
+        $('#vinyl_color_radios input[type=radio]:checked').each(function(index, color) {
+          formData.vinyl_color = color.value
+        });
+      }
+
+     
+      
+
+      console.log(formData);
+
+
     $.ajax({
       type: "POST",
-      url: "./test.php",
-      data: $("#manmade-intake-form").serialize(),
+      // url: "./sendgrid-php/sendgrid-php.php",
+      data: formData,
+      // data: $("#manmade-intake-form").serialize(),
       success: function(data) {
+        console.log(data);
          setTimeout(function() {
             $("#ajax-progress").hide();
             $("#form_success_message").show();
-            $("#manmade-intake-form")[0].reset();
+            // $("#manmade-intake-form")[0].reset();
           }, 500);
         },
       error: function() {
+        console.log(data);
           setTimeout(function() {
             $("#ajax-progress").hide();
             $("#form_error_message").show();
-            $("#manmade-intake-form")[0].reset();
+            // $("#manmade-intake-form")[0].reset();
           }, 500);
         },
     });
