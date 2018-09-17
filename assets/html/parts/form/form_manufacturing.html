@@ -188,25 +188,25 @@
             <p>Label</p>
             <div class="vinyl-header-line"></div>
         </div>
-        <div class="label_radios_wrap">
+        <div id="label_radios" class="label_radios_wrap">
             <p class="vinyl-choose-one">choose one</p>
             <div>
                 <label for="label_print_black">
-                <input type="radio" id="label_print_black" value="label_print_black" name="label_color_radios" />
+                <input type="radio" id="label_print_black" value="Black Label" name="label_color_radios" />
                 <img src="./img/label_black.png" alt="black image for label selection" />
                 <h4>Black</h4>
             </label>  
             </div>
             <div>
                 <label for="label_print_white">
-                <input type="radio" id="label_print_white" value="label_print_white" name="label_color_radios" />
+                <input type="radio" id="label_print_white" value="White Label" name="label_color_radios" />
                 <img src="./img/label_white.png" alt="white color image for label selection" />
                 <h4>White</h4>
                 </label> 
             </div>
             <div>
                 <label for="label_print_4c">
-                <input type="radio" id="label_print_4c" value="label_print_4c" name="label_color_radios" />
+                <input type="radio" id="label_print_4c" value="Four Color Label" name="label_color_radios" />
                 <img src="./img/label_4c.png" alt="four color image for label selection" />
                 <h4>4 Color</h4>
                 <h5>custom layout</h5> 
@@ -232,19 +232,19 @@
             <div class="vinyl-header-line"></div>
         </div>
         <p class="vinyl-choose-one">choose one</p>
-        <div class="sleeves_print_radios">
+        <div id="sleeve_radios" class="sleeves_print_radios">
             <label for="sleeves_black">
-                <input type="radio" id="sleeves_black" value="sleeves_black" name="sleeves_color_radios" />
+                <input type="radio" id="sleeves_black" value="Black" name="sleeves_color_radios" />
                 <img src="./img/sleeve_black.png" alt="black sleeve example" />
                 <h4>Black</h4>
             </label>  
             <label for="sleeves_white">
-                <input type="radio" id="sleeves_white" value="sleeves_white" name="sleeves_color_radios" />
+                <input type="radio" id="sleeves_white" value="White" name="sleeves_color_radios" />
                 <img src="./img/sleeve_white.png" alt="white album example" />
                 <h4>White</h4>
             </label>
             <label for="sleeves_4color">
-                <input type="radio" id="sleeves_4color" value="sleeves_4color" name="sleeves_color_radios" />
+                <input type="radio" id="sleeves_4color" value="Four Color" name="sleeves_color_radios" />
                 <img src="./img/sleeve_4color.png" alt="4 color sleeve example" />
                 <h4>4 Color</h4>
                 <h5>custom layout<h5> 
@@ -257,7 +257,7 @@
                 </div>
                 <div class="select_field">
                     <select name="type_of_sleeve" id="type_of_sleeve" size="1">
-                        <option value="Nothing selected">None</option>
+                        <option value="Nothing selected">Select One</option>
                         <option value="Inner Sleeve Regular">Inner Sleeve</option>
                         <option value="Inner Sleeve Polylined">Inner Sleeve Polylined</option>
                     </select>
@@ -270,7 +270,7 @@
                 </div>
                 <div class="select_field">
                     <select name="type_of_sleeve_color" id="type_of_sleeve" size="1">
-                        <option value="Nothing selected">None</option>
+                        <option value="Nothing selected">Select One</option>
                         <option value="Print on Rough Side">Print on Rough Side</option>
                         <option value="Matt Lacquer">Matt Lacquer</option>
                     </select>

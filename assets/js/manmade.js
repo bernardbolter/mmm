@@ -97,84 +97,84 @@
   $( "input[name=vinyl_color]" ).on("change", function() {
     var colorVal = this.value;
     switch (colorVal) {
-      case 'vinyl_color_black':
+      case 'Black':
          $('#vinyl-color-disc-text').html('Black');
          $('#vinyl-color-disc-text-span').addClass( "vinyl-color-disc-text-span-show" );
          $('#vinyl-color-disc').removeClass();
          $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap black-disc");
          $('input[name=transparent').prop('checked', false);
          break;
-      case 'vinyl_color_white':
+      case 'White':
          $('#vinyl-color-disc-text').html('White');
          $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
          $('#vinyl-color-disc').removeClass();
          $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap white-disc");
          $('input[name=transparent').prop('checked', false);
          break;
-      case 'vinyl_color_gold':
+      case 'Gold':
          $('#vinyl-color-disc-text').html('Gold');
          $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
          $('#vinyl-color-disc').removeClass();
          $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap gold-disc");
          $('input[name=transparent').prop('checked', false);
          break;
-      case 'vinyl_color_yellow':
+      case 'Yellow':
         $('#vinyl-color-disc-text').html('Yellow');
         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
         $('#vinyl-color-disc').removeClass();
         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap yellow-disc");
         $('input[name=transparent').prop('checked', false);
          break;
-      case 'vinyl_color_yellow_translucent':
+      case 'Yellow Translucent':
         $('#vinyl-color-disc-text').html('Yellow Translucent');
         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
         $('#vinyl-color-disc').removeClass();
         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap yellow-translucent-disc");
         $('input[name=transparent').prop('checked', false);
          break;
-      case 'vinyl_color_orange':
+      case 'Orange':
         $('#vinyl-color-disc-text').html('Orange');
         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
         $('#vinyl-color-disc').removeClass();
         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap orange-disc");
         $('input[name=transparent').prop('checked', false);
          break;
-      case 'vinyl_color_red':
+      case 'Red':
         $('#vinyl-color-disc-text').html('Red');
         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
         $('#vinyl-color-disc').removeClass();
         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap red-disc");
         $('input[name=transparent').prop('checked', false);
          break;
-      case 'vinyl_color_red_translucent':
+      case 'Red Translucent':
         $('#vinyl-color-disc-text').html('Red Translucent');
         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
         $('#vinyl-color-disc').removeClass();
         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap red-translucent-disc");
         $('input[name=transparent').prop('checked', false);
          break;
-      case 'vinyl_color_blue':
+      case 'Blue':
         $('#vinyl-color-disc-text').html('Blue');
         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
         $('#vinyl-color-disc').removeClass();
         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap blue-disc");
         $('input[name=transparent').prop('checked', false);
          break;
-      case 'vinyl_color_blue_translucent':
+      case 'Blue Translucent':
         $('#vinyl-color-disc-text').html('Blue Translucent');
         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
         $('#vinyl-color-disc').removeClass();
         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap blue-translucent-disc");
         $('input[name=transparent').prop('checked', false);
          break;
-      case 'vinyl_color_green':
+      case 'Green':
         $('#vinyl-color-disc-text').html('Green');
         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
         $('#vinyl-color-disc').removeClass();
         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap green-disc");
         $('input[name=transparent').prop('checked', false);
          break;
-      case 'vinyl_color_green_translucent':
+      case 'Green Translucent':
         $('#vinyl-color-disc-text').html('Green Translucent');
         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
         $('#vinyl-color-disc').removeClass();
@@ -225,17 +225,16 @@
 
   $( "input[name=sleeves_color_radios]" ).on("change", function() {
     var sleeveChecked = this.value;
-    console.log(sleeveChecked)
     switch (sleeveChecked) {
-      case 'sleeves_black':
+      case 'Black':
         $('#type_of_sleeve').removeClass('type_of_sleeve_off');
         $('#type_of_sleeve_color').addClass('type_of_sleeve_color_off');
         break;
-      case 'sleeves_white':
+      case 'White':
         $('#type_of_sleeve').removeClass('type_of_sleeve_off');
         $('#type_of_sleeve_color').addClass('type_of_sleeve_color_off');
         break;
-      case 'sleeves_4color':
+      case 'Four Color':
         $('#type_of_sleeve').addClass('type_of_sleeve_off');
         $('#type_of_sleeve_color').removeClass('type_of_sleeve_color_off');
         break;
@@ -325,7 +324,7 @@
     }
   }
 
-  // SHow and hide image with hole for 4 color cover options
+  // Show and hide image with hole for 4 color cover options
 
   $("#4_color_cover_hole").on("change", function() {
     if ($('#4_color_cover_hole').is(':checked')) {
@@ -426,6 +425,34 @@
         $('#vinyl_color_radios input[type=radio]:checked').each(function(index, color) {
           formData.vinyl_color = color.value
         });
+      }
+
+      // Labels
+      if ($('input:radio[name="label_color_radios"]').is(":checked")) {
+        $('#label_radios input[type=radio]:checked').each(function(index, label) {
+          formData.label = label.value;
+        });
+      } else {
+        formData.label = "";
+      }
+      formData.amount_of_labels = $('input[name="amount_of_labels"]').val();
+
+      //Sleeves
+      if ($('input:radio[name="sleeves_color_radios"]').is(":checked")) {
+        $('#sleeve_radios input[type=radio]:checked').each(function(index, color) {
+          if ((color.value = "Black") || (color.value = "White")) {
+            formData.sleeve = color.value;
+            console.log("Black and white");
+          } else if (color.value = "Four Color") {
+            formData.sleeve = color.value;
+            console.log("Four Color");
+          } else {
+            console.log("nuttin");
+          }
+        });
+      } else {
+        formData.sleeve = "";
+        formData.type_of_sleeve = "";
       }
 
      
