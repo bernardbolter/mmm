@@ -396,6 +396,7 @@
       });
       var manufacturing_vinyl_size = vinylSizesArray.join((', '));
       formData.manufacturing_vinyl_size = manufacturing_vinyl_size;
+      formData.amount_of_vinyl = $('input[name="amount_of_vinyl"]').val();
 
       // 12inch options
 
@@ -440,20 +441,27 @@
       //Sleeves
       if ($('input:radio[name="sleeves_color_radios"]').is(":checked")) {
         $('#sleeve_radios input[type=radio]:checked').each(function(index, color) {
-          if ((color.value = "Black") || (color.value = "White")) {
+          console.log(color.value);
+          if ((color.value === "Black") || (color.value === "White")) {
             formData.sleeve = color.value;
-            console.log("Black and white");
-          } else if (color.value = "Four Color") {
+            console.log(formData.sleeve);
+            console.log($('#type_of_sleeve option:selected').val());
+            formData.type_of_sleeve = $('#type_of_sleeve option:selected').val();
+          } else if (color.value === "Four Color") {
             formData.sleeve = color.value;
-            console.log("Four Color");
+            console.log($('#type_of_sleeve_4_color option:selected').val());
+            formData.type_of_sleeve = $('#type_of_sleeve_4_color option:selected').val();
           } else {
-            console.log("nuttin");
+            formData.sleeve = "";
+            formData.type_of_sleeve = "";
           }
         });
       } else {
         formData.sleeve = "";
         formData.type_of_sleeve = "";
       }
+
+      formData.amount_of_sleeves = $('input[name="amount_of_sleeves"]').val();
 
      
       
