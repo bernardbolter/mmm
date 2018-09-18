@@ -249,17 +249,17 @@
   $( "input[name=cover_color_radios]" ).on("change", function() {
     var coverChecked = this.value;
     switch (coverChecked) {
-      case 'cover_disco':
+      case 'Disco Bag':
         $('#color_of_disco_bag').removeClass('color_of_disco_bag_off');
         $('#type_of_cover').addClass('type_of_cover_off');
         $('#type_of_cover_color').addClass('type_of_cover_color_off');
         break;
-      case 'cover_solid_color':
+      case 'Solid Color':
         $('#color_of_disco_bag').addClass('color_of_disco_bag_off');
         $('#type_of_cover').removeClass('type_of_cover_off');
         $('#type_of_cover_color').addClass('type_of_cover_color_off');
         break;
-      case 'cover_print_4c':
+      case 'Four Color':
         $('#color_of_disco_bag').addClass('color_of_disco_bag_off');
         $('#type_of_cover').addClass('type_of_cover_off');
         $('#type_of_cover_color').removeClass('type_of_cover_color_off');
@@ -441,15 +441,11 @@
       //Sleeves
       if ($('input:radio[name="sleeves_color_radios"]').is(":checked")) {
         $('#sleeve_radios input[type=radio]:checked').each(function(index, color) {
-          console.log(color.value);
           if ((color.value === "Black") || (color.value === "White")) {
             formData.sleeve = color.value;
-            console.log(formData.sleeve);
-            console.log($('#type_of_sleeve option:selected').val());
             formData.type_of_sleeve = $('#type_of_sleeve option:selected').val();
           } else if (color.value === "Four Color") {
             formData.sleeve = color.value;
-            console.log($('#type_of_sleeve_4_color option:selected').val());
             formData.type_of_sleeve = $('#type_of_sleeve_4_color option:selected').val();
           } else {
             formData.sleeve = "";
@@ -463,10 +459,64 @@
 
       formData.amount_of_sleeves = $('input[name="amount_of_sleeves"]').val();
 
-     
-      
+      // Covers
 
-      console.log(formData);
+      if ($('input:radio[name="cover_color_radios"]').is(":checked")) {
+        $('#cover_radios input[type=radio]:checked').each(function(index, cover) {
+          if (cover.value === "Disco Bag") {
+            formData.cover = cover.value;
+            formData.cover_hole = "";
+            formData.cover_option = $('#color_of_disco_bag option:selected').val();
+            formData.cover_thickness = "";
+          } else if (cover.value === "Solid Color") {
+            formData.cover = cover.value;
+            formData.cover_option = $('#solid_color_cover option:selected').val();
+            formData.cover_thickness = "";
+            if ($('input:checkbox[name="solid_color_cover_hole"]').is(":checked")) {
+              formData.cover_hole = "with hole";
+            } else {
+              formData.cover_hole = "no hole";
+            }
+          } else if (cover.value === "Four Color") {
+            formData.cover = cover.value;
+            formData.cover_option = $('#finish_of_4_color_cover option:selected').val();
+            formData.cover_thickness = $('#thickness_of_4_color_cover option:selected').val();
+            if ($('input:checkbox[name="4_color_cover_hole"]').is(":checked")) {
+              formData.cover_hole = "with hole";
+            } else {
+              formData.cover_hole = "no hole";
+            }
+          } else {
+            formData.cover = "";
+            formData.cover_option = "";
+            formData.cover_hole = "";
+            formData.cover_thickness = "";
+          }
+        });
+      } else {
+        formData.cover = "";
+        formData.cover_option = "";
+        formData.cover_hole = "";
+        formData.cover_thickness = "";
+      }
+      formData.amount_of_covers = $('input[name="amount_of_covers"]').val();
+
+      // Test Pressings
+
+      formData.test_pressings_amount = $('input[name="test_pressing_amount"]').val();
+     
+      // Notes
+
+      formData.notes = $('textarea[name="additional_notes"]').val();
+      formData.notes = formData.notes.replace(/\n/g, "<br />");
+
+      // GDPR
+
+      if ($('input:checkbox[name="gdpr_consent"]').is(":checked")) {
+        formData.gdpr = "has been checked";
+      } else {
+        formData.gdpr = "has not been checked";
+      }
 
 
     $.ajax({

@@ -318,20 +318,20 @@
             <p>Cover</p>
             <div class="vinyl-header-line"></div>
         </div>
-        <div class="sleeves_print_radios">
+        <div id="cover_radios" class="sleeves_print_radios">
             <p class="vinyl-choose-one">choose one</p>
             <label class="sleeves_print_image" for="cover_disco">
-                <input type="radio" id="cover_disco" value="cover_disco" name="cover_color_radios" />
+                <input type="radio" id="cover_disco" value="Disco Bag" name="cover_color_radios" />
                 <img id="disco_bag_image" src="./img/disco_black.png" alt="cover disco black example" />
                 <h4>Disco Bag</h4>
             </label>
             <label for="cover_solid_color">
-                <input type="radio" id="cover_solid_color" value="cover_solid_color" name="cover_color_radios" />
+                <input type="radio" id="cover_solid_color" value="Solid Color" name="cover_color_radios" />
                 <img id="cover_solid_image" src="./img/cover_solid_black.png" alt="solid color cover example" />
                 <h4>Solid Color</h4>
             </label>
             <label for="cover_print_4c">
-                <input type="radio" id="cover_print_4c" value="cover_print_4c" name="cover_color_radios" />
+                <input type="radio" id="cover_print_4c" value="Four Color" name="cover_color_radios" />
                 <img id="4color_hole_image" src="./img/cover_4color.png" alt="4 color album example" />
                 <h4>4 color</h4>
                 <h5>custom layout</h5> 
@@ -344,6 +344,7 @@
                 </div>
                 <div class="select_field">
                     <select name="color_of_disco_bag" id="color_of_disco_bag" size="1">
+                        <option value="Nothing Slected">Select One</option>
                         <option value="Black">Black</option>
                         <option value="White">White</option>
                         <option value="Brown">Brown</option>
@@ -356,10 +357,11 @@
                 </div>
                 <div class="select_field">
                     <select name="solid_color_cover_option" id="solid_color_cover" size="1">
+                        <option value="Nothing Selected">Select One</option>
                         <option value="Solid Black">Solid Black</option>
-                        <option value="Solid Black inside out">Solid Black | Inside Out</option>
+                        <option value="Solid Black | Inside Out">Solid Black | Inside Out</option>
                         <option value="Solid White">Solid White</option>
-                        <option value="Solid White inside out">Solid White | Inside Out</option>
+                        <option value="Solid White | Inside Out">Solid White | Inside Out</option>
                         <option value="Solid Brown">Solid Brown</option>
                     </select>
                 </div>
