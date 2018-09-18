@@ -503,7 +503,7 @@
 
       // Test Pressings
 
-      formData.test_pressings_amount = $('input[name="test_pressing_amount"]').val();
+      formData.test_pressing_amount = $('input[name="test_pressing_amount"]').val();
      
       // Notes
 
@@ -518,18 +518,19 @@
         formData.gdpr = "has not been checked";
       }
 
+    console.log(formData);
 
     $.ajax({
       type: "POST",
+      url: "",
       // url: "./sendgrid-php/sendgrid-php.php",
       data: formData,
-      // data: $("#manmade-intake-form").serialize(),
       success: function(data) {
         console.log(data);
          setTimeout(function() {
             $("#ajax-progress").hide();
             $("#form_success_message").show();
-            // $("#manmade-intake-form")[0].reset();
+            $("#manmade-intake-form")[0].reset();
           }, 500);
         },
       error: function() {
@@ -537,7 +538,7 @@
           setTimeout(function() {
             $("#ajax-progress").hide();
             $("#form_error_message").show();
-            // $("#manmade-intake-form")[0].reset();
+            $("#manmade-intake-form")[0].reset();
           }, 500);
         },
     });
