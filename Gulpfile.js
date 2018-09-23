@@ -33,7 +33,9 @@ var path = {
         './assets/style/**/*.sass'
     ],
     JS: './assets/js/*.js',
+    PDF: './assets/pdfs/*.pdf',
     IMAGES: './assets/images/*',
+    FAVICONS: './assets/favicon/**',
     FONTS: [
         './assets/fonts/*.woff2',
         './assets/fonts/*.woff',
@@ -55,6 +57,10 @@ gulp.task('html-in', function () {
         'before': /<\/head>$/,
         'lineBefore': '<link rel="stylesheet" type="text/css" href="style.css" />'
     }))
+    .pipe(insertLines({
+        'before': /<\/body>$/,
+        'lineBefore': '<script  src="mashup.js"></script>'
+    }))
     .pipe(gulp.dest('./builds/inbound/'));
 });
 
@@ -69,6 +75,10 @@ gulp.task('html-out', function () {
         'before': /<\/head>$/,
         'lineBefore': '<link rel="stylesheet" type="text/css" href="style-' + version + '.css" />'
     }))
+    .pipe(insertLines({
+        'before': /<\/body>$/,
+        'lineBefore': '<script  src="mashup-' + version + '.js"></script>'
+    }))
     .pipe(gulp.dest('./builds/outbound/'));
 
     gulp.src(path.STYLESHEETS)
@@ -76,6 +86,10 @@ gulp.task('html-out', function () {
         .pipe(autoprefixer('last 2 versions', 'safari 5', 'ie8', 'ie9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(concat('style-' + version + '.css'))
         .pipe(gulp.dest('./builds/outbound/'));
+
+    gulp.src(path.JS)
+        .pipe(concat('mashup-' + version + '.js'))
+        .pipe(gulp.dest('./builds/outbound'));
 });
 
 // PHP tasks ------------------------------------------------------------>>>>>>>>
@@ -87,6 +101,18 @@ gulp.task('php-in', function() {
 
 gulp.task('php-out', function() {
     gulp.src(path.PHP)
+        .pipe(gulp.dest('./builds/outbound/'));
+});
+
+// FAVICON tasks ------------------------------------------------------------>>>>>>>>
+
+gulp.task('favicon-in', function() {
+    gulp.src(path.FAVICONS)
+        .pipe(gulp.dest('./builds/inbound/'));
+});
+
+gulp.task('favicon-out', function() {
+    gulp.src(path.FAVICONS)
         .pipe(gulp.dest('./builds/outbound/'));
 });
 
@@ -123,6 +149,18 @@ var filename = 'style-' + getDate() + '.css';
     gulp.task('js-out', function() {
         gulp.src(path.JS)
             .pipe(concat('mashup.js'))
+            .pipe(gulp.dest('./builds/outbound'));
+        });
+
+// PDF TASKS ---------------------------------------------------->>>>>>>>
+
+    gulp.task('pdf-in', function() {
+        gulp.src(path.PDF)
+            .pipe(gulp.dest('./builds/inbound/'));
+        });
+
+    gulp.task('pdf-out', function() {
+        gulp.src(path.PDF)
             .pipe(gulp.dest('./builds/outbound'));
         });
 
@@ -182,8 +220,8 @@ gulp.task('clean-in', function() {
     gulp.watch([path.JS], ['js-in']);
   });
   
-  gulp.task('default', ['html-in', 'php-in', 'style-in', 'js-in', 'img-in', 'fonts-in', 'connect-sync', 'watch']);
+  gulp.task('default', ['html-in', 'php-in', 'style-in', 'js-in','pdf-in', 'img-in', 'fonts-in', 'connect-sync', 'watch']);
   
-  gulp.task('outbound', ['html-out', 'php-out', 'js-out', 'img-out', 'fonts-out']);
+  gulp.task('outbound', ['html-out', 'php-out', 'pdf-out', 'img-out', 'favicon-out', 'fonts-out']);
   
   gulp.task('clean', ['clean-in', 'clean-out']);

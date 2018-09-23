@@ -1,5 +1,5 @@
 <div id="manufacturing_button" class="form-header">
-    <h3>Vinyl Manufaturing Order</h3>
+    <h3>Vinyl Manufaturing Order &nbsp;&nbsp;<span>request a quote</span></h3>
     <a class="manufacturing_button">
         <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <path d="M18.9322709,25.8285624 C18.7703137,25.836892 18.624696,25.939809 18.5502831,26.0985366 C18.4758703,26.2572641 18.4839707,26.447681 18.5715322,26.5980422 C18.6590936,26.7484035 18.8128099,26.8358594 18.974764,26.8274584 L28.039954,26.8274584 C28.2034156,26.8300058 28.3554595,26.7353726 28.4378649,26.5797957 C28.5202703,26.4242189 28.5202703,26.231802 28.4378649,26.0762251 C28.3554595,25.9206483 28.2034156,25.8260151 28.039954,25.8285624 L18.974764,25.8285624 C18.9606074,25.8278305 18.9464275,25.8278305 18.9322709,25.8285624 Z"  fill-rule="nonzero" transform="translate(23.499669, 26.328013) rotate(-45.000000) translate(-23.499669, -26.328013) "></path>
@@ -47,7 +47,9 @@
         </div>
         <div class="form_vinyl_selections_amount">
             <div id="vinyl_size_12_double_triple" class="manmade-radio-buttons vinyl-size-small-radios">
-                <p class="vinyl-size-12-double-text">12" Options</p>
+                <p class="vinyl-size-12-double-text">12" Options
+                    <img src="img/info.png" class="tooltip info-tip" title="180g vinyl is only available for Black 12inch records." />
+                </p>
                 <div class="options_12inch_wrap">
                     <div>
                         <input checked="checked" type="radio" id="vinyl_size_12_single" value="vinyl_size_12_single" name="vinyl_size_12_double_triple" />
@@ -181,6 +183,7 @@
                     <input type="checkbox" value="transparent" name="transparent" />
                     <label for="transparent">Transparent</label>
                 </div>
+                <p>* The 180g Vinyl option is only available for black records.</p>
             </div> 
         </section>
     </div>
@@ -218,12 +221,19 @@
             </div>
         </div>
         <div class="label_inputs_wrap">
-            <div class="color_amount_wrap label_amount_wrap">
+            <div id="amount_black_white_labels" class="color_amount_wrap label_amount_wrap">
                 <div class="dropdown_label_wrap">
-                    <label for="amount_of_labels">Amount:</label>   
-                    <img src="img/info.png" class="tooltip info-tip" title="The amount refers to paired labels. Minimum order of 500 labels." /> 
+                    <label for="amount_of_bw_labels">Amount:</label>   
+                    <img src="img/info.png" class="tooltip info-tip" title="The amount refers to paired labels. Minimum order - 300 pairs of Black or White labels." /> 
                 </div>
-                <input type="text" name="amount_of_labels">
+                <input type="text" name="amount_of_bw_labels" placeholder="minimum order of 300 pairs">
+            </div>
+            <div id="amount_cmyk_labels" class="color_amount_wrap label_amount_wrap labels_cmyk_hide">
+                <div class="dropdown_label_wrap">
+                    <label for="amount_of_cmyk_labels">Amount:</label>   
+                    <img src="img/info.png" class="tooltip info-tip" title="The amount refers to paired labels. Minimum order - 500 pairs of CMYK labels." /> 
+                </div>
+                <input type="text" name="amount_of_cmyk_labels" placeholder="minimum order of 500 pairs">
             </div>
         </div>
     </div>
@@ -280,12 +290,19 @@
                     </select>
                 </div>
             </div>
-            <div class="color_amount_wrap">
+            <div id="amount_bw_sleeves" class="color_amount_wrap">
                 <div class="dropdown_label_wrap">
-                    <label for="amount_of_sleeves">Amount:</label>   
-                    <img src="img/info.png" class="tooltip info-tip" title="Minimum of 300 copies for printed matter." /> 
+                    <label for="amount_of_bw_sleeves">Amount:</label>   
+                    <img src="img/info.png" class="tooltip info-tip" title="Minimum order of Black or White Sleeves is 100." /> 
                 </div>
-                <input type="text" name="amount_of_sleeves">
+                <input type="text" name="amount_of_bw_sleeves" placeholder="minimum order of 100">
+            </div>
+            <div id="amount_cmyk_sleeves" class="color_amount_wrap amount_cmyk_sleeves_hide">
+                <div class="dropdown_label_wrap">
+                    <label for="amount_of_cmyk_sleeves">Amount:</label>   
+                    <img src="img/info.png" class="tooltip info-tip" title="Minimum order of CMYK Sleeves is 300." /> 
+                </div>
+                <input type="text" name="amount_of_cmyk_sleeves" placeholder="minimum order of 300">
             </div>
         </section>
         <!-- <p class="vinyl-sleeves-heading">PE and PVC</p>
@@ -404,12 +421,19 @@
                     <label for="4_color_cover_hole">With Center Hole</label>
                 </div>
             </div>
-            <div class="color_amount_wrap cover_amount_wrap">
+            <div id="amount_disco_solid_covers" class="color_amount_wrap cover_amount_wrap">
                 <div class="dropdown_label_wrap">
-                    <label for="amount_of_covers">Amount:</label>   
-                    <img src="img/info.png" class="tooltip info-tip" title="minimum of 300 copies for printed matter." /> 
+                    <label for="amount_of_disco_solid_covers">Amount:</label>   
+                    <img src="img/info.png" class="tooltip info-tip" title="minimum order of 100 for Disco Bags and Solid Color Covers." /> 
                 </div>
-                <input type="text" name="amount_of_covers">
+                <input type="text" name="amount_of_disco_solid_covers"placeholder="minimum order of 100">
+            </div>
+            <div id="amount_cmyk_covers" class="color_amount_wrap cover_amount_wrap amount_cmyk_covers_off">
+                <div class="dropdown_label_wrap">
+                    <label for="amount_of_cmyk_covers">Amount:</label>   
+                    <img src="img/info.png" class="tooltip info-tip" title="minimum order of 300 for CMYK covers." /> 
+                </div>
+                <input type="text" name="amount_of_cmyk_covers"placeholder="minimum order of 300">
             </div>
         </section>
     </div>
@@ -444,14 +468,14 @@
     <div class="gema-bulletpoints">
         <p>&middot; In order for us to complete your pressing order each label-group must fill in the GEMA form attached below</p>
         <p>&middot; Next mail the filled in form by post to GEMA</p>
-        <p>&middot; When your record release is documented by GEMA you will receive a return paper by post called: Auslieferungsgenehmigung (License Proof)</p>
+        <p>&middot; When your vinyl release is documented by GEMA you will receive a return paper by post called: Auslieferungsgenehmigung (License Proof)</p>
         <p>&middot; Once this form is received please scan and email the image to office@manmademastering.com with your catalog number in the subject line of the email</p>
     </div>
     <div class="gema-links">
-        <a href="#" class="gema-link">
+        <a href="Licensing-application-by-customer.pdf" target="_blank" class="gema-link">
             <p>Download GEMA Form | English</p>
         </a>
-        <a href="#" class="gema-link">
+        <a href="lizenzantrag_anmeldeformular.pdf" target="_blank" class="gema-link">
             <p>Download GEMA Form | Deutsch</p>
         </a>
     </div>

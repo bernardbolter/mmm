@@ -207,17 +207,21 @@
   $( "input[name=label_color_radios]" ).on("change", function() {
     var labelChecked = this.value;
     switch (labelChecked) {
-      case 'label_print_1c':
-        $('#color_of_label').addClass('color_of_label_on');
+      case 'Black Label':
+        $('#amount_black_white_labels').removeClass('labels_bw_hide');
+        $('#amount_cmyk_labels').addClass('labels_cmyk_hide');
         break;
-      case 'label_print_4c':
-        $('#color_of_label').addClass('color_of_label_on');
+      case 'White Label':
+        $('#amount_black_white_labels').removeClass('labels_bw_hide');
+        $('#amount_cmyk_labels').addClass('labels_cmyk_hide');
         break;
-      case 'label_print_default':
-        $('#color_of_label').removeClass('color_of_label_on');
+      case 'Four Color Label':
+        $('#amount_black_white_labels').addClass('labels_bw_hide');
+        $('#amount_cmyk_labels').removeClass('labels_cmyk_hide');
         break;
       default:
-        $('#color_of_label').removeClass('color_of_label_on');
+        $('#amount_black_white_labels').removeClass('labels_bw_hide');
+        $('#amount_cmyk_labels').addClass('labels_cmyk_hide');
     }
   });
 
@@ -229,18 +233,26 @@
       case 'Black':
         $('#type_of_sleeve').removeClass('type_of_sleeve_off');
         $('#type_of_sleeve_color').addClass('type_of_sleeve_color_off');
+        $('#amount_bw_sleeves').removeClass('amount_bw_sleeves_hide');
+        $('#amount_cmyk_sleeves').addClass('amount_cmyk_sleeves_hide');
         break;
       case 'White':
         $('#type_of_sleeve').removeClass('type_of_sleeve_off');
         $('#type_of_sleeve_color').addClass('type_of_sleeve_color_off');
+        $('#amount_bw_sleeves').removeClass('amount_bw_sleeves_hide');
+        $('#amount_cmyk_sleeves').addClass('amount_cmyk_sleeves_hide');
         break;
       case 'Four Color':
         $('#type_of_sleeve').addClass('type_of_sleeve_off');
         $('#type_of_sleeve_color').removeClass('type_of_sleeve_color_off');
+        $('#amount_bw_sleeves').addClass('amount_bw_sleeves_hide');
+        $('#amount_cmyk_sleeves').removeClass('amount_cmyk_sleeves_hide');
         break;
       default:
         $('#type_of_sleeve').removeClass('type_of_sleeve_off');
         $('#type_of_sleeve_color').addClass('type_of_sleeve_color_off');
+        $('#amount_bw_sleeves').removeClass('amount_bw_sleeves_hide');
+        $('#amount_cmyk_sleeves').addClass('amount_cmyk_sleeves_hide');
     }
   });
 
@@ -253,21 +265,29 @@
         $('#color_of_disco_bag').removeClass('color_of_disco_bag_off');
         $('#type_of_cover').addClass('type_of_cover_off');
         $('#type_of_cover_color').addClass('type_of_cover_color_off');
+        $('#amount_disco_solid_covers').removeClass('amount_disco_solid_covers_off');
+        $('#amount_cmyk_covers').addClass('amount_cmyk_covers_off');
         break;
       case 'Solid Color':
         $('#color_of_disco_bag').addClass('color_of_disco_bag_off');
         $('#type_of_cover').removeClass('type_of_cover_off');
         $('#type_of_cover_color').addClass('type_of_cover_color_off');
+        $('#amount_disco_solid_covers').removeClass('amount_disco_solid_covers_off');
+        $('#amount_cmyk_covers').addClass('amount_cmyk_covers_off');
         break;
       case 'Four Color':
         $('#color_of_disco_bag').addClass('color_of_disco_bag_off');
         $('#type_of_cover').addClass('type_of_cover_off');
         $('#type_of_cover_color').removeClass('type_of_cover_color_off');
+        $('#amount_disco_solid_covers').addClass('amount_disco_solid_covers_off');
+        $('#amount_cmyk_covers').removeClass('amount_cmyk_covers_off');
         break;
       default:
         $('#color_of_disco_bag').addClass('color_of_disco_bag_off');
         $('#type_of_cover').addClass('type_of_cover_off');
         $('#type_of_cover_color').addClass('type_of_cover_color_off');
+        $('#amount_disco_solid_covers').removeClass('amount_disco_solid_covers_off');
+        $('#amount_cmyk_covers').addClass('amount_cmyk_covers_off');
     }
   });
 
@@ -436,9 +456,11 @@
       } else {
         formData.label = "";
       }
-      formData.amount_of_labels = $('input[name="amount_of_labels"]').val();
 
-      //Sleeves
+      formData.amount_of_bw_labels = $('input[name="amount_of_bw_labels"]').val();
+      formData.amount_of_cmyk_labels = $('input[name="amount_of_cmyk_labels"]').val();
+
+      // Sleeves
       if ($('input:radio[name="sleeves_color_radios"]').is(":checked")) {
         $('#sleeve_radios input[type=radio]:checked').each(function(index, color) {
           if ((color.value === "Black") || (color.value === "White")) {
@@ -457,7 +479,8 @@
         formData.type_of_sleeve = "";
       }
 
-      formData.amount_of_sleeves = $('input[name="amount_of_sleeves"]').val();
+      formData.amount_of_bw_sleeves = $('input[name="amount_of_bw_sleeves"]').val();
+      formData.amount_of_cmyk_sleeves = $('input[name="amount_of_cmyk_sleeves"]').val();
 
       // Covers
 
@@ -499,7 +522,8 @@
         formData.cover_hole = "";
         formData.cover_thickness = "";
       }
-      formData.amount_of_covers = $('input[name="amount_of_covers"]').val();
+      formData.amount_of_disco_solid_covers = $('input[name="amount_of_disco_solid_covers"]').val();
+      formData.amount_of_cmyk_covers = $('input[name="amount_of_cmyk_covers"]').val();
 
       // Test Pressings
 
@@ -523,7 +547,7 @@
     $.ajax({
       type: "POST",
       url: "",
-      // url: "./sendgrid-php/sendgrid-php.php",
+      url: "./sendgrid-php/sendgrid-php.php",
       data: formData,
       success: function(data) {
         console.log(data);

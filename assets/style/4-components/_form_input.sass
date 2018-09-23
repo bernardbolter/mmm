@@ -26,7 +26,7 @@
         border: 1px solid $form-back
 
         &::placeholder
-            color: #5E000B
+            color: $dark-text
             opacity: 0.4
 
     &:focus
@@ -55,6 +55,10 @@
         width: 65%
         margin-right: 5%
 
+    input
+        &::placeholder
+            color: #5E000B !important
+
 .input-mobile-number
     width: 100%
 
@@ -67,6 +71,10 @@
     @media (min-width: $mobile-break)
         width: 47.5%
         margin-right: 5%
+
+    input
+        &::placeholder
+            color: #5E000B !important
 
 .input-tax-id
     width: 100%
@@ -86,6 +94,10 @@
 
     @media (min-width: $mobile-break)
         width: 65%
+
+    input
+        &::placeholder
+            color: #5E000B !important
 
 .input-city
     width: 100%
