@@ -354,6 +354,18 @@
     }
   });
 
+  // hide final delivery fields
+
+  $("#delivery_checkbox").on("change", function() {
+    console.log('checked');
+    if ($('#delivery_address_checkbox').is(':checked')) {
+      console.log('checked 2');
+      $("#final_delivery_wrap").addClass('final_delivery_wrap_off');
+    } else {
+      $("#final_delivery_wrap").removeClass('final_delivery_wrap_off');
+    }
+  });
+
   // CHECK DATA and then SEND TO PHP
 
   $("#manmade-intake-form").submit(function(e) {
@@ -529,11 +541,25 @@
 
       formData.test_pressing_amount = $('input[name="test_pressing_amount"]').val();
 
+      // Test Pressing Delivery Address
+
+      formData.test_delivery_city = $('input[name="test_delivery_city"]').val();
+      formData.test_delivery_postal_code = $('input[name="test_delivery_postal_code"]').val();
+      formData.test_delivery_country = $('input[name="test_delivery_country"]').val();
+
       // Final Product Delivery Address
 
       formData.final_delivery_city = $('input[name="final_delivery_city"]').val();
       formData.final_delivery_postal_code = $('input[name="final_delivery_postal_code"]').val();
       formData.final_delivery_country = $('input[name="final_delivery_country"]').val();
+
+      // Final Delivery Checkbox
+
+      if ($('input:checkbox[name="delivery_address_checkbox"]').is(":checked")) {
+        formData.delivery_address_checkbox = 'yes';
+      } else {
+        formData.delivery_address_checkbox = 'no';
+      }
      
       // Notes
 
@@ -552,7 +578,6 @@
 
     $.ajax({
       type: "POST",
-      url: "",
       url: "./sendgrid-php/sendgrid-php.php",
       data: formData,
       success: function(data) {
