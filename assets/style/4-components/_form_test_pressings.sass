@@ -23,7 +23,7 @@
         text-align: left
 
 .test-pressings-text
-    width: auto
+    width: 45%
     margin: 0 5% 0 0
     padding: 0
 
@@ -36,25 +36,24 @@
         padding: 0
         margin: 0
         text-align: left
-        max-width: 130px
 
 .input-test-pressings
-    width: 100px
+    width: 50%
     margin: 0
 
     label
         margin: 0
 
     input
-        width: 50%
+        width: 100%
         color: $dark-text
-        padding: 3px 15%
 
 .final-delivery-wrap
     width: 100%
     display: flex
     flex-direction: row
     flex-wrap: wrap
+    margin: 0 0 25px
 
 .input-final-delivery-city
     width: 100%
@@ -79,3 +78,22 @@
     @media (min-width: 750px)
         width: 34%
         margin: 12px 0 0
+
+.delivery_checkbox_radios
+    flex-direction: row
+    margin: 15px 0 5px
+
+    label
+        font-size: 12px
+        font-weight: 300
+        margin: 0 0 0 5px
+
+    input
+        width: 13px
+        height: 13px
+
+    input:checked::before
+        font-size: 14px
+        width: 13px
+        height: 13px
+        margin-top: -4px

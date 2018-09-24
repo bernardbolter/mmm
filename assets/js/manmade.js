@@ -528,6 +528,12 @@
       // Test Pressings
 
       formData.test_pressing_amount = $('input[name="test_pressing_amount"]').val();
+
+      // Final Product Delivery Address
+
+      formData.final_delivery_city = $('input[name="final_delivery_city"]').val();
+      formData.final_delivery_postal_code = $('input[name="final_delivery_postal_code"]').val();
+      formData.final_delivery_country = $('input[name="final_delivery_country"]').val();
      
       // Notes
 
