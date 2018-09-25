@@ -93,17 +93,17 @@
             <p class="vinyl-choose-one">choose one</p>
             <div id="vinyl-color-disc" class="vinyl-color-disc-wrap black-disc">
                 <div class="disc-svg-wrap">
-                    <svg width="200px" height="100px" viewBox="0 0 200 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <ellipse class="svg-disc-color"  cx="100" cy="50" rx="100" ry="50"></ellipse>
-                        <ellipse class="svg-disc-label-color"  cx="100" cy="47" rx="40" ry="15"></ellipse>
-                        <ellipse class="svg-disc-hole-color" cx="100" cy="47" rx="5" ry="2"></ellipse>
-                        <path class="svg-disc-trans" d="M95.3558601,99.9674174 C96.5652247,99.9890775 97.7800613,100 99,100 C154.228475,100 199,77.6142375 199,50 C199,39.6411132 192.69969,30.0179846 181.910487,22.0363233 L95.3558601,99.9674174 Z"></path>
+                    <svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <ellipse class="svg-disc-color"  cx="100" cy="100" rx="100" ry="100"></ellipse>
+                        <ellipse class="svg-disc-label-color"  cx="100" cy="100" rx="30" ry="30"></ellipse>
+                        <ellipse class="svg-disc-hole-color" cx="100" cy="100" rx="5" ry="4"></ellipse>
+                        <path class="svg-disc-trans" d="M71.1202886,195.766582 C80.2637406,198.520123 89.9590484,200 100,200 C155.228475,200 200,155.228475 200,100 C200,93.57241 199.393582,87.2864565 198.234838,81.1962316 L71.1202886,195.766582 Z"></path>
                     </svg>
                 </div>
                 <p id="vinyl-color-disc-text">Black</p>
                 <p id="vinyl-color-disc-text-span" class="vinyl-color-disc-text-span-show">(default)</p>
             </div>
-
+        <div class="vinly_color_transparent_wrap">
             <div id="vinyl_color_radios" class="vinyl_color_all_wrap">
                 <div class="vinyl_color_single">
                     <label for="vinyl_color_black">
@@ -185,6 +185,7 @@
                 </div>
                 <p>* The 180g Vinyl option is only available for black records.</p>
             </div> 
+        </div>
         </section>
     </div>
 
@@ -221,12 +222,12 @@
             </div>
         </div>
         <div class="label_inputs_wrap">
-            <div id="amount_black_white_labels" class="color_amount_wrap label_amount_wrap">
+            <div id="amount_black_white_labels" class="color_amount_wrap label_amount_wrap labels_bw_hide">
                 <div class="dropdown_label_wrap">
                     <label for="amount_of_bw_labels">Amount:</label>   
-                    <img src="img/info.png" class="tooltip info-tip" title="The amount refers to paired labels. Minimum order - 300 pairs of Black or White labels." /> 
+                    <img src="img/info.png" class="tooltip info-tip" title="The amount refers to paired labels. Minimum order - 100 pairs of Black or White labels." /> 
                 </div>
-                <input type="text" name="amount_of_bw_labels" placeholder="minimum order of 300 pairs">
+                <input type="text" name="amount_of_bw_labels" placeholder="minimum order of 100 pairs">
             </div>
             <div id="amount_cmyk_labels" class="color_amount_wrap label_amount_wrap labels_cmyk_hide">
                 <div class="dropdown_label_wrap">
@@ -265,7 +266,7 @@
             </label>
         </div>
         <section class="sleeve_info_wrap">
-            <div id="type_of_sleeve" class="sleeve_dropdown_wrap">
+            <div id="type_of_sleeve" class="sleeve_dropdown_wrap type_of_sleeve_off">
                 <div class="dropdown_label_wrap">
                     <label for="type_of_sleeve">Type of Sleeve:</label>
                 </div>
@@ -290,7 +291,7 @@
                     </select>
                 </div>
             </div>
-            <div id="amount_bw_sleeves" class="color_amount_wrap">
+            <div id="amount_bw_sleeves" class="color_amount_wrap amount_bw_sleeves_hide">
                 <div class="dropdown_label_wrap">
                     <label for="amount_of_bw_sleeves">Amount:</label>   
                     <img src="img/info.png" class="tooltip info-tip" title="Minimum order of Black or White Sleeves is 100." /> 
@@ -361,6 +362,17 @@
                         <option value="Solid Brown">Solid Brown</option>
                     </select>
                 </div>
+                <div class="dropdown_label_wrap color_drop_spacing">
+                    <label for="finish_of_4_color_cover">Solid Color Finish Options:</label>
+                </div>
+                <div class="select_field">
+                    <select name="finish_of_solid_color_cover" id="finish_of_solid_color_cover" size="1">
+                        <option value="None Selected">Select One</option>
+                        <option value="Matte">Matte</option>
+                        <option value="Glossy">Glossy</option>
+                        <option value="Inside Out">Inside Out</option>
+                    </select>
+                </div>
                 <div id="solid_color_hole" class="manmade-radio-buttons cover-with-hole">
                     <input type="checkbox" id="solid_color_cover_hole" value="solid_color_cover_hole" name="solid_color_cover_hole" />
                     <label for="solid_color_cover_hole">With Center Hole</label>
@@ -396,7 +408,7 @@
                     <label for="4_color_cover_hole">With Center Hole</label>
                 </div>
             </div>
-            <div id="amount_disco_solid_covers" class="color_amount_wrap cover_amount_wrap">
+            <div id="amount_disco_solid_covers" class="color_amount_wrap cover_amount_wrap amount_disco_solid_covers_off">
                 <div class="dropdown_label_wrap">
                     <label for="amount_of_disco_solid_covers">Amount:</label>   
                     <img src="img/info.png" class="tooltip info-tip" title="minimum order of 100 for Disco Bags and Solid Color Covers." /> 
@@ -424,7 +436,7 @@
             <h3>2 test pressings w/ every order are free</h3>
          </div>
         <div class="test-pressings-text">
-            <h4>*If you require addition test pressings, please enter the amount </h4>
+            <h4>*If you require addition test pressings, please enter the amount here </h4>
         </div>
         <div class="manmade-input input-test-pressings">
             <label for="test_pressing_amount">

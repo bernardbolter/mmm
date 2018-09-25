@@ -377,7 +377,7 @@
     formData.company = $('input[name="company"]').val();
     formData.mobile_number = $('input[name="mobile_number"]').val();
     formData.name = $('input[name="name"]').val();
-    formData.street_number = $('input[name="street_number"]').val();
+    formData.street_address = $('input[name="street_address"]').val();
     formData.tax_id = $('input[name="tax_id"]').val();
     formData.email = $('input[name="email"]').val();
     formData.city = $('input[name="city"]').val();
@@ -503,11 +503,11 @@
             formData.cover = cover.value;
             formData.cover_hole = "";
             formData.cover_option = $('#color_of_disco_bag option:selected').val();
-            formData.cover_thickness = "";
+            formData.cover_finish = "";
           } else if (cover.value === "Solid Color") {
             formData.cover = cover.value;
             formData.cover_option = $('#solid_color_cover option:selected').val();
-            formData.cover_thickness = "";
+            formData.cover_thickness = $('#finish_of_solid_color_cover option:selected').val();
             if ($('input:checkbox[name="solid_color_cover_hole"]').is(":checked")) {
               formData.cover_hole = "with hole";
             } else {
@@ -515,8 +515,8 @@
             }
           } else if (cover.value === "Four Color") {
             formData.cover = cover.value;
-            formData.cover_option = $('#finish_of_4_color_cover option:selected').val();
-            formData.cover_thickness = $('#thickness_of_4_color_cover option:selected').val();
+            formData.cover_finish = $('#finish_of_4_color_cover option:selected').val();
+            formData.cover_option = $('#thickness_of_4_color_cover option:selected').val();
             if ($('input:checkbox[name="4_color_cover_hole"]').is(":checked")) {
               formData.cover_hole = "with hole";
             } else {
@@ -526,7 +526,7 @@
             formData.cover = "";
             formData.cover_option = "";
             formData.cover_hole = "";
-            formData.cover_thickness = "";
+            formData.cover_finish = "";
           }
         });
       } else {
@@ -582,7 +582,6 @@
       url: "./sendgrid-php/sendgrid-php.php",
       data: formData,
       success: function(data) {
-        console.log(data);
          setTimeout(function() {
             $("#ajax-progress").hide();
             $("#form_success_message").show();
@@ -590,7 +589,6 @@
           }, 500);
         },
       error: function() {
-        console.log(data);
           setTimeout(function() {
             $("#ajax-progress").hide();
             $("#form_error_message").show();

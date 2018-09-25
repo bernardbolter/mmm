@@ -12,7 +12,7 @@
     @media (min-width: 700px)
         flex-direction: row
         align-items: flex-start
-        justify-content: space-around
+        justify-content: flex-start
 
 .vinyl-color-disc-wrap
     width: 100%
@@ -22,6 +22,10 @@
 
     @media (min-width: 700px)
         width: 250px
+        margin: 0 5px
+
+    @media (min-width: 800px)
+        margin: 0 30px
 
 #vinyl-color-disc-text
     font-family: $the-font
@@ -66,16 +70,21 @@
         width: 100%
         cursor: pointer
 
+.vinly_color_transparent_wrap
+    display: flex
+    flex-direction: column
+    margin: 10px 0 0 0
+
 .vinyl-color-radios
     flex-direction: column
     align-items: center
     justify-content: center
-    margin: 5px 0 0 0
+    margin: 15px 0 0 0
 
     @media (min-width: 700px)
         flex-direction: column
-        width: 400px
-        margin: 20px 0 0 0
+        width: 240px
+        margin: 0 20px
 
     p
         font-size: 13px
