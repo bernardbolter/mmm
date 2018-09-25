@@ -102,84 +102,84 @@
          $('#vinyl-color-disc-text-span').addClass( "vinyl-color-disc-text-span-show" );
          $('#vinyl-color-disc').removeClass();
          $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap black-disc");
-         $('input[name=transparent').prop('checked', false);
+         $('input[name="transparent"]').prop('checked', false);
          break;
       case 'White':
          $('#vinyl-color-disc-text').html('White');
          $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
          $('#vinyl-color-disc').removeClass();
          $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap white-disc");
-         $('input[name=transparent').prop('checked', false);
+         $('input[name="transparent"]').prop('checked', false);
          break;
       case 'Gold':
          $('#vinyl-color-disc-text').html('Gold');
          $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
          $('#vinyl-color-disc').removeClass();
          $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap gold-disc");
-         $('input[name=transparent').prop('checked', false);
+         $('input[name="transparent"]').prop('checked', false);
          break;
       case 'Yellow':
         $('#vinyl-color-disc-text').html('Yellow');
         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
         $('#vinyl-color-disc').removeClass();
         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap yellow-disc");
-        $('input[name=transparent').prop('checked', false);
+        $('input[name="transparent"]').prop('checked', false);
          break;
       case 'Yellow Translucent':
         $('#vinyl-color-disc-text').html('Yellow Translucent');
         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
         $('#vinyl-color-disc').removeClass();
         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap yellow-translucent-disc");
-        $('input[name=transparent').prop('checked', false);
+        $('input[name="transparent"]').prop('checked', false);
          break;
       case 'Orange':
         $('#vinyl-color-disc-text').html('Orange');
         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
         $('#vinyl-color-disc').removeClass();
         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap orange-disc");
-        $('input[name=transparent').prop('checked', false);
+        $('input[name="transparent"]').prop('checked', false);
          break;
       case 'Red':
         $('#vinyl-color-disc-text').html('Red');
         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
         $('#vinyl-color-disc').removeClass();
         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap red-disc");
-        $('input[name=transparent').prop('checked', false);
+        $('input[name="transparent"]').prop('checked', false);
          break;
       case 'Red Translucent':
         $('#vinyl-color-disc-text').html('Red Translucent');
         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
         $('#vinyl-color-disc').removeClass();
         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap red-translucent-disc");
-        $('input[name=transparent').prop('checked', false);
+        $('input[name="transparent"]').prop('checked', false);
          break;
       case 'Blue':
         $('#vinyl-color-disc-text').html('Blue');
         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
         $('#vinyl-color-disc').removeClass();
         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap blue-disc");
-        $('input[name=transparent').prop('checked', false);
+        $('input[name="transparent"]').prop('checked', false);
          break;
       case 'Blue Translucent':
         $('#vinyl-color-disc-text').html('Blue Translucent');
         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
         $('#vinyl-color-disc').removeClass();
         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap blue-translucent-disc");
-        $('input[name=transparent').prop('checked', false);
+        $('input[name="transparent"]').prop('checked', false);
          break;
       case 'Green':
         $('#vinyl-color-disc-text').html('Green');
         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
         $('#vinyl-color-disc').removeClass();
         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap green-disc");
-        $('input[name=transparent').prop('checked', false);
+        $('input[name="transparent"]').prop('checked', false);
          break;
       case 'Green Translucent':
         $('#vinyl-color-disc-text').html('Green Translucent');
         $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
         $('#vinyl-color-disc').removeClass();
         $('#vinyl-color-disc').addClass("vinyl-color-disc-wrap green-translucent-disc");
-        $('input[name=transparent').prop('checked', false);
+        $('input[name="transparent"]').prop('checked', false);
          break;
       default:
         console.log('no match');
@@ -188,8 +188,8 @@
 
   // Handle the Transparent checkbox
 
-  $("input[name=transparent").on("change", function() {
-    if ($("input[name=transparent").is(':checked')) {
+  $('input[name="transparent"]').on("change", function() {
+    if ($('input[name="transparent"]').is(':checked')) {
       $('#vinyl-color-disc-text').html('Transparent');
       $('#vinyl-color-disc-text-span').removeClass( "vinyl-color-disc-text-span-show" );
       $('#vinyl-color-disc').removeClass();
@@ -369,6 +369,7 @@
   // CHECK DATA and then SEND TO PHP
 
   $("#manmade-intake-form").submit(function(e) {
+    e.preventDefault();
     $('#ajax-progress').show();
     var formData = {};
 
@@ -597,8 +598,6 @@
           }, 500);
         },
     });
-
-    e.preventDefault();
   });
 
   // clear success and error messages if user fills out the form again
