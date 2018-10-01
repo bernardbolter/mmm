@@ -108,12 +108,12 @@ gulp.task('php-out', function() {
 
 gulp.task('favicon-in', function() {
     gulp.src(path.FAVICONS)
-        .pipe(gulp.dest('./builds/inbound/'));
+        .pipe(gulp.dest('./builds/inbound/favicon'));
 });
 
 gulp.task('favicon-out', function() {
     gulp.src(path.FAVICONS)
-        .pipe(gulp.dest('./builds/outbound/'));
+        .pipe(gulp.dest('./builds/outbound/favicon'));
 });
 
 // STYLE SHEET TASKS ---------------------------------------------------->>>>>>>>

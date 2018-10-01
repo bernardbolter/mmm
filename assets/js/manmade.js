@@ -267,6 +267,13 @@
         $('#type_of_cover_color').addClass('type_of_cover_color_off');
         $('#amount_disco_solid_covers').removeClass('amount_disco_solid_covers_off');
         $('#amount_cmyk_covers').addClass('amount_cmyk_covers_off');
+        $("input[name='sleeves_color_radios']").prop('disabled', true);
+        $('.sleeves_radios').prop('checked', false);
+        $('#type_of_sleeve').addClass('type_of_sleeve_off');
+        $('#type_of_sleeve_color').addClass('type_of_sleeve_color_off');
+        $('#amount_bw_sleeves').addClass('amount_bw_sleeves_hide');
+        $('#amount_cmyk_sleeves').addClass('amount_cmyk_sleeves_hide');
+        $('#disco_bag_no_sleeve').removeClass('disco_bag_no_sleeve_hide');
         break;
       case 'Solid Color':
         $('#color_of_disco_bag').addClass('color_of_disco_bag_off');
@@ -274,6 +281,8 @@
         $('#type_of_cover_color').addClass('type_of_cover_color_off');
         $('#amount_disco_solid_covers').removeClass('amount_disco_solid_covers_off');
         $('#amount_cmyk_covers').addClass('amount_cmyk_covers_off');
+        $("input[name='sleeves_color_radios']").prop('disabled', false);
+        $('#disco_bag_no_sleeve').addClass('disco_bag_no_sleeve_hide');
         break;
       case 'Four Color':
         $('#color_of_disco_bag').addClass('color_of_disco_bag_off');
@@ -281,6 +290,8 @@
         $('#type_of_cover_color').removeClass('type_of_cover_color_off');
         $('#amount_disco_solid_covers').addClass('amount_disco_solid_covers_off');
         $('#amount_cmyk_covers').removeClass('amount_cmyk_covers_off');
+        $("input[name='sleeves_color_radios']").prop('disabled', false);
+        $('#disco_bag_no_sleeve').addClass('disco_bag_no_sleeve_hide');
         break;
       default:
         $('#color_of_disco_bag').addClass('color_of_disco_bag_off');
@@ -288,6 +299,8 @@
         $('#type_of_cover_color').addClass('type_of_cover_color_off');
         $('#amount_disco_solid_covers').removeClass('amount_disco_solid_covers_off');
         $('#amount_cmyk_covers').addClass('amount_cmyk_covers_off');
+        $("input[name='sleeves_color_radios']").prop('disabled', false);
+        $('#disco_bag_no_sleeve').addClass('disco_bag_no_sleeve_hide');
     }
   });
 
@@ -328,11 +341,12 @@
     } else {
       holeOrNo = 'no';
     }
+
     $("#solid_color_hole").removeClass('solid_color_off');
 
-    if (((solidColor === "Solid Black") || (solidColor === "Solid Black | Inside Out")) && (holeOrNo === 'no')) {
+    if (((solidColor === "Solid Black") || (solidColor === "Select One") || (solidColor === "Solid Black | Inside Out")) && (holeOrNo === 'no')) {
       $("#cover_solid_image").attr("src", "img/cover_solid_black.png");
-    } else if (((solidColor === "Solid Black") || (solidColor === "Solid Black | Inside Out")) && (holeOrNo === 'yes')) {
+    } else if (((solidColor === "Solid Black") || (solidColor === "Select One") || (solidColor === "Solid Black | Inside Out")) && (holeOrNo === 'yes')) {
       $("#cover_solid_image").attr("src", "img/cover_solid_black_hole.png");
     } else if (((solidColor === "Solid White") || (solidColor === "Solid White | Inside Out")) && (holeOrNo === 'yes')) {
       $("#cover_solid_image").attr("src", "img/cover_solid_white_hole.png");
@@ -357,12 +371,24 @@
   // hide final delivery fields
 
   $("#delivery_checkbox").on("change", function() {
-    console.log('checked');
     if ($('#delivery_address_checkbox').is(':checked')) {
-      console.log('checked 2');
       $("#final_delivery_wrap").addClass('final_delivery_wrap_off');
+      $("input[name='final_delivery_company']").prop('disabled', true);
+      $("input[name='final_delivery_contact_person']").prop('disabled', true);
+      $("input[name='final_delivery_phone_number']").prop('disabled', true);
+      $("input[name='final_delivery_street_address']").prop('disabled', true);
+      $("input[name='final_delivery_city']").prop('disabled', true);
+      $("input[name='final_delivery_postal_code']").prop('disabled', true);
+      $("input[name='final_delivery_country']").prop('disabled', true);
     } else {
       $("#final_delivery_wrap").removeClass('final_delivery_wrap_off');
+      $("input[name='final_delivery_company']").prop('disabled', false);
+      $("input[name='final_delivery_contact_person']").prop('disabled', false);
+      $("input[name='final_delivery_phone_number']").prop('disabled', false);
+      $("input[name='final_delivery_street_address']").prop('disabled', false);
+      $("input[name='final_delivery_city']").prop('disabled', false);
+      $("input[name='final_delivery_postal_code']").prop('disabled', false);
+      $("input[name='final_delivery_country']").prop('disabled', false);
     }
   });
 
@@ -385,7 +411,7 @@
     formData.country = $('input[name="country"]').val();
 
     // Mastering and Cutting Order Variables
-    formData.project_title = $('input[name="project_title"]').val();
+    formData.project_artist = $('input[name="project_artist"]').val();
     formData.release_title = $('input[name="release_title"]').val();
     formData.preferred_engineer = $('input[name="preferred_engineer"]').val();
     formData.catalogue_number = $('input[name="catalogue_number"]').val();
@@ -544,12 +570,19 @@
 
       // Test Pressing Delivery Address
 
+      formData.test_delivery_city = $('input[name="test_delivery_company"]').val();
+      formData.test_delivery_city = $('input[name="test_delivery_contact_person"]').val();
+      formData.test_delivery_city = $('input[name="test_delivery_phone_number"]').val();
+      formData.test_delivery_city = $('input[name="test_delivery_street_address"]').val();
       formData.test_delivery_city = $('input[name="test_delivery_city"]').val();
       formData.test_delivery_postal_code = $('input[name="test_delivery_postal_code"]').val();
       formData.test_delivery_country = $('input[name="test_delivery_country"]').val();
 
       // Final Product Delivery Address
-
+      formData.final_delivery_company = $('input[name="final_delivery_company"]').val();
+      formData.final_delivery_contact_person = $('input[name="final_delivery_contact_person"]').val();
+      formData.final_delivery_phone_number = $('input[name="final_delivery_phone_number"]').val();
+      formData.final_delivery_street_address = $('input[name="final_delivery_street_address"]').val();
       formData.final_delivery_city = $('input[name="final_delivery_city"]').val();
       formData.final_delivery_postal_code = $('input[name="final_delivery_postal_code"]').val();
       formData.final_delivery_country = $('input[name="final_delivery_country"]').val();

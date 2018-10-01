@@ -193,7 +193,7 @@
 
     <div class="label_wrap">
         <div class="vinyl-header">
-            <p>Label</p>
+            <p>Center Labels</p>
             <div class="vinyl-header-line"></div>
         </div>
         <div id="label_radios" class="label_radios_wrap">
@@ -202,14 +202,14 @@
                 <label for="label_print_black">
                 <input type="radio" id="label_print_black" value="Black Label" name="label_color_radios" />
                 <img src="./img/label_black.png" alt="black image for label selection" />
-                <h4>Black</h4>
+                <h4>Solid Black</h4>
             </label>  
             </div>
             <div>
                 <label for="label_print_white">
                 <input type="radio" id="label_print_white" value="White Label" name="label_color_radios" />
                 <img src="./img/label_white.png" alt="white color image for label selection" />
-                <h4>White</h4>
+                <h4>Solid White</h4>
                 </label> 
             </div>
             <div>
@@ -243,23 +243,24 @@
 
     <div class="sleeves_wrap">
         <div class="vinyl-header">
-            <p>Sleeves</p>
+            <p>Inner Sleeves</p>
             <div class="vinyl-header-line"></div>
         </div>
         <p class="vinyl-choose-one">choose one</p>
+        <p id="disco_bag_no_sleeve" class="disco_bag_no_sleeve_hide">* when you select disco bag for the jacket cover option, no inner sleeve is needed</p>
         <div id="sleeve_radios" class="sleeves_print_radios">
             <label for="sleeves_black">
-                <input type="radio" id="sleeves_black" value="Black" name="sleeves_color_radios" />
+                <input type="radio" class="sleeves_radios" id="sleeves_black" value="Black" name="sleeves_color_radios" />
                 <img src="./img/sleeve_black.png" alt="black sleeve example" />
-                <h4>Black</h4>
+                <h4>Solid Black</h4>
             </label>  
             <label for="sleeves_white">
-                <input type="radio" id="sleeves_white" value="White" name="sleeves_color_radios" />
+                <input type="radio" class="sleeves_radios" id="sleeves_white" value="White" name="sleeves_color_radios" />
                 <img src="./img/sleeve_white.png" alt="white album example" />
-                <h4>White</h4>
+                <h4>Solid White</h4>
             </label>
             <label for="sleeves_4color">
-                <input type="radio" id="sleeves_4color" value="Four Color" name="sleeves_color_radios" />
+                <input type="radio" class="sleeves_radios" id="sleeves_4color" value="Four Color" name="sleeves_color_radios" />
                 <img src="./img/sleeve_4color.png" alt="4 color sleeve example" />
                 <h4>4 Color</h4>
                 <h5>custom layout<h5> 
@@ -312,7 +313,7 @@
 
     <div class="sleeves_wrap">
         <div class="vinyl-header">
-            <p>Cover</p>
+            <p>Jacket Covers</p>
             <div class="vinyl-header-line"></div>
         </div>
         <div id="cover_radios" class="sleeves_print_radios">
@@ -451,6 +452,22 @@
             <p>Delivery Address for Test Pressings</p>
             <div class="vinyl-header-line"></div>
         </div>
+        <div class="manmade-input input-final-delivery-company">
+            <label for="test_delivery_company">Company | Firm</label>
+            <input type="text" name="test_delivery_company">
+        </div>
+        <div class="manmade-input input-final-delivery-contact-person">
+            <label for="test_delivery_contact_person">Contact Person</label>
+            <input type="text" name="test_delivery_contact_person">
+        </div>
+        <div class="manmade-input input-final-delivery-phone-number">
+            <label for="test_delivery_phone_number">Phone Number</label>
+            <input type="text" name="test_delivery_phone_number">
+        </div>
+        <div class="manmade-input input-final-delivery-street-address">
+            <label for="test_delivery_street_address">Street Address</label>
+            <input type="text" name="test_delivery_street_address">
+        </div>
         <div class="manmade-input input-final-delivery-city">
             <label for="test_delivery_city">City</label>
             <input type="text" name="test_delivery_city">
@@ -476,6 +493,22 @@
             <label for="delivery_address_checkbox">Same as Test Pressings Delivery Address</label>
         </div>
         <div id="final_delivery_wrap" class="final_delivery_wrap">
+            <div class="manmade-input input-final-delivery-company">
+                <label for="final_delivery_company">Company | Firm</label>
+                <input type="text" name="final_delivery_company">
+            </div>
+            <div class="manmade-input input-final-delivery-contact-person">
+                <label for="final_delivery_contact_person">Contact Person</label>
+                <input type="text" name="final_delivery_contact_person">
+            </div>
+            <div class="manmade-input input-final-delivery-phone-number">
+                <label for="final_delivery_phone_number">Phone Number</label>
+                <input type="text" name="final_delivery_phone_number">
+            </div>
+            <div class="manmade-input input-final-delivery-street-address">
+                <label for="final_delivery_street_address">Street Address</label>
+                <input type="text" name="final_delivery_street_address">
+            </div>
             <div class="manmade-input input-final-delivery-city">
                 <label for="final_delivery_city">City</label>
                 <input type="text" name="final_delivery_city">
