@@ -570,10 +570,10 @@
 
       // Test Pressing Delivery Address
 
-      formData.test_delivery_city = $('input[name="test_delivery_company"]').val();
-      formData.test_delivery_city = $('input[name="test_delivery_contact_person"]').val();
-      formData.test_delivery_city = $('input[name="test_delivery_phone_number"]').val();
-      formData.test_delivery_city = $('input[name="test_delivery_street_address"]').val();
+      formData.test_delivery_company = $('input[name="test_delivery_company"]').val();
+      formData.test_delivery_contact_person = $('input[name="test_delivery_contact_person"]').val();
+      formData.test_delivery_phone_number = $('input[name="test_delivery_phone_number"]').val();
+      formData.test_delivery_street_address = $('input[name="test_delivery_street_address"]').val();
       formData.test_delivery_city = $('input[name="test_delivery_city"]').val();
       formData.test_delivery_postal_code = $('input[name="test_delivery_postal_code"]').val();
       formData.test_delivery_country = $('input[name="test_delivery_country"]').val();
