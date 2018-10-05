@@ -559,7 +559,7 @@
         formData.cover = "";
         formData.cover_option = "";
         formData.cover_hole = "";
-        formData.cover_thickness = "";
+        formData.cover_finish = "";
       }
       formData.amount_of_disco_solid_covers = $('input[name="amount_of_disco_solid_covers"]').val();
       formData.amount_of_cmyk_covers = $('input[name="amount_of_cmyk_covers"]').val();
@@ -612,7 +612,7 @@
 
     $.ajax({
       type: "POST",
-      url: "./sendgrid-php/sendgrid-php.php",
+      url: "./sendgrid/sendmail.php",
       data: formData,
       success: function(data) {
          setTimeout(function() {

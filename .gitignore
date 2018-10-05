@@ -7,3 +7,5 @@
 npm-debug.log
 /assets/php/
 /assets/favicon
+/assets/php/sendgrid/vendor
+/assets/php/sendgrid/credentials.php
