@@ -1,6 +1,6 @@
 <div id="manufacturing_button" class="form-header">
-    <h3>Vinyl Manufaturing Order &nbsp;&nbsp;<span>request a quote</span></h3>
-    <a class="manufacturing_button">
+    <h3>Vinyl Manufacturing Order &nbsp;&nbsp;<span>reserved for vinyl manufacturing clients</span></h3>
+    <a class="manufacturing_button manufacturing_button_on">
         <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <path d="M18.9322709,25.8285624 C18.7703137,25.836892 18.624696,25.939809 18.5502831,26.0985366 C18.4758703,26.2572641 18.4839707,26.447681 18.5715322,26.5980422 C18.6590936,26.7484035 18.8128099,26.8358594 18.974764,26.8274584 L28.039954,26.8274584 C28.2034156,26.8300058 28.3554595,26.7353726 28.4378649,26.5797957 C28.5202703,26.4242189 28.5202703,26.231802 28.4378649,26.0762251 C28.3554595,25.9206483 28.2034156,25.8260151 28.039954,25.8285624 L18.974764,25.8285624 C18.9606074,25.8278305 18.9464275,25.8278305 18.9322709,25.8285624 Z"  fill-rule="nonzero" transform="translate(23.499669, 26.328013) rotate(-45.000000) translate(-23.499669, -26.328013) "></path>
             <path d="M10.4067665,19.4357976 C10.0671681,19.4441272 9.76183073,19.5470442 9.60579882,19.7057717 C9.44976691,19.8644992 9.46675209,20.0549161 9.65035464,20.2052774 C9.83395718,20.3556386 10.1562757,20.4430946 10.4958677,20.4346936 L29.5041323,20.4346936 C29.8468854,20.4372409 30.1656972,20.3426077 30.3384884,20.1870309 C30.5112795,20.031454 30.5112795,19.8390371 30.3384884,19.6834603 C30.1656972,19.5278834 29.8468854,19.4332502 29.5041323,19.4357976 L10.4958677,19.4357976 C10.4661837,19.4350656 10.4364506,19.4350656 10.4067665,19.4357976 Z"  fill-rule="nonzero" transform="translate(19.983875, 19.935249) rotate(-90.000000) translate(-19.983875, -19.935249) "></path>
@@ -12,9 +12,10 @@
 
 <!-- MANUFACTURING SECTION -->
 
-<section class="manufacturing_wrap">
+<section class="manufacturing_wrap manufacturing_wrap_on">
 
     <!--  VINYL Size -->
+    <div class="manufacturing-note">* To receive a detailed quote for vinyl manufacturing, fill out the form below.</div>
 
     <div class="vinyl-size-wrap">
         <div class="vinyl-header">
@@ -250,14 +251,14 @@
         <p id="disco_bag_no_sleeve" class="disco_bag_no_sleeve_hide">* when you select disco bag for the jacket cover option, no inner sleeve is needed</p>
         <div id="sleeve_radios" class="sleeves_print_radios">
             <label for="sleeves_black">
-                <input type="radio" class="sleeves_radios" id="sleeves_black" value="Black" name="sleeves_color_radios" />
+                <input type="radio" class="sleeves_radios" id="lined_paper_sleeve" value="Black" name="sleeves_color_radios" />
                 <img src="./img/sleeve_black.png" alt="black sleeve example" />
-                <h4>Solid Black</h4>
+                <h4>Lined Paper Sleeve</h4>
             </label>  
             <label for="sleeves_white">
                 <input type="radio" class="sleeves_radios" id="sleeves_white" value="White" name="sleeves_color_radios" />
                 <img src="./img/sleeve_white.png" alt="white album example" />
-                <h4>Solid White</h4>
+                <h4>Polylined Sleeve</h4>
             </label>
             <label for="sleeves_4color">
                 <input type="radio" class="sleeves_radios" id="sleeves_4color" value="Four Color" name="sleeves_color_radios" />
@@ -267,15 +268,17 @@
             </label>
         </div>
         <section class="sleeve_info_wrap">
-            <div id="type_of_sleeve" class="sleeve_dropdown_wrap type_of_sleeve_off">
+            <div id="lined_paper_sleeve_color" class="sleeve_dropdown_wrap lined_paper_sleeve_color_off">
                 <div class="dropdown_label_wrap">
-                    <label for="type_of_sleeve">Type of Sleeve:</label>
+                    <label for="lined_paper_sleeve_color">Type of Sleeve:</label>
                 </div>
                 <div class="select_field">
-                    <select name="type_of_sleeve" id="type_of_sleeve" size="1">
+                    <select name="lined_paper_sleeve_color" id="lined_paper_sleeve_color" size="1">
                         <option value="Nothing selected">Select One</option>
-                        <option value="Inner Sleeve Regular">Inner Sleeve</option>
-                        <option value="Inner Sleeve Polylined">Inner Sleeve Polylined</option>
+                        <option value="Lined Paper Sleeve White">Lined Paper Sleeve White</option>
+                        <option value="Lined Paper Sleeve Red">Lined Paper Sleeve Red</option>
+                        <option value="Lined Paper Sleeve Blue">Lined Paper Sleeve Blue</option>
+                        <option value="Lined Paper Sleeve Brown">Lined Paper Sleeve Brown</option>
                     </select>
                 </div>
             </div>
@@ -302,9 +305,9 @@
             <div id="amount_cmyk_sleeves" class="color_amount_wrap amount_cmyk_sleeves_hide">
                 <div class="dropdown_label_wrap">
                     <label for="amount_of_cmyk_sleeves">Amount:</label>   
-                    <img src="img/info.png" class="tooltip info-tip" title="Minimum order of CMYK Sleeves is 300." /> 
+                    <img src="img/info.png" class="tooltip info-tip" title="Minimum order of CMYK Sleeves is 100." /> 
                 </div>
-                <input type="text" name="amount_of_cmyk_sleeves" placeholder="minimum order of 300">
+                <input type="text" name="amount_of_cmyk_sleeves" placeholder="minimum order of 100">
             </div>
         </section>
     </div>
