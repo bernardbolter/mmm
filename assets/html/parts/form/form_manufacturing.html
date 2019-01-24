@@ -250,14 +250,14 @@
         <p class="vinyl-choose-one">choose one</p>
         <p id="disco_bag_no_sleeve" class="disco_bag_no_sleeve_hide">* when you select disco bag for the jacket cover option, no inner sleeve is needed</p>
         <div id="sleeve_radios" class="sleeves_print_radios">
-            <label for="sleeves_black">
-                <input type="radio" class="sleeves_radios" id="lined_paper_sleeve" value="Black" name="sleeves_color_radios" />
-                <img src="./img/sleeve_black.png" alt="black sleeve example" />
+            <label for="lined_paper_sleeve">
+                <input type="radio" class="sleeves_radios" id="lined_paper_sleeve" value="Lined Paper Sleeve" name="sleeves_color_radios" />
+                <img id="lined_paper_sleeve_image" src="./img/sleeve_white.png" alt="black sleeve example" />
                 <h4>Lined Paper Sleeve</h4>
             </label>  
-            <label for="sleeves_white">
-                <input type="radio" class="sleeves_radios" id="sleeves_white" value="White" name="sleeves_color_radios" />
-                <img src="./img/sleeve_white.png" alt="white album example" />
+            <label for="polylined_sleeve">
+                <input type="radio" class="sleeves_radios" id="polylined_sleeve" value="Polylined Sleeve" name="sleeves_color_radios" />
+                <img id="polylined_sleeve_image" src="./img/sleeve_white.png" alt="white album example" />
                 <h4>Polylined Sleeve</h4>
             </label>
             <label for="sleeves_4color">
@@ -270,15 +270,28 @@
         <section class="sleeve_info_wrap">
             <div id="lined_paper_sleeve_color" class="sleeve_dropdown_wrap lined_paper_sleeve_color_off">
                 <div class="dropdown_label_wrap">
-                    <label for="lined_paper_sleeve_color">Type of Sleeve:</label>
+                    <label for="lined_paper_sleeve_color">Lined Paper Sleeve Color:</label>
                 </div>
                 <div class="select_field">
                     <select name="lined_paper_sleeve_color" id="lined_paper_sleeve_color" size="1">
                         <option value="Nothing selected">Select One</option>
-                        <option value="Lined Paper Sleeve White">Lined Paper Sleeve White</option>
-                        <option value="Lined Paper Sleeve Red">Lined Paper Sleeve Red</option>
-                        <option value="Lined Paper Sleeve Blue">Lined Paper Sleeve Blue</option>
-                        <option value="Lined Paper Sleeve Brown">Lined Paper Sleeve Brown</option>
+                        <option value="White">White</option>
+                        <option value="Black">Black</option>
+                        <option value="Red">Red</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Brown">Brown</option>
+                    </select>
+                </div>
+            </div>
+            <div id="polylined_sleeve_color" class="sleeve_dropdown_wrap polylined_sleeve_color_off">
+                <div class="dropdown_label_wrap">
+                    <label for="polylined_sleeve_color">Polylined Sleeve Color:</label>
+                </div>
+                <div class="select_field">
+                    <select name="polylined_sleeve_color" id="polylined_sleeve_color" size="1">
+                        <option value="Nothing selected">Select One</option>
+                        <option value="White">White</option>
+                        <option value="Black">Black</option>
                     </select>
                 </div>
             </div>
@@ -295,19 +308,26 @@
                     </select>
                 </div>
             </div>
-            <div id="amount_bw_sleeves" class="color_amount_wrap amount_bw_sleeves_hide">
+            <div id="amount_paper_lined_sleeves" class="color_amount_wrap amount_paper_lined_sleeves_hide">
                 <div class="dropdown_label_wrap">
-                    <label for="amount_of_bw_sleeves">Amount:</label>   
-                    <img src="img/info.png" class="tooltip info-tip" title="Minimum order of Black or White Sleeves is 100." /> 
+                    <label for="amount_of_paper_lined_sleeves">Amount of Paper Lined Sleeves:</label>   
+                    <img src="img/info.png" class="tooltip info-tip" title="Minimum order for Paper Lined Sleeves is 100." /> 
                 </div>
-                <input type="text" name="amount_of_bw_sleeves" placeholder="minimum order of 100">
+                <input type="text" name="amount_of_paper_lined_sleeves" placeholder="minimum order of 100">
+            </div>
+            <div id="amount_polylined_sleeves" class="color_amount_wrap amount_polylined_sleeves_hide">
+                <div class="dropdown_label_wrap">
+                    <label for="amount_of_polylined_sleeves">Amount of Polylined Sleves:</label>   
+                    <img src="img/info.png" class="tooltip info-tip" title="Minimum order for Polylined Sleeves is 100." /> 
+                </div>
+                <input type="text" name="amount_of_polylined_sleeves" placeholder="minimum order of 100">
             </div>
             <div id="amount_cmyk_sleeves" class="color_amount_wrap amount_cmyk_sleeves_hide">
                 <div class="dropdown_label_wrap">
-                    <label for="amount_of_cmyk_sleeves">Amount:</label>   
-                    <img src="img/info.png" class="tooltip info-tip" title="Minimum order of CMYK Sleeves is 100." /> 
+                    <label for="amount_of_4_color_sleeves">Amount of 4 Color Sleeves:</label>   
+                    <img src="img/info.png" class="tooltip info-tip" title="Minimum order of 4 Color Sleeves is 100." /> 
                 </div>
-                <input type="text" name="amount_of_cmyk_sleeves" placeholder="minimum order of 100">
+                <input type="text" name="amount_of_4_color_sleeves" placeholder="minimum order of 100">
             </div>
         </section>
     </div>

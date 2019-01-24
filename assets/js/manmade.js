@@ -230,28 +230,36 @@
   $( "input[name=sleeves_color_radios]" ).on("change", function() {
     var sleeveChecked = this.value;
     switch (sleeveChecked) {
-      case 'Black':
-        $('#type_of_sleeve').removeClass('type_of_sleeve_off');
+      case 'Lined Paper Sleeve':
+        $('#lined_paper_sleeve_color').removeClass('lined_paper_sleeve_color_off');
+        $('#polylined_sleeve_color').addClass('polylined_sleeve_color_off');
         $('#type_of_sleeve_color').addClass('type_of_sleeve_color_off');
-        $('#amount_bw_sleeves').removeClass('amount_bw_sleeves_hide');
+        $('#amount_paper_lined_sleeves').removeClass('amount_paper_lined_sleeves_hide');
+        $('#amount_polylined_sleeves').addClass('amount_polylined_sleeves_hide');
         $('#amount_cmyk_sleeves').addClass('amount_cmyk_sleeves_hide');
         break;
-      case 'White':
-        $('#type_of_sleeve').removeClass('type_of_sleeve_off');
+      case 'Polylined Sleeve':
+        $('#lined_paper_sleeve_color').addClass('lined_paper_sleeve_color_off');
+        $('#polylined_sleeve_color').removeClass('polylined_sleeve_color_off');
         $('#type_of_sleeve_color').addClass('type_of_sleeve_color_off');
-        $('#amount_bw_sleeves').removeClass('amount_bw_sleeves_hide');
+        $('#amount_paper_lined_sleeves').addClass('amount_paper_lined_sleeves_hide');
+        $('#amount_polylined_sleeves').removeClass('amount_polylined_sleeves_hide');
         $('#amount_cmyk_sleeves').addClass('amount_cmyk_sleeves_hide');
         break;
       case 'Four Color':
-        $('#type_of_sleeve').addClass('type_of_sleeve_off');
+        $('#lined_paper_sleeve_color').addClass('lined_paper_sleeve_color_off');
+        $('#polylined_sleeve_color').addClass('polylined_sleeve_color_off');
         $('#type_of_sleeve_color').removeClass('type_of_sleeve_color_off');
-        $('#amount_bw_sleeves').addClass('amount_bw_sleeves_hide');
+        $('#amount_paper_lined_sleeves').addClass('amount_paper_lined_sleeves_hide');
+        $('#amount_polylined_sleeves').addClass('amount_polylined_sleeves_hide');
         $('#amount_cmyk_sleeves').removeClass('amount_cmyk_sleeves_hide');
         break;
       default:
-        $('#type_of_sleeve').removeClass('type_of_sleeve_off');
+        $('#lined_paper_sleeve_color').addClass('lined_paper_sleeve_color_off');
+        $('#polylined_sleeve_color').addClass('polylined_sleeve_color_off');
         $('#type_of_sleeve_color').addClass('type_of_sleeve_color_off');
-        $('#amount_bw_sleeves').removeClass('amount_bw_sleeves_hide');
+        $('#amount_paper_lined_sleeves').addClass('amount_paper_lined_sleeves_hide');
+        $('#amount_polylined_sleeves').addClass('amount_polylined_sleeves_hide');
         $('#amount_cmyk_sleeves').addClass('amount_cmyk_sleeves_hide');
     }
   });
@@ -301,6 +309,47 @@
         $('#amount_cmyk_covers').addClass('amount_cmyk_covers_off');
         $("input[name='sleeves_color_radios']").prop('disabled', false);
         $('#disco_bag_no_sleeve').addClass('disco_bag_no_sleeve_hide');
+    }
+  });
+
+  // Change color of Paper Lined Sleeve Image
+
+  $( "#lined_paper_sleeve_color").on("change", function() {
+    var colorLinedPaperSleeve = $("#lined_paper_sleeve_color").find(":selected").text();
+    switch (colorLinedPaperSleeve) {
+      case 'Black':
+        $("#lined_paper_sleeve_image").attr("src", "img/sleeve_black.png");
+      break;
+      case 'White':
+        $("#lined_paper_sleeve_image").attr("src", "img/sleeve_white.png");
+      break;
+      case 'Red':
+        $("#lined_paper_sleeve_image").attr("src", "img/sleeve_red.png");
+      break;
+      case 'Blue':
+        $("#lined_paper_sleeve_image").attr("src", "img/sleeve_blue.png");
+      break;
+      case 'Brown':
+        $("#lined_paper_sleeve_image").attr("src", "img/sleeve_brown.png");
+      break;
+      default:
+        $("#lined_paper_sleeve_image").attr("src", "img/sleeve_white.png");
+    }
+  });
+
+  // Change color of Polylined Image
+
+  $( "#polylined_sleeve_color").on("change", function() {
+    var colorPolylinedSleeve = $("#polylined_sleeve_color").find(":selected").text();
+    switch (colorPolylinedSleeve) {
+      case 'Black':
+        $("#polylined_sleeve_image").attr("src", "img/sleeve_black.png");
+      break;
+      case 'White':
+        $("#polylined_sleeve_image").attr("src", "img/sleeve_white.png");
+      break;
+      default:
+        $("#polylined_sleeve_image").attr("src", "img/sleeve_black.png");
     }
   });
 
@@ -502,24 +551,33 @@
       // Sleeves
       if ($('input:radio[name="sleeves_color_radios"]').is(":checked")) {
         $('#sleeve_radios input[type=radio]:checked').each(function(index, color) {
-          if ((color.value === "Black") || (color.value === "White")) {
+          if (color.value === "Lined Paper Sleeve") {
             formData.sleeve = color.value;
-            formData.type_of_sleeve = $('#type_of_sleeve option:selected').val();
-          } else if (color.value === "Four Color") {
-            formData.sleeve = color.value;
-            formData.type_of_sleeve = $('#type_of_sleeve_4_color option:selected').val();
-          } else {
-            formData.sleeve = "";
+            formData.color_of_sleeve = $('#lined_paper_sleeve_color option:selected').val();
             formData.type_of_sleeve = "";
+          } else if (color.value === "Polylined Sleeve") {
+              formData.sleeve = color.value;
+              formData.color_of_sleeve = $('#polylined_sleeve_color option:selected').val();
+              formData.type_of_sleeve = "";
+          } else if (color.value === "Four Color") {
+              formData.sleeve = color.value;
+              formData.color_of_sleeve = "";
+              formData.type_of_sleeve = $('#type_of_sleeve_4_color option:selected').val();
+          } else {
+              formData.sleeve = "";
+              formData.color_of_sleeve = "";
+              formData.type_of_sleeve = "";
           }
         });
       } else {
         formData.sleeve = "";
+        formData.color_of_sleeve = "";
         formData.type_of_sleeve = "";
       }
 
-      formData.amount_of_bw_sleeves = $('input[name="amount_of_bw_sleeves"]').val();
-      formData.amount_of_cmyk_sleeves = $('input[name="amount_of_cmyk_sleeves"]').val();
+      formData.amount_of_lined_paper_sleeves = $('input[name="amount_of_paper_lined_sleeves"]').val();
+      formData.amount_of_polylined_sleeves = $('input[name="amount_of_polylined_sleeves"]').val();
+      formData.amount_of_4_color_sleeves = $('input[name="amount_of_4_color_sleeves"]').val();
 
       // Covers
 
@@ -612,7 +670,7 @@
 
     $.ajax({
       type: "POST",
-      url: "./sendgrid/sendmail.php",
+      url: "",
       data: formData,
       success: function(data) {
          setTimeout(function() {
