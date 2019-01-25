@@ -292,6 +292,15 @@
         $("input[name='sleeves_color_radios']").prop('disabled', false);
         $('#disco_bag_no_sleeve').addClass('disco_bag_no_sleeve_hide');
         break;
+      case 'One Color':
+        $('#color_of_disco_bag').addClass('color_of_disco_bag_off');
+        $('#type_of_cover').addClass('type_of_cover_off');
+        $('#type_of_cover_color').removeClass('type_of_cover_color_off');
+        $('#amount_disco_solid_covers').addClass('amount_disco_solid_covers_off');
+        $('#amount_cmyk_covers').removeClass('amount_cmyk_covers_off');
+        $("input[name='sleeves_color_radios']").prop('disabled', false);
+        $('#disco_bag_no_sleeve').addClass('disco_bag_no_sleeve_hide');
+        break;
       case 'Four Color':
         $('#color_of_disco_bag').addClass('color_of_disco_bag_off');
         $('#type_of_cover').addClass('type_of_cover_off');
@@ -393,27 +402,58 @@
 
     $("#solid_color_hole").removeClass('solid_color_off');
 
-    if (((solidColor === "Solid Black") || (solidColor === "Select One") || (solidColor === "Solid Black | Inside Out")) && (holeOrNo === 'no')) {
+    if (((solidColor === "Black") || (solidColor === "Select One")) && (holeOrNo === 'no')) {
       $("#cover_solid_image").attr("src", "img/cover_solid_black.png");
-    } else if (((solidColor === "Solid Black") || (solidColor === "Select One") || (solidColor === "Solid Black | Inside Out")) && (holeOrNo === 'yes')) {
+    } else if (((solidColor === "Black") || (solidColor === "Select One") || (solidColor === "Black")) && (holeOrNo === 'yes')) {
       $("#cover_solid_image").attr("src", "img/cover_solid_black_hole.png");
-    } else if (((solidColor === "Solid White") || (solidColor === "Solid White | Inside Out")) && (holeOrNo === 'yes')) {
+    } else if ((solidColor === "White") && (holeOrNo === 'yes')) {
       $("#cover_solid_image").attr("src", "img/cover_solid_white_hole.png");
-    } else if (((solidColor === "Solid White") || (solidColor === "Solid White | Inside Out")) && (holeOrNo === 'no')) {
+    } else if ((solidColor === "White") && (holeOrNo === 'no')) {
       $("#cover_solid_image").attr("src", "img/cover_solid_white.png");
-    } else if (solidColor === "Solid Brown") {
+    } else if ((solidColor === "Brown") && (holeOrNo === 'yes')) {
+      $("#cover_solid_image").attr("src", "img/cover_solid_brown_hole.png");
+    } else if ((solidColor === "Brown") && (holeOrNo === 'no')) {
       $("#cover_solid_image").attr("src", "img/cover_solid_brown.png");
-      $("#solid_color_hole").addClass('solid_color_off');
+    } else if ((solidColor === "Yellow") && (holeOrNo === 'yes')) {
+      $("#cover_solid_image").attr("src", "img/cover_solid_yellow_hole.png");
+    } else if ((solidColor === "Yellow") && (holeOrNo === 'no')) {
+      $("#cover_solid_image").attr("src", "img/cover_solid_yellow.png");
+    } else if ((solidColor === "Silver") && (holeOrNo === 'yes')) {
+      $("#cover_solid_image").attr("src", "img/cover_solid_silver_hole.png");
+    } else if ((solidColor === "Silver") && (holeOrNo === 'no')) {
+      $("#cover_solid_image").attr("src", "img/cover_solid_silver.png");
+    } else if ((solidColor === "Cyan") && (holeOrNo === 'yes')) {
+      $("#cover_solid_image").attr("src", "img/cover_solid_cyan_hole.png");
+    } else if ((solidColor === "Cyan") && (holeOrNo === 'no')) {
+      $("#cover_solid_image").attr("src", "img/cover_solid_cyan.png");
+    } else if ((solidColor === "Green") && (holeOrNo === 'yes')) {
+      $("#cover_solid_image").attr("src", "img/cover_solid_green_hole.png");
+    } else if ((solidColor === "Green") && (holeOrNo === 'no')) {
+      $("#cover_solid_image").attr("src", "img/cover_solid_green.png");
+    } else if ((solidColor === "Red") && (holeOrNo === 'yes')) {
+      $("#cover_solid_image").attr("src", "img/cover_solid_red_hole.png");
+    } else if ((solidColor === "Red") && (holeOrNo === 'no')) {
+      $("#cover_solid_image").attr("src", "img/cover_solid_red.png");
+    } else if ((solidColor === "Gold") && (holeOrNo === 'yes')) {
+      $("#cover_solid_image").attr("src", "img/cover_solid_gold_hole.png");
+    } else if ((solidColor === "Gold") && (holeOrNo === 'no')) {
+      $("#cover_solid_image").attr("src", "img/cover_solid_gold.png");
     }
   }
 
-  // Show and hide image with hole for 4 color cover options
+  // Show and hide image with hole for 1 and 4 color cover options
 
   $("#4_color_cover_hole").on("change", function() {
-    if ($('#4_color_cover_hole').is(':checked')) {
+    var oneOrFour = $( "input[name=cover_color_radios]:checked" ).val();
+    console.log(oneOrFour);
+    if (($('#4_color_cover_hole').is(':checked')) && (oneOrFour === "Four Color")) {
       $("#4color_hole_image").attr("src", "img/cover_4color_hole.png");
-    } else {
+    } else if (($('#4_color_cover_hole').is(":not(:checked)")) && (oneOrFour === "Four Color")) {
       $("#4color_hole_image").attr("src", "img/cover_4color.png");
+    } else if (($('#4_color_cover_hole').is(':checked')) && (oneOrFour === "One Color")) {
+      $("#1color_hole_image").attr("src", "img/cover_1color_hole.png");
+    } else if (($('#4_color_cover_hole').is(":not(:checked)")) && (oneOrFour === "One Color")) {
+      $("#1color_hole_image").attr("src", "img/cover_1color.png");
     }
   });
 

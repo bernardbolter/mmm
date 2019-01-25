@@ -353,7 +353,7 @@
             </label>
             <label for="cover_print_1c">
                 <input type="radio" id="cover_print_1c" value="One Color" name="cover_color_radios" />
-                <img id="1color_hole_image" src="./img/cover_4color.png" alt="1 color cover example" />
+                <img id="1color_hole_image" src="./img/cover_1color.png" alt="1 color cover example" />
                 <h4>1 color</h4>
                 <h5>custom layout</h5> 
             </label>
@@ -373,8 +373,11 @@
                     <select name="color_of_disco_bag" id="color_of_disco_bag" size="1">
                         <option value="Nothing Slected">Select One</option>
                         <option value="Black">Black</option>
+                        <option value="Black Inside Out">Black Inside Out</option>
                         <option value="White">White</option>
+                        <option value="White Inside Out">White Inside Out</option>
                         <option value="Brown">Brown</option>
+                        <option value="Brown Inside Out">Brown Inside Out</option>
                     </select>
                 </div>
             </div>
@@ -385,11 +388,15 @@
                 <div class="select_field">
                     <select name="solid_color_cover_option" id="solid_color_cover" size="1">
                         <option value="Nothing Selected">Select One</option>
-                        <option value="Solid Black">Solid Black</option>
-                        <option value="Solid Black | Inside Out">Solid Black | Inside Out</option>
-                        <option value="Solid White">Solid White</option>
-                        <option value="Solid White | Inside Out">Solid White | Inside Out</option>
-                        <option value="Solid Brown">Solid Brown</option>
+                        <option value="Black">Black</option>
+                        <option value="White">White</option>
+                        <option value="Brown">Brown</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="Silver">Silver</option>
+                        <option value="Cyan">Cyan</option>
+                        <option value="Green">Green</option>
+                        <option value="Red">Red</option>
+                        <option value="Gold">Gold</option>
                     </select>
                 </div>
                 <div class="dropdown_label_wrap color_drop_spacing">
@@ -410,7 +417,7 @@
             </div>
             <div id="type_of_cover_color" class="sleeve_dropdown_wrap cover_drop_wrap type_of_cover_color_off">
                 <div class="dropdown_label_wrap">
-                    <label for="thickness_of_4_color_cover">4 Color Thickness Options:</label>
+                    <label for="thickness_of_4_color_cover">Printed Jacket Thickness Options:</label>
                     <img src="img/info.png" class="tooltip info-tip" title="Standard grammage at 3mm back: GC2 350g and GC1 300g for all other options. Different paper thicknesses, print on rough side and matt lacquer possible on request." /> 
                 </div>
                 <div class="select_field">
@@ -423,7 +430,7 @@
                     </select>
                 </div>
                 <div class="dropdown_label_wrap color_drop_spacing">
-                    <label for="finish_of_4_color_cover">4 Color Finish Options:</label>
+                    <label for="finish_of_4_color_cover">Printed Jacket Finish Options:</label>
                 </div>
                 <div class="select_field">
                     <select name="finish_of_4_color_cover" id="finish_of_4_color_cover" size="1">
@@ -448,9 +455,9 @@
             <div id="amount_cmyk_covers" class="color_amount_wrap cover_amount_wrap amount_cmyk_covers_off">
                 <div class="dropdown_label_wrap">
                     <label for="amount_of_cmyk_covers">Amount:</label>   
-                    <img src="img/info.png" class="tooltip info-tip" title="minimum order of 300 for CMYK covers." /> 
+                    <img src="img/info.png" class="tooltip info-tip" title="minimum order of 100 for Printed Jacket Covers." /> 
                 </div>
-                <input type="text" name="amount_of_cmyk_covers"placeholder="minimum order of 300">
+                <input type="text" name="amount_of_cmyk_covers"placeholder="minimum order of 100">
             </div>
         </section>
     </div>
