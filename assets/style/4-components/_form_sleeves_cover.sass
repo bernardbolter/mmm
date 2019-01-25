@@ -104,7 +104,12 @@
     display: flex
     flex-direction: column
     justify-content: center
-    width: 50%
+    width: 100%
+    margin: 0 0 15px 0
+
+    @media (min-width: 500px)
+        width: 50%
+        margin: 0
 
     @media (min-width: $vinyl-break)
         width: 100%
@@ -138,6 +143,50 @@
         border: 1px solid white
         background: $form-focus
 
+.sleeves_amount_wrap
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin: 0
+
+    @media (min-width: 500px)
+        width: 45%
+        margin: 0
+
+    @media (min-width: $vinyl-break)
+        width: 100%
+
+    label
+        font-family: $body-font
+        color: $light-text
+        font-size: 12px
+        font-weight: 400
+        margin-bottom: 5px
+
+    p
+        margin: -5px 0 8px 0
+        padding: 0
+        font-family: $body-font
+        color: $light-text
+        font-size: 11px
+        opacity: 0.5
+        font-weight: 700
+
+    input
+        height: 30px
+        background: $form-back
+        font-size: 16px
+        line-height: 1.5
+        color: $dark-text
+        padding: 0 10px
+        border: none
+        border: 1px solid $form-back
+
+        &::placeholder
+                color: $dark-text
+                opacity: 0.4
+
 .polylined_sleeve_color_off
     display: none
 
@@ -160,6 +209,86 @@
     display: none
 
 //  COVER STYLES
+
+.covers_print_radios
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin: 0 0 15px
+    flex-wrap: wrap
+
+    @media (min-width: 500px)
+        width: 66%
+        margin: 0 17% 15px 17%
+        justify-content: space-around
+
+    @media (min-width: 700px)
+        width: 100%
+        margin: 0 0 15px
+
+    @media (min-width: $vinyl-break)
+        width: 55%
+        margin: 0 5% 15px 0
+
+    label
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 50%
+
+        @media (min-width: 700px)
+            width: 25%
+
+        @media (min-width: $vinyl-break)
+            width: 50%
+
+    img
+        width: 80%
+        padding: 10%
+        cursor: pointer
+
+    h4
+        font-family: $the-font
+        font-weight: 700
+        font-size: 13px
+        color: $light-text
+        margin: 3px 0 0 0
+        padding: 0
+
+    h5
+        font-family: $the-font
+        font-weight: 200
+        font-size: 11px
+        color: $light-text
+        margin: 0
+        padding: 0
+
+    input
+        margin: 0
+        padding: 0
+        display: none
+
+        &:checked + img
+            background-color: rgba(255,255,255,0.1)
+            opacity: 1
+
+        &:active + img
+            background-color: rgba(255,255,255,0.1)
+            opacity: 1
+
+.covers_info_wrap
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    flex-wrap: wrap
+
+    @media (min-width: $vinyl-break)
+        width: 40%
+        flex-direction: column
+        justify-content: flex-start
+
 
 .color_drop_spacing
     margin: 10px 0 0 0

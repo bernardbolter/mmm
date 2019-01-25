@@ -308,21 +308,21 @@
                     </select>
                 </div>
             </div>
-            <div id="amount_paper_lined_sleeves" class="color_amount_wrap amount_paper_lined_sleeves_hide">
+            <div id="amount_paper_lined_sleeves" class="sleeves_amount_wrap amount_paper_lined_sleeves_hide">
                 <div class="dropdown_label_wrap">
                     <label for="amount_of_paper_lined_sleeves">Amount of Paper Lined Sleeves:</label>   
                     <img src="img/info.png" class="tooltip info-tip" title="Minimum order for Paper Lined Sleeves is 100." /> 
                 </div>
                 <input type="text" name="amount_of_paper_lined_sleeves" placeholder="minimum order of 100">
             </div>
-            <div id="amount_polylined_sleeves" class="color_amount_wrap amount_polylined_sleeves_hide">
+            <div id="amount_polylined_sleeves" class="sleeves_amount_wrap amount_polylined_sleeves_hide">
                 <div class="dropdown_label_wrap">
                     <label for="amount_of_polylined_sleeves">Amount of Polylined Sleves:</label>   
                     <img src="img/info.png" class="tooltip info-tip" title="Minimum order for Polylined Sleeves is 100." /> 
                 </div>
                 <input type="text" name="amount_of_polylined_sleeves" placeholder="minimum order of 100">
             </div>
-            <div id="amount_cmyk_sleeves" class="color_amount_wrap amount_cmyk_sleeves_hide">
+            <div id="amount_cmyk_sleeves" class="sleeves_amount_wrap amount_cmyk_sleeves_hide">
                 <div class="dropdown_label_wrap">
                     <label for="amount_of_4_color_sleeves">Amount of 4 Color Sleeves:</label>   
                     <img src="img/info.png" class="tooltip info-tip" title="Minimum order of 4 Color Sleeves is 100." /> 
@@ -338,9 +338,9 @@
         <div class="vinyl-header">
             <p>Jacket Covers</p>
             <div class="vinyl-header-line"></div>
+            <h6 class="vinyl-choose-one">choose one</h6>
         </div>
-        <div id="cover_radios" class="sleeves_print_radios">
-            <p class="vinyl-choose-one">choose one</p>
+        <div id="cover_radios" class="covers_print_radios">
             <label class="sleeves_print_image" for="cover_disco">
                 <input type="radio" id="cover_disco" value="Disco Bag" name="cover_color_radios" />
                 <img id="disco_bag_image" src="./img/disco_black.png" alt="cover disco black example" />
@@ -351,6 +351,12 @@
                 <img id="cover_solid_image" src="./img/cover_solid_black.png" alt="solid color cover example" />
                 <h4>Solid Color</h4>
             </label>
+            <label for="cover_print_1c">
+                <input type="radio" id="cover_print_1c" value="One Color" name="cover_color_radios" />
+                <img id="1color_hole_image" src="./img/cover_4color.png" alt="1 color cover example" />
+                <h4>1 color</h4>
+                <h5>custom layout</h5> 
+            </label>
             <label for="cover_print_4c">
                 <input type="radio" id="cover_print_4c" value="Four Color" name="cover_color_radios" />
                 <img id="4color_hole_image" src="./img/cover_4color.png" alt="4 color album example" />
@@ -358,7 +364,7 @@
                 <h5>custom layout</h5> 
             </label>
         </div>
-        <section class="sleeve_info_wrap">
+        <section class="covers_info_wrap">
             <div id="color_of_disco_bag" class="sleeve_dropdown_wrap cover_drop_wrap color_of_disco_bag_off">
                 <div class="dropdown_label_wrap">
                     <label for="type_of_sleeve">Disco Bag Color Options:</label>
