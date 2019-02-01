@@ -445,7 +445,6 @@
 
   $("#4_color_cover_hole").on("change", function() {
     var oneOrFour = $( "input[name=cover_color_radios]:checked" ).val();
-    console.log(oneOrFour);
     if (($('#4_color_cover_hole').is(':checked')) && (oneOrFour === "Four Color")) {
       $("#4color_hole_image").attr("src", "img/cover_4color_hole.png");
     } else if (($('#4_color_cover_hole').is(":not(:checked)")) && (oneOrFour === "Four Color")) {
@@ -625,14 +624,23 @@
         $('#cover_radios input[type=radio]:checked').each(function(index, cover) {
           if (cover.value === "Disco Bag") {
             formData.cover = cover.value;
-            formData.cover_hole = "";
             formData.cover_option = $('#color_of_disco_bag option:selected').val();
             formData.cover_finish = "";
+            formData.cover_hole = "";
           } else if (cover.value === "Solid Color") {
             formData.cover = cover.value;
             formData.cover_option = $('#solid_color_cover option:selected').val();
-            formData.cover_thickness = $('#finish_of_solid_color_cover option:selected').val();
+            formData.cover_finish = $('#finish_of_solid_color_cover option:selected').val();
             if ($('input:checkbox[name="solid_color_cover_hole"]').is(":checked")) {
+              formData.cover_hole = "with hole";
+            } else {
+              formData.cover_hole = "no hole";
+            }
+          } else if (cover.value === "One Color") {
+            formData.cover = cover.value;
+            formData.cover_finish = $('#finish_of_4_color_cover option:selected').val();
+            formData.cover_option = $('#thickness_of_4_color_cover option:selected').val();
+            if ($('input:checkbox[name="4_color_cover_hole"]').is(":checked")) {
               formData.cover_hole = "with hole";
             } else {
               formData.cover_hole = "no hole";
@@ -706,11 +714,9 @@
         formData.gdpr = "has not been checked";
       }
 
-    console.log(formData);
-
     $.ajax({
       type: "POST",
-      url: "",
+      url: "sendgrid/sendmail.php",
       data: formData,
       success: function(data) {
          setTimeout(function() {
